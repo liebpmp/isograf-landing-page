@@ -1,29 +1,23 @@
 /* ============================================================
    ISOGRAF Landing Page — JavaScript
-   Scroll animations, sticky navbar, hamburger menu, smooth scroll
+   Scroll animations, sticky navbar, hamburger menu, 3D carousel
    ============================================================ */
 
 (function () {
     'use strict';
 
     // --- DOM Elements ---
-    const navbar = document.getElementById('navbar');
-    const navHamburger = document.getElementById('navHamburger');
-    const navLinks = document.getElementById('navLinks');
+    var navbar = document.getElementById('navbar');
+    var navHamburger = document.getElementById('navHamburger');
+    var navLinks = document.getElementById('navLinks');
 
     // --- Sticky Navbar with scroll effect ---
-    let lastScroll = 0;
-
     function handleNavScroll() {
-        const scrollY = window.scrollY;
-
-        if (scrollY > 50) {
+        if (window.scrollY > 50) {
             navbar.classList.add('scrolled');
         } else {
             navbar.classList.remove('scrolled');
         }
-
-        lastScroll = scrollY;
     }
 
     window.addEventListener('scroll', handleNavScroll, { passive: true });
@@ -36,7 +30,6 @@
             document.body.style.overflow = navLinks.classList.contains('open') ? 'hidden' : '';
         });
 
-        // Close menu on link click
         navLinks.querySelectorAll('a').forEach(function (link) {
             link.addEventListener('click', function () {
                 navHamburger.classList.remove('active');
@@ -86,7 +79,6 @@
             fadeObserver.observe(el);
         });
     } else {
-        // Fallback: show all immediately
         fadeElements.forEach(function (el) {
             el.classList.add('visible');
         });
@@ -106,7 +98,6 @@
             var link = document.querySelector('.nav-links a[href="#' + id + '"]');
             if (link) {
                 if (scrollY >= top && scrollY < top + height) {
-                    // Remove active from all
                     document.querySelectorAll('.nav-links a').forEach(function (a) {
                         a.classList.remove('nav-link-active');
                     });
@@ -126,7 +117,6 @@
             if (el.dataset.animated) return;
 
             var text = el.textContent.trim();
-            // Extract the numeric value and prefix/suffix
             var match = text.match(/^([+]?)([0-9.,]+)(.*)$/);
             if (!match) return;
 
@@ -144,11 +134,9 @@
             function step(timestamp) {
                 if (!startTime) startTime = timestamp;
                 var progress = Math.min((timestamp - startTime) / duration, 1);
-                // Ease-out
                 var eased = 1 - Math.pow(1 - progress, 3);
                 var current = Math.round(eased * target);
 
-                // Format with dots for thousands
                 var formatted = current.toString();
                 if (hasDot && current >= 1000) {
                     formatted = current.toLocaleString('de-DE');
@@ -165,7 +153,6 @@
         });
     }
 
-    // Observe the stats row
     var statsRow = document.querySelector('.stats-row');
     if (statsRow && 'IntersectionObserver' in window) {
         var statsObserver = new IntersectionObserver(function (entries) {
@@ -180,12 +167,92 @@
         statsObserver.observe(statsRow);
     }
 
+    // --- 3D Carousel for Done-4-You ---
+    var carousel = document.getElementById('done4youCarousel');
+    if (carousel) {
+        var track = carousel.querySelector('.done4you-track');
+        var cards = carousel.querySelectorAll('.done4you-card');
+        var prevBtn = carousel.querySelector('.carousel-prev');
+        var nextBtn = carousel.querySelector('.carousel-next');
+        var dots = carousel.querySelectorAll('.dot');
+        var currentSlide = 2; // Start with ZFU centered (index 2)
+        var totalCards = cards.length;
+
+        function updateCarousel() {
+            cards.forEach(function (card, index) {
+                card.classList.remove('carousel-active', 'carousel-left', 'carousel-right', 'carousel-far-left', 'carousel-far-right', 'carousel-hidden');
+
+                var diff = index - currentSlide;
+
+                if (diff === 0) {
+                    card.classList.add('carousel-active');
+                } else if (diff === -1 || (diff === totalCards - 1)) {
+                    card.classList.add('carousel-left');
+                } else if (diff === 1 || (diff === -(totalCards - 1))) {
+                    card.classList.add('carousel-right');
+                } else {
+                    card.classList.add('carousel-hidden');
+                }
+            });
+
+            // Update dots
+            dots.forEach(function (dot, index) {
+                dot.classList.toggle('active', index === currentSlide);
+            });
+        }
+
+        if (prevBtn) {
+            prevBtn.addEventListener('click', function () {
+                currentSlide = (currentSlide - 1 + totalCards) % totalCards;
+                updateCarousel();
+            });
+        }
+
+        if (nextBtn) {
+            nextBtn.addEventListener('click', function () {
+                currentSlide = (currentSlide + 1) % totalCards;
+                updateCarousel();
+            });
+        }
+
+        dots.forEach(function (dot) {
+            dot.addEventListener('click', function () {
+                currentSlide = parseInt(this.dataset.slide, 10);
+                updateCarousel();
+            });
+        });
+
+        // Initialize
+        updateCarousel();
+
+        // Touch support
+        var touchStartX = 0;
+        var touchEndX = 0;
+
+        track.addEventListener('touchstart', function (e) {
+            touchStartX = e.changedTouches[0].screenX;
+        }, { passive: true });
+
+        track.addEventListener('touchend', function (e) {
+            touchEndX = e.changedTouches[0].screenX;
+            var diff = touchStartX - touchEndX;
+            if (Math.abs(diff) > 50) {
+                if (diff > 0) {
+                    currentSlide = (currentSlide + 1) % totalCards;
+                } else {
+                    currentSlide = (currentSlide - 1 + totalCards) % totalCards;
+                }
+                updateCarousel();
+            }
+        }, { passive: true });
+    }
+
     // --- Staggered animation for card groups ---
-    var cardGroups = document.querySelectorAll('.service-cards, .done4you-cards, .ergebnisse-cards, .team-grid');
+    var cardGroups = document.querySelectorAll('.service-cards, .ergebnisse-cards, .team-grid');
 
     cardGroups.forEach(function (group) {
-        var cards = group.children;
-        Array.from(cards).forEach(function (card, index) {
+        var groupCards = group.children;
+        Array.from(groupCards).forEach(function (card, index) {
             card.style.transitionDelay = (index * 0.1) + 's';
         });
     });

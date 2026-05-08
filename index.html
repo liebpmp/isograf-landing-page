@@ -15,10 +15,10 @@
     <nav class="navbar" id="navbar">
         <div class="container nav-container">
             <a href="#" class="nav-logo">
-                <svg width="32" height="20" viewBox="0 0 32 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M0 16L4 4L8 16" stroke="#D4A843" stroke-width="2.5"/>
-                    <path d="M8 16L12 4L16 16" stroke="#D4A843" stroke-width="2.5"/>
-                    <path d="M16 16L20 4L24 16" stroke="#D4A843" stroke-width="2.5"/>
+                <svg class="nav-logo-icon" width="36" height="20" viewBox="0 0 36 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 18L5 2L10 18" stroke="#D4A843" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M10 18L15 2L20 18" stroke="#D4A843" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M20 18L25 2L30 18" stroke="#D4A843" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
                 <span class="nav-logo-text">ISOGRAF</span>
             </a>
@@ -29,7 +29,7 @@
                 <a href="#ressourcen">Ressourcen</a>
                 <a href="#karriere">Karriere</a>
             </div>
-            <a href="#kontakt" class="btn btn-gold btn-nav">Jetzt starten</a>
+            <a href="#kontakt" class="btn btn-nav">Jetzt starten</a>
             <button class="nav-hamburger" id="navHamburger" aria-label="Menü öffnen">
                 <span></span><span></span><span></span>
             </button>
@@ -38,6 +38,36 @@
 
     <!-- ==================== HERO SECTION ==================== -->
     <section class="hero" id="hero">
+        <!-- Architectural watermark illustration -->
+        <div class="hero-watermark">
+            <svg viewBox="0 0 800 700" fill="none" xmlns="http://www.w3.org/2000/svg" opacity="0.06">
+                <!-- Castle/Building outline -->
+                <rect x="200" y="200" width="400" height="400" stroke="#1A2341" stroke-width="1"/>
+                <rect x="250" y="250" width="100" height="150" stroke="#1A2341" stroke-width="0.8"/>
+                <rect x="450" y="250" width="100" height="150" stroke="#1A2341" stroke-width="0.8"/>
+                <rect x="350" y="180" width="100" height="80" stroke="#1A2341" stroke-width="0.8"/>
+                <!-- Tower -->
+                <rect x="370" y="100" width="60" height="80" stroke="#1A2341" stroke-width="0.8"/>
+                <polygon points="370,100 400,50 430,100" stroke="#1A2341" stroke-width="0.8"/>
+                <!-- Arches -->
+                <path d="M260 400 Q300 350 340 400" stroke="#1A2341" stroke-width="0.8" fill="none"/>
+                <path d="M460 400 Q500 350 540 400" stroke="#1A2341" stroke-width="0.8" fill="none"/>
+                <!-- Columns -->
+                <line x1="270" y1="400" x2="270" y2="500" stroke="#1A2341" stroke-width="0.8"/>
+                <line x1="330" y1="400" x2="330" y2="500" stroke="#1A2341" stroke-width="0.8"/>
+                <line x1="470" y1="400" x2="470" y2="500" stroke="#1A2341" stroke-width="0.8"/>
+                <line x1="530" y1="400" x2="530" y2="500" stroke="#1A2341" stroke-width="0.8"/>
+                <!-- Windows -->
+                <rect x="280" y="270" width="30" height="50" rx="15" stroke="#1A2341" stroke-width="0.5"/>
+                <rect x="320" y="270" width="30" height="50" rx="15" stroke="#1A2341" stroke-width="0.5"/>
+                <rect x="460" y="270" width="30" height="50" rx="15" stroke="#1A2341" stroke-width="0.5"/>
+                <rect x="500" y="270" width="30" height="50" rx="15" stroke="#1A2341" stroke-width="0.5"/>
+                <!-- Decorative elements -->
+                <circle cx="400" cy="160" r="20" stroke="#1A2341" stroke-width="0.5"/>
+                <path d="M200 600 L600 600" stroke="#1A2341" stroke-width="1"/>
+                <path d="M220 580 L580 580" stroke="#1A2341" stroke-width="0.5"/>
+            </svg>
+        </div>
         <div class="container hero-container">
             <div class="hero-content">
                 <div class="hero-rating">
@@ -53,9 +83,18 @@
                 <h1 class="hero-headline">Der einfache Weg<br><span class="accent-italic">zu deiner Zertifizierung</span></h1>
                 <p class="hero-subtext">Wir strukturieren, optimieren und zertifizieren Ihr Unternehmen – mit der Erfahrung aus über 1.000 Projekten.</p>
                 <ul class="hero-checklist">
-                    <li><span class="check-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="12" fill="#D4A843"/><path d="M7 12.5l3 3 7-7" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Mehr Umsatz. Mehr Vertrauen. Mehr Wachstum.</li>
-                    <li><span class="check-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="12" fill="#D4A843"/><path d="M7 12.5l3 3 7-7" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Alles mit staatlicher Unterstützung.</li>
-                    <li><span class="check-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="12" fill="#D4A843"/><path d="M7 12.5l3 3 7-7" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>100% Erfolgsgarantie.</li>
+                    <li>
+                        <span class="check-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="12" fill="#D4A843"/><path d="M7 12.5l3 3 7-7" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+                        Mehr Umsatz. Mehr Vertrauen. Mehr Wachstum.
+                    </li>
+                    <li>
+                        <span class="check-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="12" fill="#D4A843"/><path d="M7 12.5l3 3 7-7" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+                        Alles mit staatlicher Unterstützung.
+                    </li>
+                    <li>
+                        <span class="check-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="12" fill="#D4A843"/><path d="M7 12.5l3 3 7-7" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+                        100% Erfolgsgarantie.
+                    </li>
                 </ul>
                 <a href="#kontakt" class="btn btn-gold btn-hero">
                     <strong>Jetzt kostenloses Erstgespräch sichern</strong>
@@ -64,23 +103,33 @@
                 <div class="hero-known-from">
                     <span>Bekannt aus</span>
                     <div class="known-logos">
-                        <span class="known-logo">ZDF</span>
-                        <span class="known-logo">ARD</span>
-                        <span class="known-logo"><strong>DER SPIEGEL</strong></span>
+                        <span class="known-logo known-logo-zdf"><strong>ZDF</strong></span>
+                        <span class="known-logo known-logo-ard">ARD<span class="ard-circle">1</span></span>
+                        <span class="known-logo known-logo-spiegel"><strong>DER SPIEGEL</strong></span>
                     </div>
                 </div>
             </div>
             <div class="hero-image">
                 <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=600&h=700&fit=crop&crop=top" alt="Daniel Graf - Geschäftsführer ISOGRAF">
-                <div class="hero-image-bg"></div>
             </div>
         </div>
-        <div class="hero-stats">
-            <div class="container">
-                <div class="stats-row">
-                    <div class="stat-item fade-in"><span class="stat-number">+800</span><span class="stat-label">Zufriedene Kunden</span></div>
-                    <div class="stat-item fade-in"><span class="stat-number">+20</span><span class="stat-label">Jahre Erfahrung</span></div>
-                    <div class="stat-item fade-in"><span class="stat-number">+1.200</span><span class="stat-label">Projekte</span></div>
+    </section>
+
+    <!-- ==================== STATS ROW ==================== -->
+    <section class="stats-section">
+        <div class="container">
+            <div class="stats-row">
+                <div class="stat-card fade-in">
+                    <span class="stat-number">+800</span>
+                    <span class="stat-label">Zufriedene Kunden</span>
+                </div>
+                <div class="stat-card fade-in">
+                    <span class="stat-number">+20</span>
+                    <span class="stat-label">Jahre Erfahrung</span>
+                </div>
+                <div class="stat-card fade-in">
+                    <span class="stat-number">+1.200</span>
+                    <span class="stat-label">Projekte</span>
                 </div>
             </div>
         </div>
@@ -93,15 +142,40 @@
                 <div class="video-thumbnail">
                     <img src="https://images.unsplash.com/photo-1551836022-deb4988cc6c0?w=900&h=500&fit=crop" alt="ISOGRAF Video">
                     <button class="play-btn" aria-label="Video abspielen">
-                        <svg width="60" height="60" viewBox="0 0 60 60" fill="none"><circle cx="30" cy="30" r="30" fill="rgba(255,255,255,0.9)"/><path d="M24 18l18 12-18 12V18z" fill="#1A2341"/></svg>
+                        <svg width="64" height="64" viewBox="0 0 64 64" fill="none">
+                            <circle cx="32" cy="32" r="32" fill="rgba(255,255,255,0.9)"/>
+                            <path d="M26 20l18 12-18 12V20z" fill="#1A2341"/>
+                        </svg>
                     </button>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <!-- ==================== SERVICE CARDS ==================== -->
+    <section class="services-section">
+        <div class="container">
             <div class="service-cards">
-                <div class="service-card fade-in"><span class="service-number">01.</span><h3>ISO 9001</h3><p>Standard für internationales Vertrauen – zeigt Ihre Professionalität, öffnet Türen zu öffentlichen Ausschreibungen, B2B-Partnerschaften und stärkt das Markenimage.</p></div>
-                <div class="service-card fade-in"><span class="service-number">02.</span><h3>AZAV</h3><p>ISOGRAF begleitet Sie als erfahrener Berater und Coach persönlich durch den gesamten Prozess – von der ersten Analyse bis zur finalen erfolgreichen Zertifizierung.</p></div>
-                <div class="service-card fade-in"><span class="service-number">03.</span><h3>ZFU Zulassung</h3><p>Wir führen Sie schnell und unproblematisch durch den Vorgang der Anerkennung als staatlich zugelassener Fernunterricht.</p></div>
-                <div class="service-card fade-in"><span class="service-number">04.</span><h3>Listung</h3><p>Es gibt diverse Zertifizierungen, die Ihnen den Zugang zu Fördermitteln oder Kunden ermöglichen. Wir zeigen Ihnen auf, welche für Ihren konkreten Fall zutreffend sind.</p></div>
+                <div class="service-card fade-in">
+                    <span class="service-number">01.</span>
+                    <h3>ISO 9001</h3>
+                    <p>Standard für internationales Vertrauen – zeigt Ihre Professionalität, öffnet Türen zu öffentlichen Ausschreibungen, B2B-Partnerschaften und stärkt das Markenimage.</p>
+                </div>
+                <div class="service-card fade-in">
+                    <span class="service-number">02.</span>
+                    <h3>AZAV</h3>
+                    <p>ISOGRAF begleitet Sie als erfahrener Berater und Coach persönlich durch den gesamten Prozess – von der ersten Analyse bis zur finalen erfolgreichen Zertifizierung.</p>
+                </div>
+                <div class="service-card fade-in">
+                    <span class="service-number">03.</span>
+                    <h3>ZFU Zulassung</h3>
+                    <p>Wir führen Sie schnell und unproblematisch durch den Vorgang der Anerkennung als staatlich zugelassener Fernunterricht.</p>
+                </div>
+                <div class="service-card fade-in">
+                    <span class="service-number">04.</span>
+                    <h3>Listung</h3>
+                    <p>Es gibt diverse Zertifizierungen, die Ihnen den Zugang zu Fördermitteln oder Kunden ermöglichen. Wir zeigen Ihnen auf, welche für Ihren konkreten Fall zutreffend sind.</p>
+                </div>
             </div>
         </div>
     </section>
@@ -112,26 +186,32 @@
             <h2 class="section-heading fade-in">Warum zum <span class="accent-italic">Isograf</span>?</h2>
             <p class="warum-subtext fade-in">Viele Unternehmen befassen sich viel zu intensiv und zu umfangreich mit der Dokumentation, die für eine Zertifizierung notwendig ist. Mit unserer Erfahrung, unserem Fachwissen und modernen Lösungen, helfen wir Ihnen dieses Thema schnell und unkompliziert zu lösen</p>
         </div>
-        <div class="warum-testimonial fade-in">
-            <div class="container warum-testimonial-inner">
-                <div class="warum-testimonial-content">
-                    <p class="warum-quote"><strong>Denn wer mit ISOGRAF arbeitet, hebt sich automatisch von der Masse ab:</strong> <span class="accent-italic">Viele Erfahrung, schnelle Bearbeitung und unkomplizierte Prozesse.</span></p>
-                    <p class="warum-detail">Für alle, die ihre Leistungen leichter verkaufen und durch staatliche Förderung skalieren wollen – vom bisherigen Selbstzahler-Modell zum echten Wachstumspfad.</p>
-                    <ul class="warum-list">
-                        <li><span class="gold-dot"></span>kleine bis mittelständige Unternehmen (Produktion, Handwerk, Gastronomie)</li>
-                        <li><span class="gold-dot"></span><strong>Bildungsinstitute und Coaches</strong></li>
-                        <li><span class="gold-dot"></span><strong>Berater und Dienstleister</strong></li>
-                    </ul>
-                    <a href="#kontakt" class="btn btn-gold">Jetzt loslegen</a>
-                    <div class="warum-social-proof">
-                        <div class="avatar-stack">
-                            <img src="https://i.pravatar.cc/40?img=1" alt=""><img src="https://i.pravatar.cc/40?img=2" alt=""><img src="https://i.pravatar.cc/40?img=3" alt=""><img src="https://i.pravatar.cc/40?img=4" alt=""><img src="https://i.pravatar.cc/40?img=5" alt="">
+        <div class="warum-card-wrapper">
+            <div class="container">
+                <div class="warum-testimonial fade-in">
+                    <div class="warum-testimonial-content">
+                        <p class="warum-quote"><strong>Denn wer mit ISOGRAF arbeitet, hebt sich automatisch von der Masse ab:</strong> <span class="accent-italic">Viele Erfahrung, schnelle Bearbeitung und unkomplizierte Prozesse.</span></p>
+                        <p class="warum-detail">Für alle, die ihre Leistungen leichter verkaufen und durch staatliche Förderung skalieren wollen – vom bisherigen Selbstzahler-Modell zum echten Wachstumspfad.</p>
+                        <ul class="warum-list">
+                            <li><span class="gold-dot"></span>kleine bis mittelständige Unternehmen (Produktion, Handwerk, Gastronomie)</li>
+                            <li><span class="gold-dot"></span><strong>Bildungsinstitute und Coaches</strong></li>
+                            <li><span class="gold-dot"></span><strong>Berater und Dienstleister</strong></li>
+                        </ul>
+                        <a href="#kontakt" class="btn btn-gold">Jetzt loslegen</a>
+                        <div class="warum-social-proof">
+                            <div class="avatar-stack">
+                                <img src="https://i.pravatar.cc/40?img=1" alt="">
+                                <img src="https://i.pravatar.cc/40?img=2" alt="">
+                                <img src="https://i.pravatar.cc/40?img=3" alt="">
+                                <img src="https://i.pravatar.cc/40?img=4" alt="">
+                                <img src="https://i.pravatar.cc/40?img=5" alt="">
+                            </div>
+                            <span>+800 Zufriedene Kunden</span>
                         </div>
-                        <span>+800 Zufriedene Kunden</span>
                     </div>
-                </div>
-                <div class="warum-testimonial-image">
-                    <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400&h=500&fit=crop&crop=top" alt="ISOGRAF Berater">
+                    <div class="warum-testimonial-image">
+                        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400&h=500&fit=crop&crop=top" alt="ISOGRAF Berater">
+                    </div>
                 </div>
             </div>
         </div>
@@ -142,62 +222,129 @@
         <div class="container">
             <h2 class="section-heading section-heading-light fade-in">Done-4-You <span class="accent-italic">Zertifizierung</span></h2>
             <p class="done4you-subtext fade-in">Wählen Sie die passende Zertifizierung für Ihr Business</p>
-            <div class="done4you-carousel fade-in">
-                <div class="done4you-cards">
-                    <div class="done4you-card">
-                        <div class="done4you-card-image"><img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=300&h=200&fit=crop" alt="ISO 9001"></div>
+            <div class="done4you-carousel" id="done4youCarousel">
+                <div class="done4you-track">
+                    <div class="done4you-card" data-index="0">
+                        <div class="done4you-card-image">
+                            <svg viewBox="0 0 300 180" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect width="300" height="180" fill="#F5F0E8"/>
+                                <rect x="60" y="40" width="180" height="120" stroke="#C4A862" stroke-width="0.8" fill="none"/>
+                                <path d="M90 80 Q150 30 210 80" stroke="#8B7A5E" stroke-width="0.6" fill="none"/>
+                                <line x1="100" y1="80" x2="100" y2="140" stroke="#8B7A5E" stroke-width="0.6"/>
+                                <line x1="200" y1="80" x2="200" y2="140" stroke="#8B7A5E" stroke-width="0.6"/>
+                                <rect x="120" y="90" width="60" height="40" rx="4" stroke="#8B7A5E" stroke-width="0.5" fill="none"/>
+                                <circle cx="150" cy="60" r="12" stroke="#C4A862" stroke-width="0.5" fill="none"/>
+                            </svg>
+                        </div>
                         <h3>ISO 9001</h3>
                         <p class="done4you-card-subtitle">Qualität als Standard</p>
                         <span class="done4you-tag">Vertrauen aufbauen</span>
                         <ul class="done4you-features">
-                            <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="#D4A843" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg> Internationale Anerkennung</li>
-                            <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="#D4A843" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg> B2B-Partnerschaften</li>
-                            <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="#D4A843" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg> Öffentliche Ausschreibungen</li>
-                            <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="#D4A843" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg> Markenimage stärken</li>
+                            <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="#1A2341" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg> Internationale Anerkennung</li>
+                            <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="#1A2341" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg> B2B-Partnerschaften</li>
+                            <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="#1A2341" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg> Öffentliche Ausschreibungen</li>
+                            <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="#1A2341" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg> Markenimage stärken</li>
                         </ul>
                         <a href="#kontakt" class="btn btn-gold btn-full">Mehr erfahren →</a>
                     </div>
-                    <div class="done4you-card done4you-card-active">
-                        <div class="done4you-card-image"><img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=300&h=200&fit=crop" alt="ZFU"></div>
-                        <h3>ZFU</h3>
-                        <p class="done4you-card-subtitle">Sicherheit für digitale Programme</p>
-                        <span class="done4you-tag">Rechtssicher skalieren</span>
-                        <ul class="done4you-features">
-                            <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="#D4A843" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg> Schutz vor Rückforderungen</li>
-                            <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="#D4A843" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg> Freigabe für Online-Kurse</li>
-                            <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="#D4A843" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg> Seriosität & Vertrauen</li>
-                            <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="#D4A843" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg> Didaktik & Vertragskonformität</li>
-                        </ul>
-                        <a href="#kontakt" class="btn btn-gold btn-full">Mehr erfahren →</a>
-                    </div>
-                    <div class="done4you-card">
-                        <div class="done4you-card-image"><img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=200&fit=crop" alt="AZAV"></div>
+                    <div class="done4you-card" data-index="1">
+                        <div class="done4you-card-image">
+                            <svg viewBox="0 0 300 180" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect width="300" height="180" fill="#F5F0E8"/>
+                                <rect x="40" y="30" width="220" height="130" stroke="#C4A862" stroke-width="0.8" fill="none"/>
+                                <path d="M80 70 Q150 20 220 70" stroke="#8B7A5E" stroke-width="0.6" fill="none"/>
+                                <circle cx="150" cy="50" r="15" stroke="#C4A862" stroke-width="0.5" fill="none"/>
+                                <line x1="90" y1="70" x2="90" y2="130" stroke="#8B7A5E" stroke-width="0.6"/>
+                                <line x1="150" y1="70" x2="150" y2="130" stroke="#8B7A5E" stroke-width="0.6"/>
+                                <line x1="210" y1="70" x2="210" y2="130" stroke="#8B7A5E" stroke-width="0.6"/>
+                                <rect x="100" y="85" width="40" height="30" rx="3" stroke="#8B7A5E" stroke-width="0.4" fill="none"/>
+                                <rect x="160" y="85" width="40" height="30" rx="3" stroke="#8B7A5E" stroke-width="0.4" fill="none"/>
+                            </svg>
+                        </div>
                         <h3>AZAV</h3>
                         <p class="done4you-card-subtitle">Zugang zu Fördermitteln</p>
                         <span class="done4you-tag">Förderung sichern</span>
                         <ul class="done4you-features">
-                            <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="#D4A843" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg> Bildungsgutscheine annehmen</li>
-                            <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="#D4A843" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg> Staatliche Förderung</li>
-                            <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="#D4A843" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg> Neue Kundengruppen</li>
-                            <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="#D4A843" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg> Qualitätsnachweis</li>
+                            <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="#1A2341" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg> Bildungsgutscheine annehmen</li>
+                            <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="#1A2341" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg> Staatliche Förderung</li>
+                            <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="#1A2341" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg> Neue Kundengruppen</li>
+                            <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="#1A2341" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg> Qualitätsnachweis</li>
+                        </ul>
+                        <a href="#kontakt" class="btn btn-gold btn-full">Mehr erfahren →</a>
+                    </div>
+                    <div class="done4you-card" data-index="2">
+                        <div class="done4you-card-image">
+                            <svg viewBox="0 0 300 180" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect width="300" height="180" fill="#F5F0E8"/>
+                                <rect x="50" y="35" width="200" height="125" stroke="#C4A862" stroke-width="0.8" fill="none"/>
+                                <path d="M100 75 Q150 35 200 75" stroke="#8B7A5E" stroke-width="0.6" fill="none"/>
+                                <rect x="80" y="75" width="140" height="70" stroke="#8B7A5E" stroke-width="0.4" fill="none"/>
+                                <line x1="120" y1="75" x2="120" y2="145" stroke="#8B7A5E" stroke-width="0.4"/>
+                                <line x1="180" y1="75" x2="180" y2="145" stroke="#8B7A5E" stroke-width="0.4"/>
+                                <circle cx="150" cy="55" r="10" stroke="#C4A862" stroke-width="0.5" fill="none"/>
+                                <path d="M130 100 L150 85 L170 100" stroke="#8B7A5E" stroke-width="0.4" fill="none"/>
+                            </svg>
+                        </div>
+                        <h3>ZFU</h3>
+                        <p class="done4you-card-subtitle">Sicherheit für digitale Programme</p>
+                        <span class="done4you-tag">Rechtssicher skalieren</span>
+                        <ul class="done4you-features">
+                            <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="#1A2341" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg> Schutz vor Rückforderungen</li>
+                            <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="#1A2341" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg> Freigabe für Online-Kurse</li>
+                            <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="#1A2341" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg> Seriosität & Vertrauen</li>
+                            <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="#1A2341" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg> Didaktik & Vertragskonformität</li>
+                        </ul>
+                        <a href="#kontakt" class="btn btn-gold btn-full">Mehr erfahren →</a>
+                    </div>
+                    <div class="done4you-card" data-index="3">
+                        <div class="done4you-card-image">
+                            <svg viewBox="0 0 300 180" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect width="300" height="180" fill="#F5F0E8"/>
+                                <rect x="55" y="40" width="190" height="120" stroke="#C4A862" stroke-width="0.8" fill="none"/>
+                                <path d="M85 80 Q150 30 215 80" stroke="#8B7A5E" stroke-width="0.6" fill="none"/>
+                                <line x1="95" y1="80" x2="95" y2="140" stroke="#8B7A5E" stroke-width="0.6"/>
+                                <line x1="205" y1="80" x2="205" y2="140" stroke="#8B7A5E" stroke-width="0.6"/>
+                                <rect x="110" y="95" width="80" height="35" rx="4" stroke="#8B7A5E" stroke-width="0.4" fill="none"/>
+                                <circle cx="150" cy="60" r="14" stroke="#C4A862" stroke-width="0.5" fill="none"/>
+                            </svg>
+                        </div>
+                        <h3>Listung</h3>
+                        <p class="done4you-card-subtitle">Zugang zu Fördermitteln</p>
+                        <span class="done4you-tag">Förderfähig werden</span>
+                        <ul class="done4you-features">
+                            <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="#1A2341" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg> Fördermittelzugang</li>
+                            <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="#1A2341" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg> Neue Kundengruppen</li>
+                            <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="#1A2341" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg> Wettbewerbsvorteil</li>
+                            <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="#1A2341" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg> Individuelle Beratung</li>
                         </ul>
                         <a href="#kontakt" class="btn btn-gold btn-full">Mehr erfahren →</a>
                     </div>
                 </div>
                 <div class="carousel-controls">
-                    <button class="carousel-arrow" aria-label="Zurück"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M15 18l-6-6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
-                    <button class="carousel-arrow carousel-arrow-active" aria-label="Weiter"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M9 18l6-6-6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
-                    <div class="carousel-dots"><span class="dot"></span><span class="dot"></span><span class="dot active"></span><span class="dot"></span></div>
+                    <button class="carousel-arrow carousel-prev" aria-label="Zurück">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M15 18l-6-6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </button>
+                    <button class="carousel-arrow carousel-next carousel-arrow-active" aria-label="Weiter">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M9 18l6-6-6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </button>
+                    <div class="carousel-dots">
+                        <span class="dot" data-slide="0"></span>
+                        <span class="dot" data-slide="1"></span>
+                        <span class="dot active" data-slide="2"></span>
+                        <span class="dot" data-slide="3"></span>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ==================== WACHSTUM SECTION ==================== -->
+    <!-- ==================== WACHSTUM SECTION (Certificate + Text) ==================== -->
     <section class="wachstum-section">
         <div class="container">
             <div class="wachstum-top fade-in">
-                <div class="wachstum-image-col"><img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=500&h=350&fit=crop" alt="ISO Zertifikat" class="wachstum-cert-img"></div>
+                <div class="wachstum-image-col">
+                    <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=500&h=350&fit=crop" alt="ISO Zertifikat" class="wachstum-cert-img">
+                </div>
                 <div class="wachstum-text-col">
                     <h2>Zertifizierung, Die Ihr <span class="accent-italic">Wachstum Trägt.</span></h2>
                     <p>Et eleifend consectetur tellus consectetur nibh non urna lobortis. Quis sapien enim posuere mollis risus. Nec dictumst ullamcorper et leo. Varius praesent tinc.</p>
@@ -213,8 +360,10 @@
             <h2 class="section-heading fade-in">Zertifizierung, die Ihr <span class="accent-italic">Wachstum trägt.</span></h2>
             <p class="wachstum-bento-sub fade-in">Mit ISOGRAF führen wir Sie unkompliziert und sicher durch den gesamten Zertifizierungsprozess – vollständig begleitet.</p>
             <div class="bento-grid fade-in">
+                <!-- Top-left: Large card with man + floating testimonial -->
                 <div class="bento-card bento-large">
-                    <img src="https://images.unsplash.com/photo-1551836022-deb4988cc6c0?w=500&h=400&fit=crop" alt="Beratung">
+                    <img src="https://images.unsplash.com/photo-1551836022-deb4988cc6c0?w=600&h=450&fit=crop" alt="Beratung">
+                    <div class="bento-overlay"></div>
                     <div class="bento-testimonial">
                         <div class="bento-testimonial-header">
                             <img src="https://i.pravatar.cc/40?img=10" alt="Persona">
@@ -229,36 +378,68 @@
                                 </div>
                             </div>
                         </div>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean commodo ligula e dolor. Aenean massa.</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean commodo ligula e dolor. Aenean massa. Cum sociis natoque et magnis dis.</p>
                     </div>
                 </div>
+                <!-- Top-right: Experience card with clock tower -->
                 <div class="bento-card bento-experience">
-                    <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=400&h=300&fit=crop" alt="Erfahrung">
+                    <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=400&h=400&fit=crop" alt="Erfahrung">
+                    <div class="bento-overlay bento-overlay-blue"></div>
                     <div class="bento-experience-text">
-                        <span class="stat-number-small">+20 Jahre <span class="accent-italic">Erfahrung</span></span>
+                        <span class="bento-experience-title">+20 Jahre <span class="accent-italic">Erfahrung</span></span>
                         <p>sowohl bei Dienstleistern, als auch bei Gewerbekunden.</p>
                     </div>
                 </div>
+                <!-- Bottom-left: Process card -->
                 <div class="bento-card bento-process">
                     <div class="bento-process-icon">
-                        <svg width="48" height="48" viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="22" stroke="#1A2341" stroke-width="2" fill="#E8F0FE"/><path d="M15 24l6 6 12-12" stroke="#1A2341" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        <svg width="56" height="56" viewBox="0 0 56 56" fill="none">
+                            <circle cx="28" cy="28" r="26" stroke="rgba(255,255,255,0.3)" stroke-width="2" fill="rgba(255,255,255,0.08)"/>
+                            <path d="M17 28l8 8 14-14" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
                     </div>
                     <h3>Unkomplizierter <span class="accent-italic">Prozess</span></h3>
                     <p>mit der Erfahrung aus über 1.200 Projekten.</p>
                 </div>
+                <!-- Bottom-right: Growth card with columns -->
                 <div class="bento-card bento-growth">
-                    <div class="bento-growth-bg"><img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=400&h=300&fit=crop" alt="Wachstum"></div>
+                    <img src="https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=500&h=350&fit=crop" alt="Wachstum" class="bento-growth-bg">
+                    <div class="bento-overlay bento-overlay-blue"></div>
                     <div class="bento-growth-content">
+                        <div class="bento-gold-dots">
+                            <svg width="80" height="40" viewBox="0 0 80 40" fill="none">
+                                <circle cx="5" cy="5" r="2" fill="#D4A843" opacity="0.6"/>
+                                <circle cx="15" cy="5" r="2" fill="#D4A843" opacity="0.6"/>
+                                <circle cx="25" cy="5" r="2" fill="#D4A843" opacity="0.6"/>
+                                <circle cx="35" cy="5" r="2" fill="#D4A843" opacity="0.6"/>
+                                <circle cx="5" cy="15" r="2" fill="#D4A843" opacity="0.6"/>
+                                <circle cx="15" cy="15" r="2" fill="#D4A843" opacity="0.6"/>
+                                <circle cx="25" cy="15" r="2" fill="#D4A843" opacity="0.6"/>
+                                <circle cx="35" cy="15" r="2" fill="#D4A843" opacity="0.6"/>
+                            </svg>
+                        </div>
                         <h3>Echtes <span class="accent-italic">Wachstum</span></h3>
                         <p>Die meisten Unternehmen scheitern an der Komplexität der Zertifizierungsprozesse. Wir übernehmen den gesamten Prozess für Sie.</p>
                     </div>
                 </div>
             </div>
-            <div class="wachstum-cta fade-in"><a href="#kontakt" class="btn btn-gold">Jetzt loslegen</a></div>
+            <div class="wachstum-cta fade-in">
+                <a href="#kontakt" class="btn btn-gold">Jetzt loslegen</a>
+                <div class="wachstum-social-proof">
+                    <div class="avatar-stack">
+                        <img src="https://i.pravatar.cc/40?img=6" alt="">
+                        <img src="https://i.pravatar.cc/40?img=7" alt="">
+                        <img src="https://i.pravatar.cc/40?img=8" alt="">
+                        <img src="https://i.pravatar.cc/40?img=9" alt="">
+                        <img src="https://i.pravatar.cc/40?img=10" alt="">
+                    </div>
+                    <span>800+ Zufriedene Kunden</span>
+                </div>
+            </div>
         </div>
     </section>
 
-    <!-- ==================== CTA SECTION ==================== -->
+    <!-- ==================== CTA BANNER ==================== -->
     <section class="cta-section">
         <div class="container">
             <div class="cta-banner fade-in">
@@ -267,28 +448,50 @@
                     <p>Vereinbaren Sie jetzt ein kostenloses Erstgespräch und erfahren Sie, wie wir Sie auf dem Weg zur Zertifizierung unterstützen können.</p>
                     <a href="#kontakt" class="btn btn-gold">Jetzt loslegen</a>
                     <div class="cta-social-proof">
-                        <div class="avatar-stack"><img src="https://i.pravatar.cc/40?img=11" alt=""><img src="https://i.pravatar.cc/40?img=12" alt=""><img src="https://i.pravatar.cc/40?img=13" alt=""><img src="https://i.pravatar.cc/40?img=14" alt=""><img src="https://i.pravatar.cc/40?img=15" alt=""></div>
+                        <div class="avatar-stack">
+                            <img src="https://i.pravatar.cc/40?img=11" alt="">
+                            <img src="https://i.pravatar.cc/40?img=12" alt="">
+                            <img src="https://i.pravatar.cc/40?img=13" alt="">
+                            <img src="https://i.pravatar.cc/40?img=14" alt="">
+                            <img src="https://i.pravatar.cc/40?img=15" alt="">
+                        </div>
                         <span>+800 Zufriedene Kunden</span>
                     </div>
                 </div>
-                <div class="cta-image"><img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=350&h=400&fit=crop&crop=top" alt="ISOGRAF Berater"></div>
+                <div class="cta-image">
+                    <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=350&h=450&fit=crop&crop=top" alt="ISOGRAF Berater">
+                </div>
             </div>
         </div>
     </section>
 
     <!-- ==================== ERGEBNISSE SECTION ==================== -->
     <section class="ergebnisse-section" id="ergebnisse">
+        <div class="ergebnisse-bg">
+            <img src="https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1400&h=800&fit=crop" alt="">
+            <div class="ergebnisse-overlay"></div>
+        </div>
         <div class="container">
-            <div class="section-badge fade-in"><svg width="16" height="16" viewBox="0 0 24 24" fill="#D4A843"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg> Die Ergebnisse</div>
-            <h2 class="section-heading fade-in">Bisherige <span class="accent-italic">Ergebnisse</span></h2>
+            <div class="section-badge section-badge-light fade-in">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="#D4A843"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                Die Ergebnisse
+            </div>
+            <h2 class="section-heading section-heading-light fade-in">Bisherige <span class="accent-italic">Ergebnisse</span></h2>
             <p class="ergebnisse-sub fade-in">Transparente Leistungen, nachweisbare Resultate – und ein Prozess, der in über +1200 Projekten zuverlässig funktioniert hat.</p>
             <div class="ergebnisse-cards fade-in">
                 <div class="ergebnis-card">
                     <h4>EduVision Coaching GmbH</h4>
                     <p class="ergebnis-type">Business Coaching</p>
                     <div class="ergebnis-values">
-                        <div><span class="ergebnis-label">Vorher</span><span class="ergebnis-amount">80.000 €</span></div>
-                        <div><span class="ergebnis-label">Nachher</span><span class="ergebnis-amount ergebnis-amount-big">340.000 €</span></div>
+                        <div>
+                            <span class="ergebnis-label">Vorher</span>
+                            <span class="ergebnis-amount">80.000 €</span>
+                        </div>
+                        <div class="ergebnis-progress-line"></div>
+                        <div>
+                            <span class="ergebnis-label">Nachher</span>
+                            <span class="ergebnis-amount ergebnis-amount-big">340.000 €</span>
+                        </div>
                     </div>
                     <span class="ergebnis-badge">durch KOMPASS + AZAV</span>
                 </div>
@@ -296,8 +499,15 @@
                     <h4>TrainUp Institut</h4>
                     <p class="ergebnis-type">Leadership Training</p>
                     <div class="ergebnis-values">
-                        <div><span class="ergebnis-label">Vorher</span><span class="ergebnis-amount">50.000 €</span></div>
-                        <div><span class="ergebnis-label">Nachher</span><span class="ergebnis-amount ergebnis-amount-big">410.000 €</span></div>
+                        <div>
+                            <span class="ergebnis-label">Vorher</span>
+                            <span class="ergebnis-amount">50.000 €</span>
+                        </div>
+                        <div class="ergebnis-progress-line"></div>
+                        <div>
+                            <span class="ergebnis-label">Nachher</span>
+                            <span class="ergebnis-amount ergebnis-amount-big">410.000 €</span>
+                        </div>
                     </div>
                     <div class="ergebnis-growth">+720% Wachstum</div>
                     <span class="ergebnis-badge">durch Qualifizierungschancengesetz + ISO</span>
@@ -306,8 +516,15 @@
                     <h4>MindGrow Academy</h4>
                     <p class="ergebnis-type">Executive Coaching</p>
                     <div class="ergebnis-values">
-                        <div><span class="ergebnis-label">Vorher</span><span class="ergebnis-amount">9.000 €/M</span></div>
-                        <div><span class="ergebnis-label">Nachher</span><span class="ergebnis-amount ergebnis-amount-big">46.000 €/M</span></div>
+                        <div>
+                            <span class="ergebnis-label">Vorher</span>
+                            <span class="ergebnis-amount">9.000 €/M</span>
+                        </div>
+                        <div class="ergebnis-progress-line"></div>
+                        <div>
+                            <span class="ergebnis-label">Nachher</span>
+                            <span class="ergebnis-amount ergebnis-amount-big">46.000 €/M</span>
+                        </div>
                     </div>
                     <span class="ergebnis-badge">durch ZFU-Zulassung</span>
                 </div>
@@ -318,35 +535,87 @@
     <!-- ==================== 5-PHASEN-METHODE ==================== -->
     <section class="phasen-section">
         <div class="container">
-            <div class="section-badge section-badge-light fade-in"><svg width="16" height="16" viewBox="0 0 24 24" fill="#D4A843"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg> Die 5-Phasen</div>
+            <div class="section-badge section-badge-light fade-in">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="#D4A843"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                Die 5-Phasen
+            </div>
             <h2 class="section-heading section-heading-light fade-in">Unsere bewährte <span class="accent-italic">5-Phasen-Methode</span></h2>
             <p class="phasen-sub fade-in">Mit unserem strukturierten Prozess führen wir Sie Schritt für Schritt durch die gesamte Zertifizierung – transparent, effizient und ohne unnötige Komplexität.</p>
             <div class="phasen-tags fade-in">
-                <span class="phasen-tag"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="#B0B8C8" stroke-width="1.5"/><path d="M8 12l3 3 5-5" stroke="#B0B8C8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg> Einfachheit</span>
-                <span class="phasen-tag"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="#B0B8C8" stroke-width="1.5"/><path d="M8 12l3 3 5-5" stroke="#B0B8C8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg> Expertise & Erfahrung</span>
-                <span class="phasen-tag"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="#B0B8C8" stroke-width="1.5"/><path d="M8 12l3 3 5-5" stroke="#B0B8C8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg> Vertrauen & Entlastung</span>
+                <span class="phasen-tag">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="#B0B8C8" stroke-width="1.5"/><path d="M8 12l3 3 5-5" stroke="#B0B8C8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    Einfachheit
+                </span>
+                <span class="phasen-tag">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="#B0B8C8" stroke-width="1.5"/><path d="M8 12l3 3 5-5" stroke="#B0B8C8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    Expertise & Erfahrung
+                </span>
+                <span class="phasen-tag">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="#B0B8C8" stroke-width="1.5"/><path d="M8 12l3 3 5-5" stroke="#B0B8C8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    Vertrauen & Entlastung
+                </span>
             </div>
             <div class="timeline">
                 <div class="timeline-line"></div>
+                <!-- Phase 01: Content left, Image right -->
                 <div class="timeline-item timeline-right fade-in">
-                    <div class="timeline-content"><span class="timeline-number">01</span><h3>Analyse & Strategie</h3><div class="timeline-dot"></div><p>Wir analysieren Ihre aktuelle Situation und entwickeln eine maßgeschneiderte Strategie für Ihre Zertifizierung.</p></div>
-                    <div class="timeline-image"><img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=400&h=280&fit=crop" alt="Analyse"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-number">01</span>
+                        <h3>Analyse & Strategie</h3>
+                        <p>Wir analysieren Ihre aktuelle Situation und entwickeln eine maßgeschneiderte Strategie für Ihre Zertifizierung.</p>
+                    </div>
+                    <div class="timeline-dot-wrapper"><div class="timeline-dot"></div></div>
+                    <div class="timeline-image">
+                        <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=400&h=280&fit=crop" alt="Analyse">
+                    </div>
                 </div>
+                <!-- Phase 02: Image left, Content right -->
                 <div class="timeline-item timeline-left fade-in">
-                    <div class="timeline-image"><img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=400&h=280&fit=crop" alt="Dokumentation"></div>
-                    <div class="timeline-content"><span class="timeline-number">02</span><h3>Dokumentation</h3><div class="timeline-dot"></div><p>Wir erstellen alle notwendigen Dokumente, Prozesse und Handbücher nach aktuellen Standards.</p></div>
+                    <div class="timeline-image">
+                        <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=400&h=280&fit=crop" alt="Dokumentation">
+                    </div>
+                    <div class="timeline-dot-wrapper"><div class="timeline-dot"></div></div>
+                    <div class="timeline-content">
+                        <span class="timeline-number">02</span>
+                        <h3>Dokumentation</h3>
+                        <p>Wir erstellen alle notwendigen Dokumente, Prozesse und Handbücher nach aktuellen Standards.</p>
+                    </div>
                 </div>
+                <!-- Phase 03: Content left, Image right -->
                 <div class="timeline-item timeline-right fade-in">
-                    <div class="timeline-content"><span class="timeline-number">03</span><h3>Implementierung</h3><div class="timeline-dot"></div><p>Ihr Team wird geschult und alle Prozesse werden in Ihrem Unternehmen implementiert.</p></div>
-                    <div class="timeline-image"><img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=400&h=280&fit=crop" alt="Implementierung"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-number">03</span>
+                        <h3>Implementierung</h3>
+                        <p>Ihr Team wird geschult und alle Prozesse werden in Ihrem Unternehmen implementiert.</p>
+                    </div>
+                    <div class="timeline-dot-wrapper"><div class="timeline-dot"></div></div>
+                    <div class="timeline-image">
+                        <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=400&h=280&fit=crop" alt="Implementierung">
+                    </div>
                 </div>
+                <!-- Phase 04: Image left, Content right -->
                 <div class="timeline-item timeline-left fade-in">
-                    <div class="timeline-image"><img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=400&h=280&fit=crop" alt="Audit-Vorbereitung"></div>
-                    <div class="timeline-content"><span class="timeline-number">04</span><h3>Audit-Vorbereitung</h3><div class="timeline-dot"></div><p>Wir simulieren das Audit und bereiten Sie optimal auf die Prüfung vor. Keine Überraschungen.</p></div>
+                    <div class="timeline-image">
+                        <img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=400&h=280&fit=crop" alt="Audit-Vorbereitung">
+                    </div>
+                    <div class="timeline-dot-wrapper"><div class="timeline-dot"></div></div>
+                    <div class="timeline-content">
+                        <span class="timeline-number">04</span>
+                        <h3>Audit-Vorbereitung</h3>
+                        <p>Wir simulieren das Audit und bereiten Sie optimal auf die Prüfung vor. Keine Überraschungen.</p>
+                    </div>
                 </div>
+                <!-- Phase 05: Content left, Image right -->
                 <div class="timeline-item timeline-right fade-in">
-                    <div class="timeline-content"><span class="timeline-number">05</span><h3>Zertifizierung</h3><div class="timeline-dot"></div><p>Wir begleiten Sie beim Audit und feiern gemeinsam Ihre erfolgreiche Zertifizierung.</p></div>
-                    <div class="timeline-image"><img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=400&h=280&fit=crop" alt="Zertifizierung"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-number">05</span>
+                        <h3>Zertifizierung</h3>
+                        <p>Wir begleiten Sie beim Audit und feiern gemeinsam Ihre erfolgreiche Zertifizierung.</p>
+                    </div>
+                    <div class="timeline-dot-wrapper"><div class="timeline-dot"></div></div>
+                    <div class="timeline-image">
+                        <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=400&h=280&fit=crop" alt="Zertifizierung">
+                    </div>
                 </div>
             </div>
         </div>
@@ -368,29 +637,52 @@
     <!-- ==================== TEAM SECTION ==================== -->
     <section class="team-section" id="team">
         <div class="container">
-            <div class="section-badge fade-in"><svg width="16" height="16" viewBox="0 0 24 24" fill="#D4A843"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg> Das Team</div>
+            <div class="section-badge fade-in">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="#D4A843"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                Das Team
+            </div>
             <h2 class="section-heading fade-in">Unser <span class="accent-italic">starkes Team</span></h2>
             <p class="team-sub fade-in">Transparente Leistungen, nachweisbare Resultate – und ein Prozess, der in über 1.200 Projekten zuverlässig funktioniert hat.</p>
             <div class="team-grid fade-in">
                 <div class="team-card">
                     <div class="team-photo"><img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=200&h=200&fit=crop&crop=face" alt="Volker Rozek"></div>
-                    <h4>Volker Rozek</h4><p class="team-role">Senior Berater</p><p class="team-desc">Experte für Prozessoptimierung</p>
-                    <div class="team-social"><a href="#" aria-label="Facebook"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a><a href="#" aria-label="LinkedIn"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2zM4 6a2 2 0 100-4 2 2 0 000 4z"/></svg></a></div>
+                    <h4>Volker Rozek</h4>
+                    <p class="team-role">Senior Berater</p>
+                    <p class="team-desc">Experte für Prozessoptimierung</p>
+                    <div class="team-social">
+                        <a href="#" aria-label="Facebook"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a>
+                        <a href="#" aria-label="LinkedIn"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2zM4 6a2 2 0 100-4 2 2 0 000 4z"/></svg></a>
+                    </div>
                 </div>
                 <div class="team-card">
                     <div class="team-photo"><img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=200&h=200&fit=crop&crop=face" alt="Daniel Graf"></div>
-                    <h4>Daniel Graf</h4><p class="team-role">Senior Berater</p><p class="team-desc">Experte für ISO 9001, AZAV, ISO 14001 sowie 13485 und 27001</p>
-                    <div class="team-social"><a href="#" aria-label="Facebook"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a><a href="#" aria-label="LinkedIn"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2zM4 6a2 2 0 100-4 2 2 0 000 4z"/></svg></a></div>
+                    <h4>Daniel Graf</h4>
+                    <p class="team-role">Senior Berater</p>
+                    <p class="team-desc">Experte für ISO 9001, AZAV, ISO 14001 sowie 13485 und 27001</p>
+                    <div class="team-social">
+                        <a href="#" aria-label="Facebook"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a>
+                        <a href="#" aria-label="LinkedIn"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2zM4 6a2 2 0 100-4 2 2 0 000 4z"/></svg></a>
+                    </div>
                 </div>
                 <div class="team-card">
                     <div class="team-photo"><img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&h=200&fit=crop&crop=face" alt="Christian Engelhardt"></div>
-                    <h4>Christian Engelhardt</h4><p class="team-role">Geschäftsführung, AZAV Fachmann</p><p class="team-desc">Zulassung AZAV, Förderanträge, Förderprozess</p>
-                    <div class="team-social"><a href="#" aria-label="Facebook"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a><a href="#" aria-label="LinkedIn"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2zM4 6a2 2 0 100-4 2 2 0 000 4z"/></svg></a></div>
+                    <h4>Christian Engelhardt</h4>
+                    <p class="team-role">Geschäftsführung, AZAV Fachmann</p>
+                    <p class="team-desc">Zulassung AZAV, Förderanträge, Förderprozess</p>
+                    <div class="team-social">
+                        <a href="#" aria-label="Facebook"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a>
+                        <a href="#" aria-label="LinkedIn"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2zM4 6a2 2 0 100-4 2 2 0 000 4z"/></svg></a>
+                    </div>
                 </div>
                 <div class="team-card">
                     <div class="team-photo"><img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=200&h=200&fit=crop&crop=face" alt="Jeremy Gocht"></div>
-                    <h4>Jeremy Gocht</h4><p class="team-role">Junior Berater</p><p class="team-desc">Prozessmanagement und Auditvorbereitung</p>
-                    <div class="team-social"><a href="#" aria-label="Facebook"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a><a href="#" aria-label="LinkedIn"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2zM4 6a2 2 0 100-4 2 2 0 000 4z"/></svg></a></div>
+                    <h4>Jeremy Gocht</h4>
+                    <p class="team-role">Junior Berater</p>
+                    <p class="team-desc">Prozessmanagement und Auditvorbereitung</p>
+                    <div class="team-social">
+                        <a href="#" aria-label="Facebook"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a>
+                        <a href="#" aria-label="LinkedIn"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2zM4 6a2 2 0 100-4 2 2 0 000 4z"/></svg></a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -405,11 +697,19 @@
                     <p>Vereinbaren Sie jetzt ein kostenloses Erstgespräch und erfahren Sie, wie wir Sie auf dem Weg zur Zertifizierung unterstützen können.</p>
                     <a href="#" class="btn btn-gold">Jetzt loslegen</a>
                     <div class="cta-social-proof">
-                        <div class="avatar-stack"><img src="https://i.pravatar.cc/40?img=20" alt=""><img src="https://i.pravatar.cc/40?img=21" alt=""><img src="https://i.pravatar.cc/40?img=22" alt=""><img src="https://i.pravatar.cc/40?img=23" alt=""><img src="https://i.pravatar.cc/40?img=24" alt=""></div>
+                        <div class="avatar-stack">
+                            <img src="https://i.pravatar.cc/40?img=20" alt="">
+                            <img src="https://i.pravatar.cc/40?img=21" alt="">
+                            <img src="https://i.pravatar.cc/40?img=22" alt="">
+                            <img src="https://i.pravatar.cc/40?img=23" alt="">
+                            <img src="https://i.pravatar.cc/40?img=24" alt="">
+                        </div>
                         <span>+800 Zufriedene Kunden</span>
                     </div>
                 </div>
-                <div class="final-cta-image"><img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=350&h=400&fit=crop&crop=top" alt="ISOGRAF Berater"></div>
+                <div class="final-cta-image">
+                    <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=350&h=450&fit=crop&crop=top" alt="ISOGRAF Berater">
+                </div>
             </div>
         </div>
     </section>
@@ -419,7 +719,14 @@
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-brand">
-                    <a href="#" class="nav-logo"><svg width="32" height="20" viewBox="0 0 32 20" fill="none"><path d="M0 16L4 4L8 16" stroke="#D4A843" stroke-width="2.5"/><path d="M8 16L12 4L16 16" stroke="#D4A843" stroke-width="2.5"/><path d="M16 16L20 4L24 16" stroke="#D4A843" stroke-width="2.5"/></svg><span class="nav-logo-text">ISOGRAF</span></a>
+                    <a href="#" class="nav-logo">
+                        <svg width="36" height="20" viewBox="0 0 36 20" fill="none">
+                            <path d="M0 18L5 2L10 18" stroke="#D4A843" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M10 18L15 2L20 18" stroke="#D4A843" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M20 18L25 2L30 18" stroke="#D4A843" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <span class="nav-logo-text">ISOGRAF</span>
+                    </a>
                     <p class="footer-tagline">Qualität, die fördert. Über 1.200 erfolgreiche Projekte.</p>
                     <div class="footer-social">
                         <a href="#" aria-label="LinkedIn"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2zM4 6a2 2 0 100-4 2 2 0 000 4z"/></svg></a>
@@ -427,11 +734,37 @@
                         <a href="#" aria-label="Telefon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg></a>
                     </div>
                 </div>
-                <div class="footer-col"><h4>Leistungen</h4><ul><li><a href="#">KOMPASS-Förderung</a></li><li><a href="#">AZAV-Zulassung</a></li><li><a href="#">ZFU-Zulassung</a></li><li><a href="#">ISO 9001</a></li></ul></div>
-                <div class="footer-col"><h4>Unternehmen</h4><ul><li><a href="#">Über uns</a></li><li><a href="#">Team</a></li><li><a href="#">Karriere</a></li><li><a href="#">Kontakt</a></li></ul></div>
-                <div class="footer-col"><h4>Ressourcen</h4><ul><li><a href="#">Blog</a></li><li><a href="#">FAQ</a></li><li><a href="#">Leitfäden</a></li><li><a href="#">Support</a></li></ul></div>
+                <div class="footer-col">
+                    <h4>Leistungen</h4>
+                    <ul>
+                        <li><a href="#">KOMPASS-Förderung</a></li>
+                        <li><a href="#">AZAV-Zulassung</a></li>
+                        <li><a href="#">ZFU-Zulassung</a></li>
+                        <li><a href="#">ISO 9001</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Unternehmen</h4>
+                    <ul>
+                        <li><a href="#">Über uns</a></li>
+                        <li><a href="#">Team</a></li>
+                        <li><a href="#">Karriere</a></li>
+                        <li><a href="#">Kontakt</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Ressourcen</h4>
+                    <ul>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Leitfäden</a></li>
+                        <li><a href="#">Support</a></li>
+                    </ul>
+                </div>
             </div>
-            <div class="footer-bottom"><p>&copy; 2025 ISOGRAF. Alle Rechte vorbehalten.</p></div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 ISOGRAF. Alle Rechte vorbehalten.</p>
+            </div>
         </div>
     </footer>
 
