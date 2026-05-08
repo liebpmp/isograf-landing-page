@@ -1,152 +1,100 @@
-# Isograf Landing Page — Figma MCP → Pixel-Perfect Website
+# Isograf Landing Page — V9 Pixel-Perfect Rebuild
 
 ## Mission
-Build a pixel-perfect responsive website from the Figma design using the Figma MCP server for exact design values.
+Build a PIXEL-PERFECT website from the Figma design. Every CSS value must match exactly.
 
-## Figma File
-- **File:** `zjXTHbWMJ85arqkgO17rxa`
-- **Page:** "Isograf Landingpages (Stand 08.05.2026)"
-- **Frame:** "Isograf_UI - Main" (node-id: `75:2473`)
-- **Size:** 1441px × 14218px
+## What You Have (ALL LOCAL — no API calls needed!)
 
-## 17 Sections (in order)
-| # | Name | Node ID |
-|---|------|---------|
-| 1 | NavBar | 75:2474 |
-| 2 | Hero | 75:2492 |
-| 3 | References | 75:2557 |
-| 4 | 4 Columns | 75:2568 |
-| 5 | 4 Columns | 75:2575 |
-| 6 | Introduction | 75:2605 |
-| 7 | Certificate | 75:2660 |
-| 8 | Frame 16 | 75:2831 |
-| 9 | Growth | 75:2839 |
-| 10 | Contact Banner | 75:2941 |
-| 11 | Routes / References | 75:2960 |
-| 12 | 5 Methods | 75:3076 |
-| 13 | Comparison | 75:3176 |
-| 14 | Frame 14 | 75:3313 |
-| 15 | Routes / References | 75:3321 |
-| 16 | Contact Banner | 75:3402 |
-| 17 | Footer | 75:3424 |
+### 1. Pre-extracted CSS per section: `figma-css/*.md`
+These files contain EXACT CSS values extracted from Figma for every node:
+- Colors as hex/rgba (already converted from Figma 0-1 floats)
+- Typography: font-family, font-size, font-weight, line-height, letter-spacing
+- Layout: display, flex-direction, justify-content, align-items, gap, padding
+- Effects: box-shadow, border, border-radius
+- Text content
+- Image references (for download)
 
-## Workflow — Section by Section
+**USE THESE AS YOUR PRIMARY SOURCE.** Read each section's CSS file and translate directly to HTML+CSS.
 
-For EACH section:
-1. **Use Figma MCP tools** to read the node and ALL its children (deep). Extract:
-   - Layout mode (auto-layout → flexbox, or absolute)
-   - Exact dimensions, padding, gap, itemSpacing
-   - Fill colors (solid, gradient — copy exact stops)
-   - Typography: fontFamily, fontSize, fontWeight, lineHeight, letterSpacing
-   - Border radius, strokes, effects (shadows, blurs)
-   - Image fills → export as PNG/JPG via Figma API to `assets/`
-2. **Write the HTML + CSS** for that section using the EXACT values from Figma
-3. **Move to the next section**
+### 2. Reference screenshots: `figma-reference-images/*.png`
+PNG screenshots of each section as rendered in Figma. **Compare your output against these.**
 
-## Figma MCP Tools Available
-You have a Figma MCP server connected. Use its tools to:
-- Read node properties (layout, styles, typography)
-- Get CSS for nodes
-- Export images from nodes
-- Navigate the node tree
+### 3. Builder export for text/SVGs: `builder-export.html`
+Contains all German text content and inline SVGs. Copy text and SVGs verbatim.
 
-## Also Available: builder-export.html
-The file `builder-export.html` (248KB) is a Builder.io export of the same Figma frame. It contains:
-- All text content (German)
-- All inline SVGs (logo, icons, decorative)
-- Image URLs on Builder.io CDN
-- Approximate inline styles
+### 4. Raw Figma JSON: `figma-sections/*.json` (if you need deeper detail)
 
-Use builder-export.html as a SECONDARY reference for:
-- Text content (copy verbatim)
-- SVG code (copy verbatim)
-- Image URLs (download to assets/)
+## 17 Sections (build in this order)
 
-But use Figma MCP as PRIMARY source for all layout and styling values.
+| # | CSS File | Reference Image |
+|---|----------|-----------------|
+| 1 | `figma-css/01-navbar-css.md` | `figma-reference-images/01-navbar.png` |
+| 2 | `figma-css/02-hero-css.md` | `figma-reference-images/02-hero.png` |
+| 3 | `figma-css/03-references-css.md` | `figma-reference-images/03-references.png` |
+| 4 | `figma-css/04-columns-1-css.md` | `figma-reference-images/04-columns-1.png` |
+| 5 | `figma-css/05-columns-2-css.md` | `figma-reference-images/05-columns-2.png` |
+| 6 | `figma-css/06-introduction-css.md` | `figma-reference-images/06-introduction.png` |
+| 7 | `figma-css/07-certificate-css.md` | `figma-reference-images/07-certificate.png` |
+| 8 | `figma-css/08-frame16-css.md` | `figma-reference-images/08-frame16.png` |
+| 9 | `figma-css/09-growth-css.md` | `figma-reference-images/09-growth.png` |
+| 10 | `figma-css/10-contact-banner-css.md` | `figma-reference-images/10-contact-banner.png` |
+| 11 | `figma-css/11-routes-refs-1-css.md` | `figma-reference-images/11-routes-refs-1.png` |
+| 12 | `figma-css/12-five-methods-css.md` | `figma-reference-images/12-five-methods.png` |
+| 13 | `figma-css/13-comparison-css.md` | (not available — use CSS data) |
+| 14 | `figma-css/14-frame14-css.md` | `figma-reference-images/14-frame14.png` |
+| 15 | `figma-css/15-routes-refs-2-css.md` | `figma-reference-images/15-routes-refs-2.png` |
+| 16 | `figma-css/16-contact-banner-2-css.md` | `figma-reference-images/16-contact-banner-2.png` |
+| 17 | `figma-css/17-footer-css.md` | `figma-reference-images/17-footer.png` |
 
-## Design System (from Figma)
+## Workflow — STRICT ORDER
 
-### Fonts
+For EACH section (1-17):
+1. **Read** `figma-css/XX-name-css.md` — this has ALL the CSS values you need
+2. **Look at** `figma-reference-images/XX-name.png` — this is your visual target
+3. **Get text/SVGs from** `builder-export.html` for that section
+4. **Write HTML + CSS** using the EXACT values from the CSS file
+5. **For images**: use `mcp__figma__download_figma_images` with fileKey `zjXTHbWMJ85arqkgO17rxa` and the image node IDs listed in the CSS file
+
+After ALL sections:
+6. **Take a full-page screenshot** at 1441px width
+7. **Compare section by section** against reference images
+8. **Fix any differences** — colors, spacing, fonts, layout
+9. **Git commit and push** to origin/main for GitHub Pages
+
+## Design System
+
+### Fonts (from Figma)
 - **DM Sans** — Logo, navigation, headings (400, 500, 700)
 - **Libre Baskerville** — Italic accents in headings
 - **Roboto** — Body text (400, 500)
+Load via Google Fonts.
 
-### Colors (verify via Figma MCP)
-- Gold primary: `#E2AC26`
-- Gold light: `#FCC846`
-- Navy: `#14213D`, `#082742`
-- Text: `#000`, `#6A7282`, `#272525`
+### Key Colors (from Figma CSS files — verified)
+- Gold primary: `#e2ac26`
+- Gold light: `#fcc846`, `#fdb931`
+- Navy dark: `#14213d`, `#082742`
+- Text dark: `#000000`, `#272525`
+- Text gray: `#6a7282`
+- White: `#ffffff`
+- Light bg: `#f9f7f2`, `#faf9f6`
 
 ## Output Files
 ```
 index.html    — semantic HTML5, one <section> per Figma frame
-styles.css    — all styles with CSS custom properties
+styles.css    — all styles, CSS custom properties for colors/fonts
 script.js     — smooth scroll, sticky nav, mobile menu, FAQ accordion
-assets/       — all images from Figma
+assets/       — all images
 ```
 
-## Responsive
-- Desktop: 1441px (MUST match Figma exactly)
-- Tablet: 768px (stack where needed)
-- Mobile: 375px (single column, hamburger)
+## Page Width
+- Desktop: exactly 1441px content width (match Figma frame)
+- All sections: `max-width: 1441px; margin: 0 auto;` or full-bleed with inner container
 
 ## Critical Rules
-1. **Every CSS value must come from Figma MCP data** — no guessing
-2. At 1441px width, the result MUST be indistinguishable from the Figma design
-3. Download ALL images via Figma image export API
-4. Keep all SVGs from builder-export.html (they're already correct)
-5. Git commit and push to GitHub Pages when done
-
-## ⚠️ IMPORTANT: Use LOCAL Figma JSON files (NOT the MCP API!)
-
-The Figma API has rate limits. ALL section data has been pre-downloaded to local JSON files.
-
-**DO NOT use mcp__figma__get_figma_data!** Instead, read the local JSON files:
-
-```
-figma-sections/01-navbar.json
-figma-sections/02-hero.json
-figma-sections/03-references.json
-figma-sections/04-columns-1.json
-figma-sections/05-columns-2.json
-figma-sections/06-introduction.json
-figma-sections/07-certificate.json
-figma-sections/08-frame16.json
-figma-sections/09-growth.json
-figma-sections/10-contact-banner.json
-figma-sections/11-routes-refs-1.json
-figma-sections/12-five-methods.json
-figma-sections/13-comparison.json
-figma-sections/14-frame14.json
-figma-sections/15-routes-refs-2.json
-figma-sections/16-contact-banner-2.json
-figma-sections/17-footer.json
-```
-
-Each JSON file contains the COMPLETE Figma node tree with ALL properties:
-- `fills` → background colors, gradients
-- `style` → typography (fontFamily, fontSize, fontWeight, lineHeight, letterSpacing)  
-- `absoluteBoundingBox` → exact x, y, width, height
-- `paddingLeft/Right/Top/Bottom` → padding
-- `itemSpacing` → gap
-- `layoutMode` → HORIZONTAL/VERTICAL = flexbox direction
-- `cornerRadius` → border-radius
-- `strokes` → borders
-- `effects` → shadows, blurs
-- `characters` → text content
-
-### How to extract CSS from JSON:
-1. Read the JSON file for the section
-2. Parse the node tree recursively
-3. Map Figma properties to CSS:
-   - `fills[0].color` (r,g,b,a 0-1) → `rgb(r*255, g*255, b*255)`
-   - `layoutMode: "HORIZONTAL"` → `display: flex; flex-direction: row`
-   - `layoutMode: "VERTICAL"` → `display: flex; flex-direction: column`
-   - `primaryAxisAlignItems` → `justify-content`
-   - `counterAxisAlignItems` → `align-items`
-   - `itemSpacing` → `gap`
-   - `absoluteBoundingBox.width/height` → `width/height`
-
-### For images: Use mcp__figma__download_figma_images
-Image downloads still work. For any node with `type: "RECTANGLE"` and `fills[].type: "IMAGE"`, export via:
-- mcp__figma__download_figma_images with fileKey "zjXTHbWMJ85arqkgO17rxa" and the node IDs
+1. **EVERY CSS value comes from figma-css/*.md** — no guessing, no defaults
+2. **At 1441px, output MUST visually match** the reference images
+3. **Read the CSS file COMPLETELY** before writing each section
+4. **Text content from builder-export.html** — copy exactly (German)
+5. **SVGs from builder-export.html** — copy exactly
+6. Don't overcomplicate — clean semantic HTML, BEM-style classes
+7. One section at a time, test as you go

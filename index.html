@@ -3,122 +3,101 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="ISOGRAF - Der einfache Weg zu deiner Zertifizierung. ISO 9001, AZAV, ZFU Zulassung und mehr.">
-  <title>ISOGRAF — Zertifizierungsexperten | ISO 9001, AZAV, ZFU</title>
+  <title>ISOGRAF — Unternehmensberatung für messbares Wachstum</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,700;1,9..40,400;1,9..40,500;1,9..40,700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Roboto:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 29 18'><path fill='%23E2AC26' fill-rule='evenodd' d='M0 0h.023L14.214 17.874H0V0zm23.089 7.21L28.812 14.42V0l-5.723 7.21zM14.658 0h-.049l-5.94 7.482 8.25 10.392h11.893v-.047L14.658 0z'/></svg>">
 </head>
 <body>
 
-  <!-- ========== SECTION 01: NAVBAR ========== -->
-  <nav class="navbar" id="navbar">
+  <!-- Section 1: NavBar -->
+  <header class="navbar" id="navbar">
     <div class="navbar__inner">
-      <a href="#" class="navbar__logo" aria-label="ISOGRAF Home">
-        <svg width="29" height="18" viewBox="0 0 29 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <a href="#" class="navbar__logo">
+        <svg class="navbar__logo-icon" width="29" height="18" viewBox="0 0 29 18" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path fill-rule="evenodd" clip-rule="evenodd" d="M0.0232014 0H0V17.8742H14.2138L0.0232014 0ZM23.0888 7.21028L28.8121 14.4199V0L23.0888 7.21028ZM14.6584 0H14.6095L8.66865 7.48242L16.919 17.8742H28.8115V17.8275L14.6578 0H14.6584Z" fill="#E2AC26"/>
         </svg>
         <span class="navbar__logo-text">ISOGRAF</span>
       </a>
-      <div class="navbar__container" id="navContainer">
+      <nav class="navbar__nav">
         <a href="#leistungen" class="navbar__link">Leistungen</a>
         <a href="#ueber-uns" class="navbar__link">Über uns</a>
         <a href="#ergebnisse" class="navbar__link navbar__link--active">Ergebnisse</a>
         <a href="#ressourcen" class="navbar__link">Ressourcen</a>
         <a href="#karriere" class="navbar__link">Karriere</a>
-        <a href="#kontakt" class="navbar__btn">Jetzt starten</a>
+        <a href="#kontakt" class="navbar__cta">Jetzt starten</a>
+      </nav>
+      <div class="navbar__hamburger" aria-label="Menü öffnen">
+        <span></span><span></span><span></span>
       </div>
-      <button class="navbar__hamburger" id="navHamburger" aria-label="Menü öffnen">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
     </div>
-  </nav>
+  </header>
 
-  <!-- ========== SECTION 02: HERO ========== -->
+  <!-- Section 2: Hero -->
   <section class="hero" id="hero">
-    <!-- Background layers -->
     <div class="hero__bg">
-      <img src="assets/hero-bg.png" alt="" class="hero__bg-img" loading="eager">
-      <div class="hero__bg-gradient-lr"></div>
-      <div class="hero__bg-gradient-bt"></div>
+      <img src="assets/assets/hero-bg.png" alt="" class="hero__bg-img">
+      <div class="hero__bg-gradient"></div>
     </div>
-    <!-- Decorative dashboard images -->
-    <div class="hero__dashboard-blur">
-      <img src="assets/hero-dashboard.png" alt="" loading="eager">
-    </div>
-    <div class="hero__dashboard">
-      <img src="assets/hero-dashboard.png" alt="" loading="eager">
-    </div>
-    <!-- Bottom fade -->
-    <div class="hero__bottom-fade"></div>
-
-    <!-- Star rating pill -->
-    <div class="hero__rating">
-      <div class="hero__stars">
-        <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.8 1.75a.46.46 0 0 1 .73 0l1.76 3.57a3.06 3.06 0 0 0 2.22 1.67l3.94.58a.46.46 0 0 1 .26.78l-2.85 2.78a3.06 3.06 0 0 0-.88 2.71l.67 3.93a.46.46 0 0 1-.67.48l-3.53-1.85a3.06 3.06 0 0 0-2.85 0l-3.53 1.85a.46.46 0 0 1-.67-.48l.67-3.93a3.06 3.06 0 0 0-.88-2.71L.65 7.48a.46.46 0 0 1 .26-.78l3.94-.58a3.06 3.06 0 0 0 2.22-1.67L8.8 1.75Z" fill="#FCC846" stroke="#FCC846" stroke-width="1.53" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.8 1.75a.46.46 0 0 1 .73 0l1.76 3.57a3.06 3.06 0 0 0 2.22 1.67l3.94.58a.46.46 0 0 1 .26.78l-2.85 2.78a3.06 3.06 0 0 0-.88 2.71l.67 3.93a.46.46 0 0 1-.67.48l-3.53-1.85a3.06 3.06 0 0 0-2.85 0l-3.53 1.85a.46.46 0 0 1-.67-.48l.67-3.93a3.06 3.06 0 0 0-.88-2.71L.65 7.48a.46.46 0 0 1 .26-.78l3.94-.58a3.06 3.06 0 0 0 2.22-1.67L8.8 1.75Z" fill="#FCC846" stroke="#FCC846" stroke-width="1.53" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.8 1.75a.46.46 0 0 1 .73 0l1.76 3.57a3.06 3.06 0 0 0 2.22 1.67l3.94.58a.46.46 0 0 1 .26.78l-2.85 2.78a3.06 3.06 0 0 0-.88 2.71l.67 3.93a.46.46 0 0 1-.67.48l-3.53-1.85a3.06 3.06 0 0 0-2.85 0l-3.53 1.85a.46.46 0 0 1-.67-.48l.67-3.93a3.06 3.06 0 0 0-.88-2.71L.65 7.48a.46.46 0 0 1 .26-.78l3.94-.58a3.06 3.06 0 0 0 2.22-1.67L8.8 1.75Z" fill="#FCC846" stroke="#FCC846" stroke-width="1.53" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.8 1.75a.46.46 0 0 1 .73 0l1.76 3.57a3.06 3.06 0 0 0 2.22 1.67l3.94.58a.46.46 0 0 1 .26.78l-2.85 2.78a3.06 3.06 0 0 0-.88 2.71l.67 3.93a.46.46 0 0 1-.67.48l-3.53-1.85a3.06 3.06 0 0 0-2.85 0l-3.53 1.85a.46.46 0 0 1-.67-.48l.67-3.93a3.06 3.06 0 0 0-.88-2.71L.65 7.48a.46.46 0 0 1 .26-.78l3.94-.58a3.06 3.06 0 0 0 2.22-1.67L8.8 1.75Z" fill="#FCC846" stroke="#FCC846" stroke-width="1.53" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.8 1.75a.46.46 0 0 1 .73 0l1.76 3.57a3.06 3.06 0 0 0 2.22 1.67l3.94.58a.46.46 0 0 1 .26.78l-2.85 2.78a3.06 3.06 0 0 0-.88 2.71l.67 3.93a.46.46 0 0 1-.67.48l-3.53-1.85a3.06 3.06 0 0 0-2.85 0l-3.53 1.85a.46.46 0 0 1-.67-.48l.67-3.93a3.06 3.06 0 0 0-.88-2.71L.65 7.48a.46.46 0 0 1 .26-.78l3.94-.58a3.06 3.06 0 0 0 2.22-1.67L8.8 1.75Z" fill="url(#starPartial)"/><defs><linearGradient id="starPartial" x1="1.53" y1="8.81" x2="16.8" y2="8.81" gradientUnits="userSpaceOnUse"><stop stop-color="#FCC846"/><stop offset=".702" stop-color="#FCC846"/><stop offset=".736" stop-color="#FDECC0"/></linearGradient></defs></svg>
-      </div>
-      <span class="hero__rating-text">4,9/5,0 - Deutschlands bestbewertete Zertifizierungsexperten</span>
-    </div>
-
-    <!-- Main content -->
-    <div class="hero__content">
-      <div class="hero__text-group">
-        <h1 class="hero__heading">
-          <span class="hero__heading-dm">Der einfache Weg </span><br>
-          <span class="hero__heading-lb">zu deiner Zertifizierung</span>
-        </h1>
+    <div class="hero__inner">
+      <div class="hero__content">
+        <div class="hero__rating">
+          <div class="hero__stars">
+            <svg width="18" height="18" viewBox="0 0 19 19" fill="none"><path d="M8.8 1.75C8.83 1.68 8.89 1.63 8.95 1.59C9.01 1.55 9.09 1.53 9.16 1.53C9.24 1.53 9.31 1.55 9.38 1.59C9.44 1.63 9.49 1.68 9.53 1.75L11.29 5.33C11.41 5.56 11.58 5.76 11.79 5.92C12 6.07 12.25 6.17 12.51 6.21L16.45 6.79C16.53 6.8 16.6 6.83 16.65 6.88C16.71 6.93 16.76 6.99 16.78 7.06C16.8 7.14 16.8 7.21 16.79 7.29C16.77 7.36 16.73 7.43 16.68 7.48L13.82 10.26C13.64 10.44 13.49 10.67 13.41 10.92C13.33 11.17 13.31 11.43 13.36 11.69L14.03 15.62C14.04 15.69 14.04 15.77 14.01 15.84C13.98 15.91 13.93 15.97 13.87 16.01C13.81 16.06 13.74 16.08 13.66 16.09C13.58 16.09 13.51 16.08 13.44 16.04L9.92 14.19C9.68 14.07 9.42 14 9.16 14C8.9 14 8.64 14.07 8.41 14.19L4.88 16.04C4.82 16.08 4.74 16.09 4.67 16.09C4.59 16.08 4.52 16.06 4.46 16.01C4.4 15.97 4.35 15.91 4.32 15.84C4.29 15.77 4.28 15.69 4.3 15.62L4.97 11.69C5.01 11.43 4.99 11.17 4.91 10.92C4.83 10.67 4.69 10.44 4.5 10.26L1.65 7.48C1.59 7.43 1.56 7.36 1.54 7.29C1.52 7.21 1.52 7.14 1.55 7.06C1.57 6.99 1.61 6.93 1.67 6.88C1.73 6.83 1.8 6.8 1.87 6.79L5.82 6.21C6.08 6.17 6.32 6.07 6.54 5.92C6.75 5.76 6.92 5.56 7.04 5.33L8.8 1.75Z" fill="#FCC846" stroke="#FCC846" stroke-width="1.53"/></svg>
+            <svg width="18" height="18" viewBox="0 0 19 19" fill="none"><path d="M8.8 1.75C8.83 1.68 8.89 1.63 8.95 1.59C9.01 1.55 9.09 1.53 9.16 1.53C9.24 1.53 9.31 1.55 9.38 1.59C9.44 1.63 9.49 1.68 9.53 1.75L11.29 5.33C11.41 5.56 11.58 5.76 11.79 5.92C12 6.07 12.25 6.17 12.51 6.21L16.45 6.79C16.53 6.8 16.6 6.83 16.65 6.88C16.71 6.93 16.76 6.99 16.78 7.06C16.8 7.14 16.8 7.21 16.79 7.29C16.77 7.36 16.73 7.43 16.68 7.48L13.82 10.26C13.64 10.44 13.49 10.67 13.41 10.92C13.33 11.17 13.31 11.43 13.36 11.69L14.03 15.62C14.04 15.69 14.04 15.77 14.01 15.84C13.98 15.91 13.93 15.97 13.87 16.01C13.81 16.06 13.74 16.08 13.66 16.09C13.58 16.09 13.51 16.08 13.44 16.04L9.92 14.19C9.68 14.07 9.42 14 9.16 14C8.9 14 8.64 14.07 8.41 14.19L4.88 16.04C4.82 16.08 4.74 16.09 4.67 16.09C4.59 16.08 4.52 16.06 4.46 16.01C4.4 15.97 4.35 15.91 4.32 15.84C4.29 15.77 4.28 15.69 4.3 15.62L4.97 11.69C5.01 11.43 4.99 11.17 4.91 10.92C4.83 10.67 4.69 10.44 4.5 10.26L1.65 7.48C1.59 7.43 1.56 7.36 1.54 7.29C1.52 7.21 1.52 7.14 1.55 7.06C1.57 6.99 1.61 6.93 1.67 6.88C1.73 6.83 1.8 6.8 1.87 6.79L5.82 6.21C6.08 6.17 6.32 6.07 6.54 5.92C6.75 5.76 6.92 5.56 7.04 5.33L8.8 1.75Z" fill="#FCC846" stroke="#FCC846" stroke-width="1.53"/></svg>
+            <svg width="18" height="18" viewBox="0 0 19 19" fill="none"><path d="M8.8 1.75C8.83 1.68 8.89 1.63 8.95 1.59C9.01 1.55 9.09 1.53 9.16 1.53C9.24 1.53 9.31 1.55 9.38 1.59C9.44 1.63 9.49 1.68 9.53 1.75L11.29 5.33C11.41 5.56 11.58 5.76 11.79 5.92C12 6.07 12.25 6.17 12.51 6.21L16.45 6.79C16.53 6.8 16.6 6.83 16.65 6.88C16.71 6.93 16.76 6.99 16.78 7.06C16.8 7.14 16.8 7.21 16.79 7.29C16.77 7.36 16.73 7.43 16.68 7.48L13.82 10.26C13.64 10.44 13.49 10.67 13.41 10.92C13.33 11.17 13.31 11.43 13.36 11.69L14.03 15.62C14.04 15.69 14.04 15.77 14.01 15.84C13.98 15.91 13.93 15.97 13.87 16.01C13.81 16.06 13.74 16.08 13.66 16.09C13.58 16.09 13.51 16.08 13.44 16.04L9.92 14.19C9.68 14.07 9.42 14 9.16 14C8.9 14 8.64 14.07 8.41 14.19L4.88 16.04C4.82 16.08 4.74 16.09 4.67 16.09C4.59 16.08 4.52 16.06 4.46 16.01C4.4 15.97 4.35 15.91 4.32 15.84C4.29 15.77 4.28 15.69 4.3 15.62L4.97 11.69C5.01 11.43 4.99 11.17 4.91 10.92C4.83 10.67 4.69 10.44 4.5 10.26L1.65 7.48C1.59 7.43 1.56 7.36 1.54 7.29C1.52 7.21 1.52 7.14 1.55 7.06C1.57 6.99 1.61 6.93 1.67 6.88C1.73 6.83 1.8 6.8 1.87 6.79L5.82 6.21C6.08 6.17 6.32 6.07 6.54 5.92C6.75 5.76 6.92 5.56 7.04 5.33L8.8 1.75Z" fill="#FCC846" stroke="#FCC846" stroke-width="1.53"/></svg>
+            <svg width="18" height="18" viewBox="0 0 19 19" fill="none"><path d="M8.8 1.75C8.83 1.68 8.89 1.63 8.95 1.59C9.01 1.55 9.09 1.53 9.16 1.53C9.24 1.53 9.31 1.55 9.38 1.59C9.44 1.63 9.49 1.68 9.53 1.75L11.29 5.33C11.41 5.56 11.58 5.76 11.79 5.92C12 6.07 12.25 6.17 12.51 6.21L16.45 6.79C16.53 6.8 16.6 6.83 16.65 6.88C16.71 6.93 16.76 6.99 16.78 7.06C16.8 7.14 16.8 7.21 16.79 7.29C16.77 7.36 16.73 7.43 16.68 7.48L13.82 10.26C13.64 10.44 13.49 10.67 13.41 10.92C13.33 11.17 13.31 11.43 13.36 11.69L14.03 15.62C14.04 15.69 14.04 15.77 14.01 15.84C13.98 15.91 13.93 15.97 13.87 16.01C13.81 16.06 13.74 16.08 13.66 16.09C13.58 16.09 13.51 16.08 13.44 16.04L9.92 14.19C9.68 14.07 9.42 14 9.16 14C8.9 14 8.64 14.07 8.41 14.19L4.88 16.04C4.82 16.08 4.74 16.09 4.67 16.09C4.59 16.08 4.52 16.06 4.46 16.01C4.4 15.97 4.35 15.91 4.32 15.84C4.29 15.77 4.28 15.69 4.3 15.62L4.97 11.69C5.01 11.43 4.99 11.17 4.91 10.92C4.83 10.67 4.69 10.44 4.5 10.26L1.65 7.48C1.59 7.43 1.56 7.36 1.54 7.29C1.52 7.21 1.52 7.14 1.55 7.06C1.57 6.99 1.61 6.93 1.67 6.88C1.73 6.83 1.8 6.8 1.87 6.79L5.82 6.21C6.08 6.17 6.32 6.07 6.54 5.92C6.75 5.76 6.92 5.56 7.04 5.33L8.8 1.75Z" fill="#FCC846" stroke="#FCC846" stroke-width="1.53"/></svg>
+            <svg width="18" height="18" viewBox="0 0 19 19" fill="none"><path d="M8.8 1.75C8.83 1.68 8.89 1.63 8.95 1.59C9.01 1.55 9.09 1.53 9.16 1.53C9.24 1.53 9.31 1.55 9.38 1.59C9.44 1.63 9.49 1.68 9.53 1.75L11.29 5.33C11.41 5.56 11.58 5.76 11.79 5.92C12 6.07 12.25 6.17 12.51 6.21L16.45 6.79C16.53 6.8 16.6 6.83 16.65 6.88C16.71 6.93 16.76 6.99 16.78 7.06C16.8 7.14 16.8 7.21 16.79 7.29C16.77 7.36 16.73 7.43 16.68 7.48L13.82 10.26C13.64 10.44 13.49 10.67 13.41 10.92C13.33 11.17 13.31 11.43 13.36 11.69L14.03 15.62C14.04 15.69 14.04 15.77 14.01 15.84C13.98 15.91 13.93 15.97 13.87 16.01C13.81 16.06 13.74 16.08 13.66 16.09C13.58 16.09 13.51 16.08 13.44 16.04L9.92 14.19C9.68 14.07 9.42 14 9.16 14C8.9 14 8.64 14.07 8.41 14.19L4.88 16.04C4.82 16.08 4.74 16.09 4.67 16.09C4.59 16.08 4.52 16.06 4.46 16.01C4.4 15.97 4.35 15.91 4.32 15.84C4.29 15.77 4.28 15.69 4.3 15.62L4.97 11.69C5.01 11.43 4.99 11.17 4.91 10.92C4.83 10.67 4.69 10.44 4.5 10.26L1.65 7.48C1.59 7.43 1.56 7.36 1.54 7.29C1.52 7.21 1.52 7.14 1.55 7.06C1.57 6.99 1.61 6.93 1.67 6.88C1.73 6.83 1.8 6.8 1.87 6.79L5.82 6.21C6.08 6.17 6.32 6.07 6.54 5.92C6.75 5.76 6.92 5.56 7.04 5.33L8.8 1.75Z" fill="url(#starGrad)"/><defs><linearGradient id="starGrad" x1="1.5" y1="8.8" x2="16.8" y2="8.8" gradientUnits="userSpaceOnUse"><stop stop-color="#FCC846"/><stop offset="0.7" stop-color="#FCC846"/><stop offset="0.74" stop-color="#FDECC0"/></linearGradient></defs></svg>
+          </div>
+          <span class="hero__rating-text">4,9/5,0 - Deutschlands bestbewertete Zertifizierungsexperten</span>
+        </div>
+        <h1 class="hero__heading">Der einfache Weg<br><em>zu deiner Zertifizierung</em></h1>
         <p class="hero__subheading">Wir strukturieren, optimieren und zertifizieren Ihr Unternehmen – mit der Erfahrung aus über 1.000 Projekten.</p>
-      </div>
-
-      <div class="hero__features-cta">
-        <div class="hero__features">
-          <div class="hero__pill">
-            <span class="hero__pill-check">
-              <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10 3L4.5 8.5L2 6" stroke="#000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </span>
-            <span class="hero__pill-text">Mehr Umsatz. Mehr Vertrauen. Mehr Wachstum.</span>
+        <div class="hero__bullets">
+          <div class="hero__bullet">
+            <span class="hero__bullet-icon"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M10 3L4.5 8.5L2 6" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            <span class="hero__bullet-text">Mehr Umsatz. Mehr Vertrauen. Mehr Wachstum.</span>
           </div>
-          <div class="hero__pill">
-            <span class="hero__pill-check">
-              <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10 3L4.5 8.5L2 6" stroke="#000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </span>
-            <span class="hero__pill-text">Alles mit staatlicher Unterstützung.</span>
+          <div class="hero__bullet">
+            <span class="hero__bullet-icon"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M10 3L4.5 8.5L2 6" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            <span class="hero__bullet-text">Alles mit staatlicher Unterstützung.</span>
           </div>
-          <div class="hero__pill">
-            <span class="hero__pill-check">
-              <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10 3L4.5 8.5L2 6" stroke="#000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </span>
-            <span class="hero__pill-text">100% Erfolgsgarantie.</span>
+          <div class="hero__bullet">
+            <span class="hero__bullet-icon"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M10 3L4.5 8.5L2 6" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            <span class="hero__bullet-text">100% Erfolgsgarantie.</span>
           </div>
         </div>
-
         <a href="#kontakt" class="hero__cta">
-          <span class="hero__cta-primary">Jetzt kostenloses Erstgespräch sichern</span>
-          <span class="hero__cta-secondary">und passende Zertifizierung finden</span>
+          <span class="hero__cta-main">Jetzt kostenloses Erstgespräch sichern</span>
+          <span class="hero__cta-sub">und passende Zertifizierung finden</span>
         </a>
+        <div class="hero__bekannt">
+          <span class="hero__bekannt-label">Bekannt aus</span>
+          <div class="hero__bekannt-logos">
+            <img src="assets/assets/logo-zdf.png" alt="ZDF" class="hero__bekannt-logo hero__bekannt-logo--zdf">
+            <img src="assets/assets/logo-ard.png" alt="ARD" class="hero__bekannt-logo hero__bekannt-logo--ard">
+            <img src="assets/assets/logo-spiegel.svg" alt="Der Spiegel" class="hero__bekannt-logo hero__bekannt-logo--spiegel">
+          </div>
+        </div>
       </div>
-
-      <div class="hero__bekannt">
-        <span class="hero__bekannt-label">Bekannt aus</span>
-        <div class="hero__bekannt-logos">
-          <img src="assets/logo-zdf-1.png" alt="ZDF" class="hero__bekannt-logo" style="height: 35px; width: auto;">
-          <img src="assets/logo-zdf-2.png" alt="ZDF" class="hero__bekannt-logo" style="height: 34px; width: auto;">
-          <img src="assets/logo-spiegel.png" alt="Der Spiegel" class="hero__bekannt-logo" style="height: 35px; width: auto;">
+      <div class="hero__awards">
+        <span class="hero__awards-label">Ausgezeichnet von:</span>
+        <div class="hero__awards-badges">
+          <img src="assets/assets/award-badge.png" alt="Auszeichnung" class="hero__award-badge">
+          <img src="assets/assets/award-badge.png" alt="Auszeichnung" class="hero__award-badge">
+          <img src="assets/assets/award-badge.png" alt="Auszeichnung" class="hero__award-badge">
+          <img src="assets/assets/award-badge.png" alt="Auszeichnung" class="hero__award-badge">
+          <img src="assets/assets/award-badge.png" alt="Auszeichnung" class="hero__award-badge">
+          <img src="assets/assets/award-badge.png" alt="Auszeichnung" class="hero__award-badge">
+          <img src="assets/assets/award-badge.png" alt="Auszeichnung" class="hero__award-badge">
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ========== SECTION 03: REFERENCES (Stats) ========== -->
-  <section class="references" id="references">
+  <!-- Section 3: References / Stats -->
+  <section class="references" id="referenzen">
     <div class="references__inner">
       <div class="references__card">
         <span class="references__number">+800</span>
@@ -135,759 +114,586 @@
     </div>
   </section>
 
-  <!-- ========== SECTION 04: 4 COLUMNS (Video Placeholder) ========== -->
-  <section class="columns-1" id="leistungen">
-    <div class="columns-1__inner">
-      <div class="columns-1__video-wrapper">
-        <svg class="columns-1__video-thumb" width="1209" height="738" viewBox="0 0 1209 738" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <rect width="1209" height="738" rx="35" fill="#1a1a2e"/>
-          <circle cx="605" cy="369" r="90" fill="white" fill-opacity="0.23"/>
-          <path d="M635.5 366.67C638.833 368.594 638.833 373.406 635.5 375.33L593.5 399.579C590.167 401.503 586 399.098 586 395.249V346.751C586 342.902 590.167 340.497 593.5 342.421L635.5 366.67Z" fill="white" fill-opacity="0.65"/>
-        </svg>
+  <!-- Section 4: Columns 1 (Background image with play button overlay) -->
+  <section class="columns1" id="leistungen">
+    <div class="columns1__inner">
+      <div class="columns1__image-wrapper">
+        <img src="assets/assets/columns1-bg.png" alt="ISOGRAF Leistungen" class="columns1__bg-image">
       </div>
     </div>
   </section>
 
-  <!-- ========== SECTION 05: 4 COLUMNS (Service Cards) ========== -->
-  <section class="columns-2" id="zertifizierungen">
-    <div class="columns-2__inner">
-      <div class="columns-2__grid">
-        <!-- Card 01: ISO 9001 -->
-        <div class="columns-2__card">
-          <div class="columns-2__card-image">
-            <img src="assets/deco-column-2.png" alt="Klassische Saeule" loading="lazy">
-          </div>
-          <div class="columns-2__card-content">
-            <span class="columns-2__card-num">01.</span>
-            <h3 class="columns-2__card-title">ISO 9001</h3>
-            <p class="columns-2__card-text">Standard für internationales Vertrauen – zeigt Ihre Professionalität, öffnet Türen zu öffentlichen Ausschreibungen, B2B-Partnerschaften und stärkt das Markenimage.</p>
-          </div>
+  <!-- Section 5: Columns 2 (4 service cards) -->
+  <section class="columns2">
+    <div class="columns2__grid">
+      <div class="columns2__card">
+        <div class="columns2__card-bg">
+          <img src="assets/assets/deco-column.png" alt="" class="columns2__card-deco">
         </div>
-        <!-- Card 02: AZAV -->
-        <div class="columns-2__card">
-          <div class="columns-2__card-image">
-            <img src="assets/deco-column-1.png" alt="Klassische Saeule" loading="lazy">
-          </div>
-          <div class="columns-2__card-content">
-            <span class="columns-2__card-num">02.</span>
-            <h3 class="columns-2__card-title">AZAV</h3>
-            <p class="columns-2__card-text">ISOGRAF begleitet Sie als erfahrener Berater und Coach persönlich durch den gesamten Prozess – von der ersten Analyse bis zur finalen erfolgreichen Zertifizierung.</p>
-          </div>
+        <div class="columns2__card-content">
+          <span class="columns2__card-number">01.</span>
+          <span class="columns2__card-title">ISO 9001</span>
+          <p class="columns2__card-text">Standard für internationales Vertrauen – zeigt Ihre Professionalität, öffnet Türen zu öffentlichen Ausschreibungen, B2B-Partnerschaften und stärkt das Markenimage.</p>
         </div>
-        <!-- Card 03: ZFU Zulassung -->
-        <div class="columns-2__card">
-          <div class="columns-2__card-image">
-            <img src="assets/deco-column-4.png" alt="Klassische Saeule" loading="lazy">
-          </div>
-          <div class="columns-2__card-content">
-            <span class="columns-2__card-num">03.</span>
-            <h3 class="columns-2__card-title">ZFU Zulassung</h3>
-            <p class="columns-2__card-text">Wir führen Sie schnell und unproblematisch durch den Vorgang der Anerkennung als staatlich zugelassener Fernunterricht.</p>
-          </div>
+      </div>
+      <div class="columns2__card">
+        <div class="columns2__card-bg">
+          <img src="assets/assets/deco-column.png" alt="" class="columns2__card-deco">
         </div>
-        <!-- Card 04: Listung -->
-        <div class="columns-2__card">
-          <div class="columns-2__card-image">
-            <img src="assets/deco-column-3.png" alt="Klassische Saeule" loading="lazy">
-          </div>
-          <div class="columns-2__card-content">
-            <span class="columns-2__card-num">04.</span>
-            <h3 class="columns-2__card-title">Listung</h3>
-            <p class="columns-2__card-text">Es gibt diverse Zertifizierungen, die Ihnen den Zugang zu Fördermitteln oder Kunden ermöglichen. Wir zeigen Ihnen auf, welche für Ihren konkreten Fall zutreffend sind.</p>
-          </div>
+        <div class="columns2__card-content">
+          <span class="columns2__card-number">02.</span>
+          <span class="columns2__card-title">AZAV</span>
+          <p class="columns2__card-text">ISOGRAF begleitet Sie als erfahrener Berater und Coach persönlich durch den gesamten Prozess – von der ersten Analyse bis zur finalen erfolgreichen Zertifizierung.</p>
+        </div>
+      </div>
+      <div class="columns2__card">
+        <div class="columns2__card-bg">
+          <img src="assets/assets/deco-column.png" alt="" class="columns2__card-deco">
+        </div>
+        <div class="columns2__card-content">
+          <span class="columns2__card-number">03.</span>
+          <span class="columns2__card-title">ZFU Zulassung</span>
+          <p class="columns2__card-text">Wir führen Sie schnell und unproblematisch durch den Vorgang der Anerkennung als staatlich zugelassener Fernunterricht.</p>
+        </div>
+      </div>
+      <div class="columns2__card">
+        <div class="columns2__card-bg">
+          <img src="assets/assets/deco-column.png" alt="" class="columns2__card-deco">
+        </div>
+        <div class="columns2__card-content">
+          <span class="columns2__card-number">04.</span>
+          <span class="columns2__card-title">Listung</span>
+          <p class="columns2__card-text">Es gibt diverse Zertifizierungen, die Ihnen den Zugang zu Fördermitteln oder Kunden ermöglichen. Wir zeigen Ihnen auf, welche für Ihren konkreten Fall zutreffend sind.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ========== SECTION 06: INTRODUCTION (Warum zum Isograf?) ========== -->
+  <!-- Section 6: Introduction -->
   <section class="introduction" id="ueber-uns">
     <div class="introduction__inner">
-      <div class="introduction__heading">
-        <h2 class="introduction__title">
-          <span class="introduction__title-dm">Warum zum </span><span class="introduction__title-lb">Isograf?</span>
-        </h2>
+      <div class="introduction__header">
+        <h2 class="introduction__title">Warum zum Isograf?</h2>
         <p class="introduction__subtitle">Viele Unternehmen befassen sich viel zu intensiv und zu umfangreich mit der Dokumentation, die für eine Zertifizierung notwendig ist. Mit unserer Erfahrung, unserem Fachwissen und modernen Lösungen, helfen wir Ihnen dieses Thema schnell und unkompliziert zu lösen</p>
       </div>
-
       <div class="introduction__content">
-        <div class="introduction__text-block">
-          <div class="introduction__text-inner">
-            <h3 class="introduction__quote">
-              <span class="introduction__quote-bold">Denn wer mit ISOGRAF arbeitet, hebt sich automatisch von der Masse ab: </span><span class="introduction__quote-italic">Viele Erfahrung, schnelle Bearbeitung und unkomplizierte Prozesse.</span>
-            </h3>
-            <p class="introduction__desc">Für alle, die ihre Leistungen leichter verkaufen und durch staatliche Förderung skalieren wollen – vom bisherigen Selbstzahler-Modell zum echten Wachstumspfad.</p>
-            <ul class="introduction__list">
-              <li class="introduction__list-item">
-                <span class="introduction__bullet"></span>
-                <span><strong>kleine bis mittelständige Unternehmen </strong>(Produktion, Handwerk, Gastronomie)</span>
-              </li>
-              <li class="introduction__list-item">
-                <span class="introduction__bullet"></span>
-                <strong>Bildungsinstitute und Coaches</strong>
-              </li>
-              <li class="introduction__list-item">
-                <span class="introduction__bullet"></span>
-                <strong>Berater und Dienstleister</strong>
-              </li>
-            </ul>
+        <div class="introduction__text-side">
+          <h3 class="introduction__content-title">Denn wer mit ISOGRAF arbeitet, hebt sich automatisch von der Masse ab: Viele Erfahrung, schnelle Bearbeitung und unkomplizierte Prozesse.</h3>
+          <p class="introduction__content-text">Für alle, die ihre Leistungen leichter verkaufen und durch staatliche Förderung skalieren wollen – vom bisherigen Selbstzahler-Modell zum echten Wachstumspfad.</p>
+          <ul class="introduction__list">
+            <li class="introduction__list-item">
+              <span class="introduction__list-icon"></span>
+              <span>kleine bis mittelständige Unternehmen (Produktion, Handwerk, Gastronomie)</span>
+            </li>
+            <li class="introduction__list-item">
+              <span class="introduction__list-icon"></span>
+              <span>Bildungsinstitute und Coaches</span>
+            </li>
+            <li class="introduction__list-item">
+              <span class="introduction__list-icon"></span>
+              <span>Berater und Dienstleister</span>
+            </li>
+          </ul>
+        </div>
+        <div class="introduction__image-side">
+          <img src="assets/assets/intro-portrait.png" alt="ISOGRAF Berater" class="introduction__portrait">
+          <div class="introduction__label-overlay">
+            <span>Steuerarchitekt, Steuerberater<br>und erfahrener Unternehmer</span>
           </div>
         </div>
-        <div class="introduction__image-block">
-          <img src="assets/isograf-probleme-blur-sm.png" alt="" class="introduction__image-blur" loading="lazy">
-          <img src="assets/isograf-probleme-sm.png" alt="ISOGRAF Dashboard" class="introduction__image" loading="lazy">
-        </div>
       </div>
-
-      <a href="#kontakt" class="introduction__cta">Jetzt loslegen</a>
-
-      <div class="introduction__clients">
-        <img src="assets/logo-clients-steuern.png" alt="Kunden" class="introduction__clients-logo">
-        <span class="introduction__clients-text"><strong>+800</strong> Zufriedene Kunden</span>
+      <div class="introduction__cta-row">
+        <a href="#kontakt" class="introduction__cta-btn">Jetzt loslegen</a>
+        <div class="introduction__clients">
+          <img src="assets/assets/logo-clients-steuern.png" alt="Kunden" class="introduction__clients-logo">
+          <span class="introduction__clients-text">+800 Zufriedene Kunden</span>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- ========== SECTION 07: CERTIFICATE (Done-4-You Zertifizierung) ========== -->
-  <section class="certificate" id="certificate">
+  <!-- Section 7: Certificate Cards -->
+  <section class="certificate" id="zertifizierung">
     <div class="certificate__inner">
-      <div class="certificate__heading">
-        <h2 class="certificate__title">
-          <span class="certificate__title-dm">Done-4-You </span><span class="certificate__title-lb">Zertifizierung</span>
-        </h2>
+      <div class="certificate__header">
         <p class="certificate__subtitle">Wählen Sie die passende Zertifizierung für Ihr Business</p>
+        <h2 class="certificate__title">Done-4-You Zertifizierung</h2>
       </div>
-
       <div class="certificate__cards">
-        <!-- KOMPASS Card (left, blurred) -->
-        <div class="certificate__card certificate__card--blurred">
+        <div class="certificate__card">
           <div class="certificate__card-image">
-            <img src="assets/card-kompass.png" alt="KOMPASS" loading="lazy">
+            <img src="assets/assets/card-kompass.png" alt="KOMPASS" class="certificate__card-img">
           </div>
           <div class="certificate__card-body">
-            <h3 class="certificate__card-title">KOMPASS</h3>
+            <h3 class="certificate__card-name">KOMPASS</h3>
             <p class="certificate__card-desc">Förderung für Selbstständige</p>
-            <span class="certificate__card-badge">Bis zu 90% Zuschuss</span>
-            <ul class="certificate__card-list">
-              <li>
-                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M13.3334 4L6 11.3334L2.66666 8" stroke="white" stroke-width="1.33334" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                Coaching für 5.000 € &rarr; Kunde zahlt nur 500 €
-              </li>
-              <li>
-                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M13.3334 4L6 11.3334L2.66666 8" stroke="white" stroke-width="1.33334" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                Staat übernimmt bis zu 4.500 €
-              </li>
-              <li>
-                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M13.3334 4L6 11.3334L2.66666 8" stroke="white" stroke-width="1.33334" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                Sofort mehr Abschlüsse
-              </li>
-              <li>
-                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M13.3334 4L6 11.3334L2.66666 8" stroke="white" stroke-width="1.33334" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                Komplette Prozessbegleitung
-              </li>
+            <div class="certificate__card-badge">Bis zu 90% Zuschuss</div>
+            <ul class="certificate__card-features">
+              <li>Coaching für 5.000 € → Kunde zahlt nur 500 €</li>
+              <li>Staat übernimmt bis zu 4.500 €</li>
+              <li>Sofort mehr Abschlüsse</li>
+              <li>Komplette Prozessbegleitung</li>
             </ul>
-            <a href="#kontakt" class="certificate__card-btn">
-              Mehr erfahren
-              <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2.91666 7H11.0834" stroke="white" stroke-width="1.16666" stroke-linecap="round" stroke-linejoin="round"/><path d="M7 2.9165L11.0834 6.99984L7 11.0832" stroke="white" stroke-width="1.16666" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </a>
+            <a href="#" class="certificate__card-btn">Mehr erfahren <span class="certificate__card-arrow">→</span></a>
           </div>
         </div>
-
-        <!-- AZAV Card (left-center, blurred) -->
-        <div class="certificate__card certificate__card--blurred">
+        <div class="certificate__card">
           <div class="certificate__card-image">
-            <img src="assets/card-service-2.png" alt="AZAV" loading="lazy">
+            <img src="assets/assets/card-service-2.png" alt="AZAV" class="certificate__card-img">
           </div>
           <div class="certificate__card-body">
-            <h3 class="certificate__card-title">AZAV</h3>
+            <h3 class="certificate__card-name">AZAV</h3>
             <p class="certificate__card-desc">Zugang zum Fördermarkt</p>
-            <span class="certificate__card-badge">Bis zu 100% Förderung</span>
-            <ul class="certificate__card-list">
-              <li>
-                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M13.3334 4L5.99999 11.3334L2.66666 8" stroke="white" stroke-width="1.33334" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                Existenzgründer-Coachings bis 100%
-              </li>
-              <li>
-                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M13.3334 4L5.99999 11.3334L2.66666 8" stroke="white" stroke-width="1.33334" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                Qualifizierungschancengesetz
-              </li>
-              <li>
-                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M13.3334 4L5.99999 11.3334L2.66666 8" stroke="white" stroke-width="1.33334" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                Bildungsgutscheine & AVGS
-              </li>
-              <li>
-                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M13.3334 4L5.99999 11.3334L2.66666 8" stroke="white" stroke-width="1.33334" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                Unterlagen, QM & Audit-Prep
-              </li>
+            <div class="certificate__card-badge">Bis zu 100% Förderung</div>
+            <ul class="certificate__card-features">
+              <li>Existenzgründer-Coachings bis 100%</li>
+              <li>Qualifizierungschancengesetz</li>
+              <li>Bildungsgutscheine & AVGS</li>
+              <li>Unterlagen, QM & Audit-Prep</li>
             </ul>
-            <a href="#kontakt" class="certificate__card-btn">
-              Mehr erfahren
-              <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2.91669 7H11.0834" stroke="white" stroke-width="1.16666" stroke-linecap="round" stroke-linejoin="round"/><path d="M7 2.9165L11.0834 6.99984L7 11.0832" stroke="white" stroke-width="1.16666" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </a>
+            <a href="#" class="certificate__card-btn">Mehr erfahren <span class="certificate__card-arrow">→</span></a>
           </div>
         </div>
-
-        <!-- ZFU Card (CENTER, featured) -->
         <div class="certificate__card certificate__card--featured">
           <div class="certificate__card-image">
-            <img src="assets/card-service-featured.png" alt="ZFU" loading="lazy">
+            <img src="assets/assets/card-service-featured.png" alt="ZFU" class="certificate__card-img">
           </div>
           <div class="certificate__card-body">
-            <h3 class="certificate__card-title">ZFU</h3>
+            <h3 class="certificate__card-name">ZFU</h3>
             <p class="certificate__card-desc">Sicherheit für digitale Programme</p>
-            <span class="certificate__card-badge">Rechtssicher skalieren</span>
-            <ul class="certificate__card-list">
-              <li>
-                <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M16.6224 4.98633L7.48017 14.1285L3.32465 9.97295" stroke="white" stroke-width="1.66221" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                Schutz vor Rückforderungen
-              </li>
-              <li>
-                <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M16.6224 4.98682L7.48017 14.129L3.32465 9.97344" stroke="white" stroke-width="1.66221" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                Freigabe für Online-Kurse
-              </li>
-              <li>
-                <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M16.6224 4.98682L7.48017 14.129L3.32465 9.97344" stroke="white" stroke-width="1.66221" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                Seriosität & Vertrauen
-              </li>
-              <li>
-                <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M16.6224 4.98633L7.48017 14.1285L3.32465 9.97295" stroke="white" stroke-width="1.66221" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                Didaktik & Vertragskonformität
-              </li>
+            <div class="certificate__card-badge">Rechtssicher skalieren</div>
+            <ul class="certificate__card-features">
+              <li>Schutz vor Rückforderungen</li>
+              <li>Freigabe für Online-Kurse</li>
+              <li>Seriosität & Vertrauen</li>
+              <li>Didaktik & Vertragskonformität</li>
             </ul>
-            <a href="#kontakt" class="certificate__card-btn">
-              Mehr erfahren
-              <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M3.63605 8.72656H13.8171" stroke="white" stroke-width="1.45443" stroke-linecap="round" stroke-linejoin="round"/><path d="M8.72638 3.63623L13.8169 8.72675L8.72638 13.8173" stroke="white" stroke-width="1.45443" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </a>
+            <a href="#" class="certificate__card-btn">Mehr erfahren <span class="certificate__card-arrow">→</span></a>
           </div>
         </div>
-
-        <!-- ISO 9001 Card (right-center, blurred) -->
-        <div class="certificate__card certificate__card--blurred">
+        <div class="certificate__card">
           <div class="certificate__card-image">
-            <img src="assets/card-service-4.png" alt="ISO 9001" loading="lazy">
+            <img src="assets/assets/card-service-4.png" alt="ISO 9001" class="certificate__card-img">
           </div>
           <div class="certificate__card-body">
-            <h3 class="certificate__card-title">ISO 9001</h3>
+            <h3 class="certificate__card-name">ISO 9001</h3>
             <p class="certificate__card-desc">Internationales Qualitätssiegel</p>
-            <span class="certificate__card-badge">Globaler Standard</span>
-            <ul class="certificate__card-list">
-              <li>
-                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M13.3333 4L5.99996 11.3334L2.66663 8" stroke="white" stroke-width="1.33334" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                Vertrauen bei Kunden & Partnern
-              </li>
-              <li>
-                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M13.3333 4L5.99996 11.3334L2.66663 8" stroke="white" stroke-width="1.33334" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                Effizientere Prozesse
-              </li>
-              <li>
-                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M13.3333 4L5.99996 11.3334L2.66663 8" stroke="white" stroke-width="1.33334" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                Zugang zu Ausschreibungen
-              </li>
-              <li>
-                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M13.3333 4L5.99996 11.3334L2.66663 8" stroke="white" stroke-width="1.33334" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                Aufbau, Audit & Zertifizierung
-              </li>
+            <div class="certificate__card-badge">Globaler Standard</div>
+            <ul class="certificate__card-features">
+              <li>Vertrauen bei Kunden & Partnern</li>
+              <li>Effizientere Prozesse</li>
+              <li>Zugang zu Ausschreibungen</li>
+              <li>Aufbau, Audit & Zertifizierung</li>
             </ul>
-            <a href="#kontakt" class="certificate__card-btn">
-              Mehr erfahren
-              <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2.91663 7H11.0833" stroke="white" stroke-width="1.16666" stroke-linecap="round" stroke-linejoin="round"/><path d="M7 2.9165L11.0834 6.99984L7 11.0832" stroke="white" stroke-width="1.16666" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </a>
+            <a href="#" class="certificate__card-btn">Mehr erfahren <span class="certificate__card-arrow">→</span></a>
           </div>
         </div>
       </div>
-
-      <!-- Carousel arrows & dots -->
       <div class="certificate__nav">
-        <div class="certificate__arrows">
-          <button class="certificate__arrow certificate__arrow--prev" aria-label="Zurück">
-            <svg width="45" height="45" viewBox="0 0 45 45" fill="none"><circle cx="22.5" cy="22.5" r="22" transform="matrix(-1 0 0 1 45 0)" fill="white" stroke="white"/><path d="M14.25 22.2261H29.25" stroke="url(#arrowPrevLine)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M20.3 16.2012L14.25 22.2252L20.3 28.2502" stroke="url(#arrowPrevChev)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><defs><linearGradient id="arrowPrevLine" x1="21.75" y1="22.2261" x2="21.75" y2="23.2261" gradientUnits="userSpaceOnUse"><stop offset="0.04" stop-color="#CCA047"/><stop offset="0.37" stop-color="#FFE5B1"/><stop offset="0.63" stop-color="#DEBE7F"/><stop offset="1" stop-color="#DCA12C"/></linearGradient><linearGradient id="arrowPrevChev" x1="17.275" y1="16.2012" x2="17.275" y2="28.2502" gradientUnits="userSpaceOnUse"><stop offset="0.04" stop-color="#CCA047"/><stop offset="0.37" stop-color="#FFE5B1"/><stop offset="0.63" stop-color="#DEBE7F"/><stop offset="1" stop-color="#DCA12C"/></linearGradient></defs></svg>
+        <div class="certificate__nav-arrows">
+          <button class="certificate__nav-arrow certificate__nav-arrow--prev" aria-label="Zurück">
+            <svg width="15" height="12" viewBox="0 0 15 12" fill="none"><path d="M15 6H1M1 6L6 1M1 6L6 11" stroke="black" stroke-width="1.5"/></svg>
           </button>
-          <button class="certificate__arrow certificate__arrow--next" aria-label="Weiter">
-            <svg width="45" height="45" viewBox="0 0 45 45" fill="none"><circle cx="22.5" cy="22.5" r="22.5" fill="url(#arrowNextBg)"/><path d="M30.75 22.2261H15.75" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M24.7 16.2012L30.75 22.2252L24.7 28.2502" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><defs><linearGradient id="arrowNextBg" x1="22.5" y1="0" x2="22.5" y2="45" gradientUnits="userSpaceOnUse"><stop offset="0.04" stop-color="#CCA047"/><stop offset="0.5" stop-color="#FFE5B1"/><stop offset="0.75" stop-color="#DEBE7F"/><stop offset="1" stop-color="#DCA12C"/></linearGradient></defs></svg>
+          <button class="certificate__nav-arrow certificate__nav-arrow--next" aria-label="Weiter">
+            <svg width="15" height="12" viewBox="0 0 15 12" fill="none"><path d="M0 6H14M14 6L9 1M14 6L9 11" stroke="white" stroke-width="1.5"/></svg>
           </button>
         </div>
-        <div class="certificate__dots">
-          <span class="certificate__dot"></span>
-          <span class="certificate__dot"></span>
-          <span class="certificate__dot certificate__dot--active"></span>
-          <span class="certificate__dot"></span>
-          <span class="certificate__dot"></span>
+        <div class="certificate__nav-dots">
+          <span class="certificate__nav-dot"></span>
+          <span class="certificate__nav-dot"></span>
+          <span class="certificate__nav-dot certificate__nav-dot--active"></span>
+          <span class="certificate__nav-dot"></span>
+          <span class="certificate__nav-dot"></span>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ========== SECTION 08: FRAME 16 (Wachstum) ========== -->
-  <section class="frame16" id="wachstum">
+  <!-- Section 8: Frame16 (Certificate + Text) -->
+  <section class="frame16">
     <div class="frame16__inner">
-      <img src="assets/about-wachstum.jpg" alt="Wachstum durch Zertifizierung" class="frame16__image" loading="lazy">
+      <div class="frame16__image">
+        <img src="assets/assets/frame16-certificate.png" alt="ISO 9001 Zertifikat" class="frame16__img">
+      </div>
       <div class="frame16__text">
-        <h2 class="frame16__title">
-          <span class="frame16__title-dm">Zertifizierung, die Ihr </span><span class="frame16__title-lb">Wachstum trägt.</span>
-        </h2>
+        <h2 class="frame16__title">Zertifizierung, Die Ihr <em>Wachstum</em> Trägt.</h2>
         <p class="frame16__desc">Et eleifend consectetur tellus consectetur nibh non urna lobortis. Quis sapien enim posuere mollis risus. Nec dictumst ullamcorper et leo. Varius praesent tinc.</p>
-        <a href="#kontakt" class="frame16__cta">Jetzt loslegen</a>
+        <a href="#kontakt" class="frame16__btn">Jetzt loslegen</a>
       </div>
     </div>
   </section>
 
-  <!-- ========== SECTION 09: GROWTH (Zertifizierung, die Ihr Wachstum trägt) ========== -->
-  <section class="growth" id="ergebnisse">
+  <!-- Section 9: Growth -->
+  <section class="growth">
     <div class="growth__inner">
-      <div class="growth__heading">
-        <h2 class="growth__title">
-          <span class="growth__title-dm">Zertifizierung, die Ihr </span><span class="growth__title-lb">Wachstum trägt.</span>
-        </h2>
+      <div class="growth__header">
+        <h2 class="growth__title">Zertifizierung, die Ihr <em>Wachstum</em> trägt.</h2>
         <p class="growth__subtitle">Mit ISOGRAF führen wir Sie unkompliziert und sicher durch den gesamten Zertifizierungsprozess – vollständig begleitet.</p>
       </div>
-
-      <div class="growth__rows">
-        <!-- Row 1: Team Photo + Reviews + Experience -->
-        <div class="growth__row">
-          <div class="growth__card growth__card--team">
-            <img src="assets/team-photo.jpg" alt="ISOGRAF Team" class="growth__card-photo" loading="lazy">
-          </div>
-          <div class="growth__card growth__card--experience">
-            <div class="growth__card-bg"></div>
-            <img src="assets/portrait-generated.jpg" alt="Erfahrung" class="growth__card-portrait" loading="lazy">
-            <div class="growth__card-overlay"></div>
-            <div class="growth__card-text">
-              <h3><span class="growth__card-white">+20 Jahre </span><span class="growth__card-gold">Erfahrung</span></h3>
-              <p>sowohl bei Dienstleistern, als auch bei Gewerbekunden.</p>
-            </div>
+      <div class="growth__grid">
+        <div class="growth__card growth__card--dark">
+          <div class="growth__card-medal"></div>
+          <h3 class="growth__card-title">Unkomplizierter <em>Prozess</em></h3>
+          <p class="growth__card-text">mit der Erfahrung aus über 1.200 Projekten.</p>
+        </div>
+        <div class="growth__card growth__card--image">
+          <img src="assets/assets/growth-court.png" alt="" class="growth__card-bg">
+          <div class="growth__card-overlay">
+            <h3 class="growth__card-title">Echtes <em>Wachstum</em></h3>
+            <p class="growth__card-text">Die meisten Unternehmen scheitern an der Komplexität der Zertifizierungsprozesse. Wir übernehmen den gesamten Prozess für Sie.</p>
           </div>
         </div>
-
-        <!-- Row 2: Medallion + Court Building -->
-        <div class="growth__row">
-          <div class="growth__card growth__card--medallion">
-            <div class="growth__card-bg"></div>
-            <div class="growth__card-text">
-              <h3><span class="growth__card-white">Unkomplizierter </span><span class="growth__card-gold">Prozess</span></h3>
-              <p>mit der Erfahrung aus über 1.200 Projekten.</p>
-            </div>
-          </div>
-          <div class="growth__card growth__card--building">
-            <img src="assets/deco-court-building.jpg" alt="Gebaeude" class="growth__card-building-img" loading="lazy">
-            <div class="growth__card-building-overlay"></div>
-            <div class="growth__card-text">
-              <h3><span class="growth__card-white">Echtes </span><span class="growth__card-gold">Wachstum</span></h3>
-              <p>Die meisten Unternehmen scheitern an der Komplexität der Zertifizierungsprozesse. Wir übernehmen den gesamten Prozess für Sie.</p>
-            </div>
+        <div class="growth__card growth__card--reviews">
+          <img src="assets/assets/growth-team.png" alt="" class="growth__card-bg">
+        </div>
+        <div class="growth__card growth__card--experience">
+          <img src="assets/assets/growth-portrait.png" alt="" class="growth__card-bg">
+          <div class="growth__card-overlay">
+            <h3 class="growth__card-title">+20 Jahre <em>Erfahrung</em></h3>
+            <p class="growth__card-text">sowohl bei Dienstleistern, als auch bei Gewerbekunden.</p>
           </div>
         </div>
       </div>
-
-      <a href="#kontakt" class="growth__cta">Jetzt loslegen</a>
-
-      <div class="growth__clients">
-        <img src="assets/logo-clients-steuern.png" alt="Kunden" class="growth__clients-logo">
-        <span class="growth__clients-text"><strong>800+</strong> Zufriedene Kunden</span>
+      <div class="growth__cta-row">
+        <a href="#kontakt" class="growth__btn">Jetzt loslegen</a>
+        <div class="growth__clients">
+          <img src="assets/assets/logo-clients-steuern.png" alt="" class="growth__clients-logo">
+          <span class="growth__clients-text">800+ Zufriedene Kunden</span>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- ========== SECTION 10: CONTACT BANNER ========== -->
+  <!-- Section 10: Contact Banner -->
   <section class="contact-banner" id="kontakt">
     <div class="contact-banner__inner">
       <div class="contact-banner__card">
-        <div class="contact-banner__content">
+        <div class="contact-banner__text-side">
           <h3 class="contact-banner__title">Bereit für Ihre Zertifizierung?</h3>
-          <p class="contact-banner__text">Vereinbaren Sie jetzt ein kostenloses Erstgespräch und erfahren Sie, wie wir Sie auf dem Weg zur Zertifizierung unterstützen können.</p>
-          <div class="contact-banner__actions">
-            <a href="#kontakt" class="contact-banner__btn">Jetzt loslegen</a>
+          <p class="contact-banner__desc">Vereinbaren Sie jetzt ein kostenloses Erstgespräch und erfahren Sie, wie wir Sie auf dem Weg zur Zertifizierung unterstützen können.</p>
+          <div class="contact-banner__cta-row">
+            <a href="#" class="contact-banner__btn">Jetzt loslegen</a>
             <div class="contact-banner__clients">
-              <img src="assets/logo-clients-steuern.png" alt="Kunden" class="contact-banner__clients-logo">
-              <span class="contact-banner__clients-text"><strong>+800</strong> Zufriedene Kunden</span>
+              <img src="assets/assets/logo-clients-steuern.png" alt="" class="contact-banner__clients-logo">
+              <span class="contact-banner__clients-text">+800 Zufriedene Kunden</span>
             </div>
           </div>
         </div>
-        <div class="contact-banner__image-wrapper">
-          <img src="assets/isograf-probleme-blur-faq.png" alt="" class="contact-banner__image-blur" loading="lazy">
-          <img src="assets/isograf-probleme-faq.png" alt="ISOGRAF Dashboard" class="contact-banner__image" loading="lazy">
+        <div class="contact-banner__image-side">
+          <img src="assets/assets/hero-isograf-probleme.png" alt="ISOGRAF Berater" class="contact-banner__portrait">
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ========== SECTION 11: ROUTES / REFERENCES (Bisherige Ergebnisse) ========== -->
-  <section class="results" id="ergebnisse-detail">
+  <!-- Section 11: Routes / References 1 (Results) -->
+  <section class="results" id="ergebnisse">
     <div class="results__bg">
-      <img src="assets/bg-walkway-full.jpg" alt="" class="results__bg-img" loading="lazy">
+      <img src="assets/assets/bg-walkway-light.png" alt="" class="results__bg-img">
     </div>
     <div class="results__inner">
-      <div class="results__heading">
-        <div class="results__badge">
-          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M7.34466 1.87629C7.37322 1.72336 7.45437 1.58524 7.57405 1.48584C7.69374 1.38644 7.84441 1.33203 7.99999 1.33203C8.15557 1.33203 8.30624 1.38644 8.42592 1.48584C8.54561 1.58524 8.62676 1.72336 8.65532 1.87629L9.35599 5.58163C9.40575 5.84506 9.53377 6.08737 9.72334 6.27694C9.91291 6.46651 10.1552 6.59453 10.4187 6.64429L14.124 7.34496C14.2769 7.37353 14.415 7.45468 14.5144 7.57436C14.6138 7.69404 14.6683 7.84472 14.6683 8.00029C14.6683 8.15587 14.6138 8.30655 14.5144 8.42623C14.415 8.54591 14.2769 8.62706 14.124 8.65563L10.4187 9.35629C10.1552 9.40606 9.91291 9.53408 9.72334 9.72365C9.53377 9.91322 9.40575 10.1555 9.35599 10.419L8.65532 14.1243C8.62676 14.2772 8.54561 14.4154 8.42592 14.5147C8.30624 14.6141 8.15557 14.6686 7.99999 14.6686C7.84441 14.6686 7.69374 14.6141 7.57405 14.5147C7.45437 14.4154 7.37322 14.2772 7.34466 14.1243L6.64399 10.419C6.59423 10.1555 6.46621 9.91322 6.27664 9.72365C6.08707 9.53408 5.84475 9.40606 5.58132 9.35629L1.87599 8.65563C1.72306 8.62706 1.58493 8.54591 1.48553 8.42623C1.38614 8.30655 1.33173 8.15587 1.33173 8.00029C1.33173 7.84472 1.38614 7.69404 1.48553 7.57436C1.58493 7.45468 1.72306 7.37353 1.87599 7.34496L5.58132 6.64429C5.84475 6.59453 6.08707 6.46651 6.27664 6.27694C6.46621 6.08737 6.59423 5.84506 6.64399 5.58163L7.34466 1.87629Z" stroke="#082742" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/><path d="M13.3333 1.33301V3.99967" stroke="#082742" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/><path d="M14.6667 2.66699H12" stroke="#082742" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/><path d="M2.66665 14.6667C3.40303 14.6667 3.99998 14.0697 3.99998 13.3333C3.99998 12.597 3.40303 12 2.66665 12C1.93027 12 1.33331 12.597 1.33331 13.3333C1.33331 14.0697 1.93027 14.6667 2.66665 14.6667Z" stroke="#082742" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          <span>Die Ergebnisse</span>
-        </div>
-        <h2 class="results__title">
-          <span class="results__title-dm">Bisherige </span><span class="results__title-lb">Ergebnisse</span>
-        </h2>
-        <p class="results__subtitle">Transparente Leistungen, nachweisbare Resultate – und ein Prozess, der in über +1.200 Projekten zuverlässig funktioniert hat.</p>
+      <div class="results__header">
+        <span class="results__badge">Die Ergebnisse</span>
+        <h2 class="results__title">Bisherige Ergebnisse</h2>
+        <p class="results__subtitle">Transparente Leistungen, nachweisbare Resultate – und ein Prozess, der in über +1.200 Projekten zuverlässig funktioniert.</p>
       </div>
-
       <div class="results__cards">
-        <!-- Card 1: EduVision -->
-        <div class="results__card results__card--side">
-          <div class="results__card-header">
-            <h4 class="results__card-name">EduVision Coaching GmbH</h4>
-            <span class="results__card-type">Business Coaching</span>
-          </div>
+        <div class="results__card">
+          <h4 class="results__card-name">EduVision Coaching GmbH</h4>
+          <p class="results__card-type">Business Coaching</p>
           <div class="results__card-before">
             <span class="results__card-label">Vorher</span>
             <span class="results__card-value">80.000 €</span>
           </div>
           <div class="results__card-divider">
-            <div class="results__card-line"></div>
-            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><g clip-path="url(#clip_trend1)"><path d="M17.5 0.833008L10.4167 7.91638L6.25001 3.74967L0.833344 9.16638" stroke="#E2AC26" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/></g><defs><clipPath id="clip_trend1"><rect width="20" height="20" fill="white"/></clipPath></defs></svg>
+            <span class="results__card-divider-line"></span>
+            <svg class="results__card-divider-icon" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M3 14L10 6L17 14" stroke="#E2AC26" stroke-width="1.67"/></svg>
           </div>
           <div class="results__card-after">
             <span class="results__card-label">Nachher</span>
-            <span class="results__card-value results__card-value--big">340.000 €</span>
+            <span class="results__card-value-big">340.000 €</span>
           </div>
           <div class="results__card-growth">+325% Wachstum</div>
-          <span class="results__card-method">durch KOMPASS + AZAV</span>
+          <p class="results__card-method">durch KOMPASS + AZAV</p>
         </div>
-
-        <!-- Card 2: TrainUp (Featured) -->
         <div class="results__card results__card--featured">
-          <div class="results__card-header">
-            <h4 class="results__card-name">TrainUp Institut</h4>
-            <span class="results__card-type">Leadership Training</span>
-          </div>
+          <h4 class="results__card-name">TrainUp Institut</h4>
+          <p class="results__card-type">Leadership Training</p>
           <div class="results__card-before">
             <span class="results__card-label">Vorher</span>
             <span class="results__card-value">50.000 €</span>
           </div>
           <div class="results__card-divider">
-            <div class="results__card-line"></div>
-            <svg width="25" height="25" viewBox="0 0 25 25" fill="none"><g clip-path="url(#clip_trend2)"><path d="M21.2705 1.0127L12.6612 9.6221L7.59681 4.55772L1.01318 11.1414" stroke="#E2AC26" stroke-width="2.02573" stroke-linecap="round" stroke-linejoin="round"/></g><defs><clipPath id="clip_trend2"><rect width="24.3088" height="24.3088" fill="white"/></clipPath></defs></svg>
+            <span class="results__card-divider-line"></span>
+            <svg class="results__card-divider-icon" width="24" height="24" viewBox="0 0 20 20" fill="none"><path d="M3 14L10 6L17 14" stroke="#E2AC26" stroke-width="2"/></svg>
           </div>
           <div class="results__card-after">
             <span class="results__card-label">Nachher</span>
-            <span class="results__card-value results__card-value--big">410.000 €</span>
+            <span class="results__card-value-big">410.000 €</span>
           </div>
           <div class="results__card-growth">+720% Wachstum</div>
-          <span class="results__card-method">durch Qualifizierungschancengesetz + ISO</span>
+          <p class="results__card-method">durch Qualifizierungschancengesetz + ISO</p>
         </div>
-
-        <!-- Card 3: MindGrow -->
-        <div class="results__card results__card--side">
-          <div class="results__card-header">
-            <h4 class="results__card-name">MindGrow Academy</h4>
-            <span class="results__card-type">Digitales Coaching</span>
-          </div>
+        <div class="results__card">
+          <h4 class="results__card-name">MindGrow Academy</h4>
+          <p class="results__card-type">Digitales Coaching</p>
           <div class="results__card-before">
             <span class="results__card-label">Vorher</span>
             <span class="results__card-value">9.000 €/M</span>
           </div>
           <div class="results__card-divider">
-            <div class="results__card-line"></div>
-            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><g clip-path="url(#clip_trend3)"><path d="M17.5 0.833008L10.4167 7.91638L6.25004 3.74967L0.833374 9.16638" stroke="#E2AC26" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/></g><defs><clipPath id="clip_trend3"><rect width="20" height="20" fill="white"/></clipPath></defs></svg>
+            <span class="results__card-divider-line"></span>
+            <svg class="results__card-divider-icon" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M3 14L10 6L17 14" stroke="#E2AC26" stroke-width="1.67"/></svg>
           </div>
           <div class="results__card-after">
             <span class="results__card-label">Nachher</span>
-            <span class="results__card-value results__card-value--big">46.000 €/M</span>
+            <span class="results__card-value-big">46.000 €/M</span>
           </div>
           <div class="results__card-growth">+411% Wachstum</div>
-          <span class="results__card-method">durch ZFU-Freigabe</span>
+          <p class="results__card-method">durch ZFU-Freigabe</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ========== SECTION 12: 5 METHODS (5-Phasen-Methode) ========== -->
-  <section class="methods" id="methode">
+  <!-- Section 12: Five Methods -->
+  <section class="methods">
     <div class="methods__inner">
-      <div class="methods__heading">
-        <div class="methods__badge">
-          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M7.34466 1.87629C7.37322 1.72336 7.45437 1.58524 7.57405 1.48584C7.69374 1.38644 7.84441 1.33203 7.99999 1.33203C8.15557 1.33203 8.30624 1.38644 8.42592 1.48584C8.54561 1.58524 8.62676 1.72336 8.65532 1.87629L9.35599 5.58163C9.40575 5.84506 9.53377 6.08737 9.72334 6.27694C9.91291 6.46651 10.1552 6.59453 10.4187 6.64429L14.124 7.34496C14.2769 7.37353 14.415 7.45468 14.5144 7.57436C14.6138 7.69404 14.6683 7.84472 14.6683 8.00029C14.6683 8.15587 14.6138 8.30655 14.5144 8.42623C14.415 8.54591 14.2769 8.62706 14.124 8.65563L10.4187 9.35629C10.1552 9.40606 9.91291 9.53408 9.72334 9.72365C9.53377 9.91322 9.40575 10.1555 9.35599 10.419L8.65532 14.1243C8.62676 14.2772 8.54561 14.4154 8.42592 14.5147C8.30624 14.6141 8.15557 14.6686 7.99999 14.6686C7.84441 14.6686 7.69374 14.6141 7.57405 14.5147C7.45437 14.4154 7.37322 14.2772 7.34466 14.1243L6.64399 10.419C6.59423 10.1555 6.46621 9.91322 6.27664 9.72365C6.08707 9.53408 5.84475 9.40606 5.58132 9.35629L1.87599 8.65563C1.72306 8.62706 1.58493 8.54591 1.48553 8.42623C1.38614 8.30655 1.33173 8.15587 1.33173 8.00029C1.33173 7.84472 1.38614 7.69404 1.48553 7.57436C1.58493 7.45468 1.72306 7.37353 1.87599 7.34496L5.58132 6.64429C5.84475 6.59453 6.08707 6.46651 6.27664 6.27694C6.46621 6.08737 6.59423 5.84506 6.64399 5.58163L7.34466 1.87629Z" stroke="white" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/><path d="M13.3333 1.33301V3.99967" stroke="white" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/><path d="M14.6667 2.66699H12" stroke="white" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/><path d="M2.66665 14.6667C3.40303 14.6667 3.99998 14.0697 3.99998 13.3333C3.99998 12.597 3.40303 12 2.66665 12C1.93027 12 1.33331 12.597 1.33331 13.3333C1.33331 14.0697 1.93027 14.6667 2.66665 14.6667Z" stroke="white" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          <span>Die 5-Phasen</span>
-        </div>
-        <h2 class="methods__title">
-          <span class="methods__title-dm">Unsere bewährte </span><span class="methods__title-lb">5-Phasen-Methode</span>
-        </h2>
-        <p class="methods__subtitle">Mit unserem strukturierten Prozess führen wir Sie Schritt für Schritt durch die gesamte Zertifizierung – transparent, effizient und ohne unnötige Komplexität.</p>
+      <div class="methods__header">
+        <span class="methods__badge">Die 5-Phasen</span>
+        <h2 class="methods__title">Unsere bewährte 5-Phasen-Methode</h2>
+        <p class="methods__subtitle">Mit unserem strukturierten Prozess führen wir Sie Schritt für Schritt durch die gesamte Zertifizierung – transparent, planbar und ohne böse Überraschungen.</p>
         <div class="methods__tags">
-          <span class="methods__tag">
-            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M8.00001 14.6663C11.6819 14.6663 14.6667 11.6816 14.6667 7.99967C14.6667 4.31778 11.6819 1.33301 8.00001 1.33301C4.31811 1.33301 1.33334 4.31778 1.33334 7.99967C1.33334 11.6816 4.31811 14.6663 8.00001 14.6663Z" stroke="white" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/><path d="M6 8.00033L7.33333 9.33366L10 6.66699" stroke="white" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            Einfachheit
-          </span>
-          <span class="methods__tag">
-            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M7.99998 14.6663C11.6819 14.6663 14.6666 11.6816 14.6666 7.99967C14.6666 4.31778 11.6819 1.33301 7.99998 1.33301C4.31808 1.33301 1.33331 4.31778 1.33331 7.99967C1.33331 11.6816 4.31808 14.6663 7.99998 14.6663Z" stroke="white" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/><path d="M6 8.00033L7.33333 9.33366L10 6.66699" stroke="white" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            Expertise & Erfahrung
-          </span>
-          <span class="methods__tag">
-            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M7.99998 14.6663C11.6819 14.6663 14.6666 11.6816 14.6666 7.99967C14.6666 4.31778 11.6819 1.33301 7.99998 1.33301C4.31808 1.33301 1.33331 4.31778 1.33331 7.99967C1.33331 11.6816 4.31808 14.6663 7.99998 14.6663Z" stroke="white" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/><path d="M6 8.00033L7.33333 9.33366L10 6.66699" stroke="white" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            Vertrauen & Entlastung
-          </span>
+          <span class="methods__tag">Einfachheit</span>
+          <span class="methods__tag">Expertise & Erfahrung</span>
+          <span class="methods__tag">Vertrauen & Entlastung</span>
         </div>
       </div>
-
-      <div class="methods__timeline">
-        <div class="methods__line"></div>
-
-        <!-- Phase 01 -->
+      <div class="methods__steps">
         <div class="methods__step methods__step--right">
           <div class="methods__step-text">
-            <span class="methods__step-num">01</span>
+            <span class="methods__step-number">01</span>
             <h3 class="methods__step-title">Analyse & Strategie</h3>
             <p class="methods__step-desc">Wir analysieren Ihre aktuelle Situation und entwickeln eine maßgeschneiderte Strategie für Ihre Zertifizierung.</p>
           </div>
-          <div class="methods__step-dot"></div>
           <div class="methods__step-image">
-            <img src="assets/8748d5f5.jpg" alt="Analyse & Strategie" loading="lazy">
+            <img src="assets/assets/step-01-analyse.png" alt="Analyse & Strategie">
           </div>
         </div>
-
-        <!-- Phase 02 -->
         <div class="methods__step methods__step--left">
           <div class="methods__step-image">
-            <img src="assets/step-02-dokumentation.jpg" alt="Dokumentation" loading="lazy">
+            <img src="assets/assets/step-02-dokumentation.png" alt="Dokumentation">
           </div>
-          <div class="methods__step-dot"></div>
           <div class="methods__step-text">
-            <span class="methods__step-num">02</span>
+            <span class="methods__step-number">02</span>
             <h3 class="methods__step-title">Dokumentation</h3>
             <p class="methods__step-desc">Wir erstellen alle notwendigen Dokumente, Prozesse und Handbücher nach aktuellen Standards.</p>
           </div>
         </div>
-
-        <!-- Phase 03 -->
         <div class="methods__step methods__step--right">
           <div class="methods__step-text">
-            <span class="methods__step-num">03</span>
+            <span class="methods__step-number">03</span>
             <h3 class="methods__step-title">Implementierung</h3>
             <p class="methods__step-desc">Ihr Team wird geschult und alle Prozesse werden in Ihrem Unternehmen implementiert.</p>
           </div>
-          <div class="methods__step-dot"></div>
           <div class="methods__step-image">
-            <img src="assets/d9a4f56a.jpg" alt="Implementierung" loading="lazy">
+            <img src="assets/assets/step-03-implementierung.png" alt="Implementierung">
           </div>
         </div>
-
-        <!-- Phase 04 -->
         <div class="methods__step methods__step--left">
           <div class="methods__step-image">
-            <img src="assets/step-04-audit.jpg" alt="Audit-Vorbereitung" loading="lazy">
+            <img src="assets/assets/step-04-audit.png" alt="Audit-Vorbereitung">
           </div>
-          <div class="methods__step-dot"></div>
           <div class="methods__step-text">
-            <span class="methods__step-num">04</span>
+            <span class="methods__step-number">04</span>
             <h3 class="methods__step-title">Audit-Vorbereitung</h3>
             <p class="methods__step-desc">Wir simulieren das Audit und bereiten Sie optimal auf die Prüfung vor. Keine Überraschungen.</p>
           </div>
         </div>
-
-        <!-- Phase 05 -->
         <div class="methods__step methods__step--right">
           <div class="methods__step-text">
-            <span class="methods__step-num">05</span>
+            <span class="methods__step-number">05</span>
             <h3 class="methods__step-title">Zertifizierung</h3>
             <p class="methods__step-desc">Wir begleiten Sie beim Audit und feiern gemeinsam Ihre erfolgreiche Zertifizierung.</p>
           </div>
-          <div class="methods__step-dot"></div>
           <div class="methods__step-image">
-            <img src="assets/6655aa2c.jpg" alt="Zertifizierung" loading="lazy">
+            <img src="assets/assets/step-05-zertifizierung.png" alt="Zertifizierung">
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ========== SECTION 13: COMPARISON (Headline + Gallery) ========== -->
-  <section class="comparison" id="comparison">
+  <!-- Section 13: Comparison -->
+  <section class="comparison">
     <div class="comparison__inner">
-      <div class="comparison__heading">
-        <h2 class="comparison__title">
-          <span class="comparison__title-dm">Ich bin eine </span><span class="comparison__title-lb">Headline</span>
-        </h2>
-        <p class="comparison__subtitle">Interdum ac tincidunt molestie facilisis. Nulla at erat odio bibendum diam quam. Scelerisque mus vel egestas justo, purus consequat nibh eget. Non risus feugiat porta integer.</p>
+      <div class="comparison__header">
+        <h2 class="comparison__title">Die häufigsten Probleme ohne professionelle Begleitung</h2>
       </div>
-      <div class="comparison__gallery">
-        <img src="assets/gallery-1.jpg" alt="Galerie 1" class="comparison__image" loading="lazy">
-        <img src="assets/gallery-2.jpg" alt="Galerie 2" class="comparison__image" loading="lazy">
-        <img src="assets/gallery-3.jpg" alt="Galerie 3" class="comparison__image" loading="lazy">
+      <div class="comparison__items">
+        <div class="comparison__item">
+          <span class="comparison__item-check"></span>
+          <div class="comparison__item-content">
+            <h4 class="comparison__item-title">Rechtsrisiko ohne Freigabe</h4>
+            <p class="comparison__item-text">Digitale Programme ohne ZFU-Freigabe können rechtliche Probleme und Rückforderungen nach sich ziehen.</p>
+          </div>
+        </div>
+        <div class="comparison__item">
+          <span class="comparison__item-check"></span>
+          <div class="comparison__item-content">
+            <h4 class="comparison__item-title">Viele Schritte, hohe Fehlergefahr</h4>
+            <p class="comparison__item-text">Prozesse sind unübersichtlich, Deadlines schwer einzuhalten – Fehler verlängern den Weg.</p>
+          </div>
+        </div>
+        <div class="comparison__item">
+          <span class="comparison__item-check"></span>
+          <div class="comparison__item-content">
+            <h4 class="comparison__item-title">Hohe Eigenzahlung, geringes Vertrauen</h4>
+            <p class="comparison__item-text">Kunden zögern bei hohen Preisen, Vertrauen und Abschlussraten sinken.</p>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- ========== SECTION 14: FRAME 14 (Placeholder) ========== -->
-  <!-- This section appears to be empty/minimal in the Figma, skipped -->
+  <!-- Section 14: Frame14 (Gallery) -->
+  <section class="gallery">
+    <div class="gallery__inner">
+      <div class="gallery__header">
+        <h2 class="gallery__title">Ich bin eine Headline</h2>
+        <p class="gallery__subtitle">Interdum ac tincidunt molestie facilisis. Nulla at erat odio bibendum diam quam. Scelerisque mus vel egestas justo, purus consequat nibh eget. Non risus feugiat porta integer.</p>
+      </div>
+      <div class="gallery__images">
+        <img src="assets/assets/gallery-1.png" alt="Galerie 1" class="gallery__img">
+        <img src="assets/assets/gallery-2.png" alt="Galerie 2" class="gallery__img">
+        <img src="assets/assets/gallery-3.png" alt="Galerie 3" class="gallery__img">
+      </div>
+    </div>
+  </section>
 
-  <!-- ========== SECTION 15: ROUTES / REFERENCES 2 (Team) ========== -->
-  <section class="team" id="team">
+  <!-- Section 15: Routes / References 2 (Team) -->
+  <section class="team" id="karriere">
     <div class="team__bg">
-      <img src="assets/bg-walkway-light.jpg" alt="" class="team__bg-img" loading="lazy">
+      <img src="assets/assets/bg-walkway-light.png" alt="" class="team__bg-img">
     </div>
     <div class="team__inner">
-      <div class="team__heading">
-        <div class="team__badge">
-          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M7.34466 1.87629C7.37322 1.72336 7.45437 1.58524 7.57405 1.48584C7.69374 1.38644 7.84441 1.33203 7.99999 1.33203C8.15557 1.33203 8.30624 1.38644 8.42592 1.48584C8.54561 1.58524 8.62676 1.72336 8.65532 1.87629L9.35599 5.58163C9.40575 5.84506 9.53377 6.08737 9.72334 6.27694C9.91291 6.46651 10.1552 6.59453 10.4187 6.64429L14.124 7.34496C14.2769 7.37353 14.415 7.45468 14.5144 7.57436C14.6138 7.69404 14.6683 7.84472 14.6683 8.00029C14.6683 8.15587 14.6138 8.30655 14.5144 8.42623C14.415 8.54591 14.2769 8.62706 14.124 8.65563L10.4187 9.35629C10.1552 9.40606 9.91291 9.53408 9.72334 9.72365C9.53377 9.91322 9.40575 10.1555 9.35599 10.419L8.65532 14.1243C8.62676 14.2772 8.54561 14.4154 8.42592 14.5147C8.30624 14.6141 8.15557 14.6686 7.99999 14.6686C7.84441 14.6686 7.69374 14.6141 7.57405 14.5147C7.45437 14.4154 7.37322 14.2772 7.34466 14.1243L6.64399 10.419C6.59423 10.1555 6.46621 9.91322 6.27664 9.72365C6.08707 9.53408 5.84475 9.40606 5.58132 9.35629L1.87599 8.65563C1.72306 8.62706 1.58493 8.54591 1.48553 8.42623C1.38614 8.30655 1.33173 8.15587 1.33173 8.00029C1.33173 7.84472 1.38614 7.69404 1.48553 7.57436C1.58493 7.45468 1.72306 7.37353 1.87599 7.34496L5.58132 6.64429C5.84475 6.59453 6.08707 6.46651 6.27664 6.27694C6.46621 6.08737 6.59423 5.84506 6.64399 5.58163L7.34466 1.87629Z" stroke="#082742" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/><path d="M13.3333 1.33301V3.99967" stroke="#082742" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/><path d="M14.6667 2.66699H12" stroke="#082742" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/><path d="M2.66665 14.6667C3.40303 14.6667 3.99998 14.0697 3.99998 13.3333C3.99998 12.597 3.40303 12 2.66665 12C1.93027 12 1.33331 12.597 1.33331 13.3333C1.33331 14.0697 1.93027 14.6667 2.66665 14.6667Z" stroke="#082742" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          <span>Das Team</span>
-        </div>
-        <h2 class="team__title">
-          <span class="team__title-dm">Unser </span><span class="team__title-lb">starkes</span> <span class="team__title-lb">Team</span>
-        </h2>
-        <p class="team__subtitle">Transparente Leistungen, nachweisbare Resultate – und ein Prozess, der in über +1.200 Projekten zuverlässig funktioniert hat.</p>
+      <div class="team__header">
+        <span class="team__badge">Das Team</span>
+        <h2 class="team__title">Unser starkes Team</h2>
+        <p class="team__subtitle">Transparente Leistungen, nachweisbare Resultate – und ein Prozess, der in über 1.200 Projekten zuverlässig funktioniert.</p>
       </div>
-
-      <div class="team__grid">
-        <!-- Member 1 -->
+      <div class="team__cards">
         <div class="team__card">
-          <div class="team__card-avatar">
-            <img src="assets/115bbf6e.jpg" alt="Volker Rozek" loading="lazy">
+          <div class="team__avatar">
+            <img src="assets/assets/team-member-1.png" alt="Volker Rozek">
           </div>
-          <div class="team__card-info">
-            <h4 class="team__card-name">Volker Rozek</h4>
-            <span class="team__card-role">Senior Berater</span>
-            <p class="team__card-desc">Experte für Prozessoptimierung</p>
-            <div class="team__card-social">
-              <a href="#" aria-label="Facebook">
-                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M16 8C16 3.58172 12.4183 0 8 0C3.58172 0 0 3.58172 0 8C0 11.993 2.92547 15.3027 6.75 15.9028V10.3125H4.71875V8H6.75V6.2375C6.75 4.2325 7.94438 3.125 9.77172 3.125C10.6467 3.125 11.5625 3.28125 11.5625 3.28125V5.25H10.5538C9.56 5.25 9.25 5.86672 9.25 6.5V8H11.4688L11.1141 10.3125H9.25V15.9028C13.0745 15.3027 16 11.993 16 8Z" fill="#ACAEB4"/></svg>
-              </a>
-              <a href="#" aria-label="LinkedIn">
-                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M14.8156 0H1.18125C0.528125 0 0 0.515625 0 1.15313V14.8438C0 15.4813 0.528125 16 1.18125 16H14.8156C15.4688 16 16 15.4813 16 14.8469V1.15313C16 0.515625 15.4688 0 14.8156 0ZM4.74687 13.6344H2.37188V5.99687H4.74687V13.6344ZM3.55938 4.95625C2.79688 4.95625 2.18125 4.34062 2.18125 3.58125C2.18125 2.82188 2.79688 2.20625 3.55938 2.20625C4.31875 2.20625 4.93437 2.82188 4.93437 3.58125C4.93437 4.3375 4.31875 4.95625 3.55938 4.95625ZM13.6344 13.6344H11.2625V9.92188C11.2625 9.0375 11.2469 7.89687 10.0281 7.89687C8.79375 7.89687 8.60625 8.8625 8.60625 9.85938V13.6344H6.2375V5.99687H8.5125V7.04063H8.54375C8.85938 6.44063 9.63438 5.80625 10.7875 5.80625C13.1906 5.80625 13.6344 7.3875 13.6344 9.44375V13.6344Z" fill="#ACAEB4"/></svg>
-              </a>
-            </div>
+          <div class="team__info">
+            <h4 class="team__name">Volker Rozek</h4>
+            <span class="team__role">Senior Berater</span>
+            <p class="team__bio">Experte für Prozessoptimierung</p>
           </div>
         </div>
-
-        <!-- Member 2 -->
         <div class="team__card">
-          <div class="team__card-avatar">
-            <img src="assets/a46e9c93.jpg" alt="Daniel Graf" loading="lazy">
+          <div class="team__avatar">
+            <img src="assets/assets/team-member-2.png" alt="Daniel Graf">
           </div>
-          <div class="team__card-info">
-            <h4 class="team__card-name">Daniel Graf</h4>
-            <span class="team__card-role">Senior Berater</span>
-            <p class="team__card-desc">Experte für ISO 9001, AZAV, ISO 14001 sowie 13485 und 27001</p>
-            <div class="team__card-social">
-              <a href="#" aria-label="Facebook">
-                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M16 8C16 3.58172 12.4183 0 8 0C3.58172 0 0 3.58172 0 8C0 11.993 2.92547 15.3027 6.75 15.9028V10.3125H4.71875V8H6.75V6.2375C6.75 4.2325 7.94438 3.125 9.77172 3.125C10.6467 3.125 11.5625 3.28125 11.5625 3.28125V5.25H10.5538C9.56 5.25 9.25 5.86672 9.25 6.5V8H11.4688L11.1141 10.3125H9.25V15.9028C13.0745 15.3027 16 11.993 16 8Z" fill="#ACAEB4"/></svg>
-              </a>
-              <a href="#" aria-label="LinkedIn">
-                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M14.8156 0H1.18125C0.528125 0 0 0.515625 0 1.15313V14.8438C0 15.4813 0.528125 16 1.18125 16H14.8156C15.4688 16 16 15.4813 16 14.8469V1.15313C16 0.515625 15.4688 0 14.8156 0ZM4.74687 13.6344H2.37188V5.99687H4.74687V13.6344ZM3.55938 4.95625C2.79688 4.95625 2.18125 4.34062 2.18125 3.58125C2.18125 2.82188 2.79688 2.20625 3.55938 2.20625C4.31875 2.20625 4.93437 2.82188 4.93437 3.58125C4.93437 4.3375 4.31875 4.95625 3.55938 4.95625ZM13.6344 13.6344H11.2625V9.92188C11.2625 9.0375 11.2469 7.89687 10.0281 7.89687C8.79375 7.89687 8.60625 8.8625 8.60625 9.85938V13.6344H6.2375V5.99687H8.5125V7.04063H8.54375C8.85938 6.44063 9.63438 5.80625 10.7875 5.80625C13.1906 5.80625 13.6344 7.3875 13.6344 9.44375V13.6344Z" fill="#ACAEB4"/></svg>
-              </a>
-            </div>
+          <div class="team__info">
+            <h4 class="team__name">Daniel Graf</h4>
+            <span class="team__role">Senior Berater</span>
+            <p class="team__bio">Experte für ISO 9001, AZAV, ISO 14001 sowie 13485 und 27001</p>
           </div>
         </div>
-
-        <!-- Member 3 -->
         <div class="team__card">
-          <div class="team__card-avatar">
-            <img src="assets/2696646b.jpg" alt="Christian Engelhardt" loading="lazy">
+          <div class="team__avatar">
+            <img src="assets/assets/team-member-3.png" alt="Christian Engelhardt">
           </div>
-          <div class="team__card-info">
-            <h4 class="team__card-name">Christian Engelhardt</h4>
-            <span class="team__card-role">Geschäftsführung, AZAV Fachmann</span>
-            <p class="team__card-desc">Zulassung AZAV, Förderanträge, Förderprozess</p>
-            <div class="team__card-social">
-              <a href="#" aria-label="Facebook">
-                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M16 8C16 3.58172 12.4183 0 8 0C3.58172 0 0 3.58172 0 8C0 11.993 2.92547 15.3027 6.75 15.9028V10.3125H4.71875V8H6.75V6.2375C6.75 4.2325 7.94438 3.125 9.77172 3.125C10.6467 3.125 11.5625 3.28125 11.5625 3.28125V5.25H10.5538C9.56 5.25 9.25 5.86672 9.25 6.5V8H11.4688L11.1141 10.3125H9.25V15.9028C13.0745 15.3027 16 11.993 16 8Z" fill="#ACAEB4"/></svg>
-              </a>
-              <a href="#" aria-label="LinkedIn">
-                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M14.8156 0H1.18125C0.528125 0 0 0.515625 0 1.15313V14.8438C0 15.4813 0.528125 16 1.18125 16H14.8156C15.4688 16 16 15.4813 16 14.8469V1.15313C16 0.515625 15.4688 0 14.8156 0ZM4.74687 13.6344H2.37188V5.99687H4.74687V13.6344ZM3.55938 4.95625C2.79688 4.95625 2.18125 4.34062 2.18125 3.58125C2.18125 2.82188 2.79688 2.20625 3.55938 2.20625C4.31875 2.20625 4.93437 2.82188 4.93437 3.58125C4.93437 4.3375 4.31875 4.95625 3.55938 4.95625ZM13.6344 13.6344H11.2625V9.92188C11.2625 9.0375 11.2469 7.89687 10.0281 7.89687C8.79375 7.89687 8.60625 8.8625 8.60625 9.85938V13.6344H6.2375V5.99687H8.5125V7.04063H8.54375C8.85938 6.44063 9.63438 5.80625 10.7875 5.80625C13.1906 5.80625 13.6344 7.3875 13.6344 9.44375V13.6344Z" fill="#ACAEB4"/></svg>
-              </a>
-            </div>
+          <div class="team__info">
+            <h4 class="team__name">Christian Engelhardt</h4>
+            <span class="team__role">Geschäftsführung, AZAV Fachmann</span>
+            <p class="team__bio">Zulassung AZAV, Förderanträge, Förderprozess</p>
           </div>
         </div>
-
-        <!-- Member 4 -->
         <div class="team__card">
-          <div class="team__card-avatar">
-            <img src="assets/29eb623a.jpg" alt="Jeremy Gocht" loading="lazy">
+          <div class="team__avatar">
+            <img src="assets/assets/team-member-4.png" alt="Jeremy Gocht">
           </div>
-          <div class="team__card-info">
-            <h4 class="team__card-name">Jeremy Gocht</h4>
-            <span class="team__card-role">Junior Berater</span>
-            <p class="team__card-desc">Prozessmanagement und Auditvorbereitung</p>
-            <div class="team__card-social">
-              <a href="#" aria-label="Facebook">
-                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M16 8C16 3.58172 12.4183 0 8 0C3.58172 0 0 3.58172 0 8C0 11.993 2.92547 15.3027 6.75 15.9028V10.3125H4.71875V8H6.75V6.2375C6.75 4.2325 7.94438 3.125 9.77172 3.125C10.6467 3.125 11.5625 3.28125 11.5625 3.28125V5.25H10.5538C9.56 5.25 9.25 5.86672 9.25 6.5V8H11.4688L11.1141 10.3125H9.25V15.9028C13.0745 15.3027 16 11.993 16 8Z" fill="#ACAEB4"/></svg>
-              </a>
-              <a href="#" aria-label="LinkedIn">
-                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M14.8156 0H1.18125C0.528125 0 0 0.515625 0 1.15313V14.8438C0 15.4813 0.528125 16 1.18125 16H14.8156C15.4688 16 16 15.4813 16 14.8469V1.15313C16 0.515625 15.4688 0 14.8156 0ZM4.74687 13.6344H2.37188V5.99687H4.74687V13.6344ZM3.55938 4.95625C2.79688 4.95625 2.18125 4.34062 2.18125 3.58125C2.18125 2.82188 2.79688 2.20625 3.55938 2.20625C4.31875 2.20625 4.93437 2.82188 4.93437 3.58125C4.93437 4.3375 4.31875 4.95625 3.55938 4.95625ZM13.6344 13.6344H11.2625V9.92188C11.2625 9.0375 11.2469 7.89687 10.0281 7.89687C8.79375 7.89687 8.60625 8.8625 8.60625 9.85938V13.6344H6.2375V5.99687H8.5125V7.04063H8.54375C8.85938 6.44063 9.63438 5.80625 10.7875 5.80625C13.1906 5.80625 13.6344 7.3875 13.6344 9.44375V13.6344Z" fill="#ACAEB4"/></svg>
-              </a>
-            </div>
+          <div class="team__info">
+            <h4 class="team__name">Jeremy Gocht</h4>
+            <span class="team__role">Junior Berater</span>
+            <p class="team__bio">Prozessmanagement und Auditvorbereitung</p>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ========== SECTION 16: CONTACT BANNER 2 ========== -->
-  <section class="contact-banner contact-banner--2" id="kontakt-2">
-    <div class="contact-banner__inner">
-      <div class="contact-banner__card">
-        <div class="contact-banner__content">
-          <h3 class="contact-banner__title">Bereit für Ihre Zertifizierung?</h3>
-          <p class="contact-banner__text">Vereinbaren Sie jetzt ein kostenloses Erstgespräch und erfahren Sie, wie wir Sie auf dem Weg zur Zertifizierung unterstützen können.</p>
-          <div class="contact-banner__actions">
-            <a href="#kontakt" class="contact-banner__btn">Jetzt loslegen</a>
-            <div class="contact-banner__clients">
-              <img src="assets/logo-clients-steuern.png" alt="Kunden" class="contact-banner__clients-logo">
-              <span class="contact-banner__clients-text"><strong>+800</strong> Zufriedene Kunden</span>
+  <!-- Section 16: Contact Banner 2 -->
+  <section class="contact-banner-2">
+    <div class="contact-banner-2__inner">
+      <div class="contact-banner-2__card">
+        <div class="contact-banner-2__text-side">
+          <h3 class="contact-banner-2__title">Bereit für Ihre Zertifizierung?</h3>
+          <p class="contact-banner-2__desc">Vereinbaren Sie jetzt ein kostenloses Erstgespräch und erfahren Sie, wie wir Sie auf dem Weg zur Zertifizierung unterstützen können.</p>
+          <div class="contact-banner-2__cta-row">
+            <a href="#" class="contact-banner-2__btn">Jetzt loslegen</a>
+            <div class="contact-banner-2__clients">
+              <img src="assets/assets/logo-clients-steuern.png" alt="" class="contact-banner-2__clients-logo">
+              <span class="contact-banner-2__clients-text">+800 Zufriedene Kunden</span>
             </div>
           </div>
         </div>
-        <div class="contact-banner__image-wrapper">
-          <img src="assets/isograf-probleme-blur-faq.png" alt="" class="contact-banner__image-blur" loading="lazy">
-          <img src="assets/isograf-probleme-faq.png" alt="ISOGRAF Dashboard" class="contact-banner__image" loading="lazy">
+        <div class="contact-banner-2__image-side">
+          <img src="assets/assets/hero-isograf-probleme.png" alt="ISOGRAF Berater" class="contact-banner-2__portrait">
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ========== SECTION 17: FOOTER ========== -->
-  <footer class="footer" id="footer">
+  <!-- Section 17: Footer -->
+  <footer class="footer">
     <div class="footer__inner">
       <div class="footer__top">
         <div class="footer__brand">
           <div class="footer__logo">
-            <svg width="34" height="21" viewBox="0 0 34 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path fill-rule="evenodd" clip-rule="evenodd" d="M0.0267394 0H0V20.5998H16.3813L0.0267394 0ZM26.6097 8.30979L33.2057 16.6189V0L26.6097 8.30979ZM16.8937 0H16.8374L9.99055 8.62343L19.4991 20.5998H33.205V20.546L16.893 0H16.8937Z" fill="#E2AC26"/>
+            <svg width="33" height="21" viewBox="0 0 29 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M0.0232014 0H0V17.8742H14.2138L0.0232014 0ZM23.0888 7.21028L28.8121 14.4199V0L23.0888 7.21028ZM14.6584 0H14.6095L8.66865 7.48242L16.919 17.8742H28.8115V17.8275L14.6578 0H14.6584Z" fill="#E2AC26"/>
             </svg>
             <span class="footer__logo-text">ISOGRAF</span>
           </div>
           <p class="footer__tagline">Qualität, die fördert. Über 1.200 erfolgreiche Projekte.</p>
           <div class="footer__social">
+            <a href="#" class="footer__social-link" aria-label="Instagram">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><rect x="2" y="2" width="16" height="16" rx="4" stroke="#99A1AF" stroke-width="1.67"/><circle cx="10" cy="10" r="3" stroke="#99A1AF" stroke-width="1.67"/><circle cx="14.5" cy="5.5" r="1" fill="#99A1AF"/></svg>
+            </a>
             <a href="#" class="footer__social-link" aria-label="LinkedIn">
-              <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M13.3333 6.66699C14.6594 6.66699 15.9312 7.19378 16.8689 8.13146C17.8065 9.06914 18.3333 10.3409 18.3333 11.667V17.5003H15V11.667C15 11.225 14.8244 10.801 14.5118 10.4885C14.1993 10.1759 13.7754 10.0003 13.3333 10.0003C12.8913 10.0003 12.4674 10.1759 12.1548 10.4885C11.8423 10.801 11.6667 11.225 11.6667 11.667V17.5003H8.33333V11.667C8.33333 10.3409 8.86012 9.06914 9.7978 8.13146C10.7355 7.19378 12.0072 6.66699 13.3333 6.66699Z" stroke="#99A1AF" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/><path d="M5 7.5H1.66667V17.5H5V7.5Z" stroke="#99A1AF" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/><path d="M3.33333 5.00033C4.25381 5.00033 5 4.25413 5 3.33366C5 2.41318 4.25381 1.66699 3.33333 1.66699C2.41286 1.66699 1.66667 2.41318 1.66667 3.33366C1.66667 4.25413 2.41286 5.00033 3.33333 5.00033Z" stroke="#99A1AF" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M4 8V16M4 4V4.01M8 16V10C8 9 9 8 10 8C11 8 12 9 12 10V16M12 16V10M8 16H8.01" stroke="#99A1AF" stroke-width="1.67" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </a>
-            <a href="#" class="footer__social-link" aria-label="E-Mail">
-              <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M18.3333 5.83301L10.8408 10.6055C10.5866 10.7532 10.2978 10.831 10.0037 10.831C9.70972 10.831 9.42092 10.7532 9.16666 10.6055L1.66666 5.83301" stroke="#99A1AF" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/><path d="M16.6667 3.33301H3.33333C2.41286 3.33301 1.66666 4.0792 1.66666 4.99967V14.9997C1.66666 15.9201 2.41286 16.6663 3.33333 16.6663H16.6667C17.5871 16.6663 18.3333 15.9201 18.3333 14.9997V4.99967C18.3333 4.0792 17.5871 3.33301 16.6667 3.33301Z" stroke="#99A1AF" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </a>
-            <a href="#" class="footer__social-link" aria-label="Telefon">
-              <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M11.5267 13.807C11.6988 13.886 11.8927 13.9041 12.0764 13.8582C12.2602 13.8123 12.4228 13.7052 12.5375 13.5545L12.8333 13.167C12.9886 12.96 13.1899 12.792 13.4213 12.6763C13.6527 12.5606 13.9079 12.5003 14.1667 12.5003H16.6667C17.1087 12.5003 17.5326 12.6759 17.8452 12.9885C18.1577 13.301 18.3333 13.725 18.3333 14.167V16.667C18.3333 17.109 18.1577 17.5329 17.8452 17.8455C17.5326 18.1581 17.1087 18.3337 16.6667 18.3337C12.6884 18.3337 8.87312 16.7533 6.06007 13.9403C3.24702 11.1272 1.66667 7.31191 1.66667 3.33366C1.66667 2.89163 1.84227 2.46771 2.15483 2.15515C2.46739 1.84259 2.89131 1.66699 3.33334 1.66699H5.83334C6.27537 1.66699 6.69929 1.84259 7.01185 2.15515C7.32441 2.46771 7.5 2.89163 7.5 3.33366V5.83366C7.5 6.0924 7.43976 6.34759 7.32405 6.57901C7.20834 6.81044 7.04033 7.01175 6.83334 7.16699L6.44334 7.45949C6.29035 7.57631 6.18252 7.74248 6.13816 7.92978C6.09381 8.11709 6.11566 8.31397 6.20001 8.48699C7.33891 10.8002 9.21203 12.671 11.5267 13.807Z" stroke="#99A1AF" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <a href="#" class="footer__social-link" aria-label="Twitter">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M2 2L8 10L2 18M18 2H12L8 10M18 18H12L8 10" stroke="#99A1AF" stroke-width="1.67" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </a>
           </div>
         </div>
-
         <div class="footer__col">
           <h4 class="footer__col-title">Leistungen</h4>
-          <ul class="footer__col-list">
+          <ul class="footer__list">
             <li><a href="#">KOMPASS-Förderung</a></li>
             <li><a href="#">AZAV-Zulassung</a></li>
             <li><a href="#">ZFU-Zulassung</a></li>
             <li><a href="#">ISO 9001</a></li>
           </ul>
         </div>
-
         <div class="footer__col">
           <h4 class="footer__col-title">Unternehmen</h4>
-          <ul class="footer__col-list">
+          <ul class="footer__list">
             <li><a href="#">Über uns</a></li>
             <li><a href="#">Team</a></li>
             <li><a href="#">Karriere</a></li>
             <li><a href="#">Kontakt</a></li>
           </ul>
         </div>
-
         <div class="footer__col">
           <h4 class="footer__col-title">Ressourcen</h4>
-          <ul class="footer__col-list">
+          <ul class="footer__list">
             <li><a href="#">Blog</a></li>
             <li><a href="#">FAQ</a></li>
             <li><a href="#">Leitfäden</a></li>
@@ -895,9 +701,8 @@
           </ul>
         </div>
       </div>
-
       <div class="footer__bottom">
-        <span class="footer__copyright">&copy; 2025 ISOGRAF. Alle Rechte vorbehalten.</span>
+        <p class="footer__copyright">© 2025 ISOGRAF. Alle Rechte vorbehalten.</p>
         <div class="footer__legal">
           <a href="#">Datenschutz</a>
           <a href="#">Impressum</a>
