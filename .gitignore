@@ -2,8 +2,15 @@
 isograf-main-design.svg
 isograf-main-design.pdf
 isograf-main-design.png
-assets/
-sections/
+isograf-externalized.svg
+builder-export.html
+
+# Old assets (large, unnamed)
+assets/img-*
 assets/optimized/
-CLAUDE.md
+svg-assets/
+rendered-sections/
+sections/
+
+# Misc
 *.log

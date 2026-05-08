@@ -1,125 +1,98 @@
-# Isograf Landing Page — Pixel-Perfect Figma Implementation
+# Isograf Landing Page — Builder.io Figma Export → Responsive Website
 
-## TASK
-Recreate the Figma design EXACTLY as a responsive HTML/CSS/JS one-page website.
-The design is in `isograf-main-design.png` (1441x14218px full page) and split into sections in `sections/`.
+## Mission
+Convert the Builder.io Figma export (`builder-export.html`, 248KB) into a production-ready, responsive, pixel-perfect landing page for GitHub Pages deployment.
 
-## CRITICAL: Use the `image` tool!
-You MUST use the `image` tool to look at `sections/01-nav-hero.png` through `sections/10-team-footer.png` BEFORE writing any code. Each section image shows the exact design to replicate. Look at EVERY section image.
+## Source of Truth
+**`builder-export.html`** is THE definitive reference. It contains:
+- All exact Figma positions, sizes, colors, fonts, spacing
+- 41 images hosted on Builder.io CDN (download locally to `assets/`)
+- All SVGs inline (logo, icons, decorative elements)
+- Complete text content in German
+- Layer names from Figma (use as semantic class names)
 
-## Brand
-- **Company:** Isograf — ISO 9001 / ISO 42001 Zertifizierungsbegleitung (Done-4-You für KMU)
-- **GF:** Daniel Graf ("Mr. Normen")
-- **Tone:** Premium, vertrauenswürdig, professionell
+## Design System (extracted from builder-export.html)
 
-## Design System (extracted from Figma)
+### Fonts
+- **DM Sans** — Logo, navigation, headings (weight: 400, 500, 700)
+- **Libre Baskerville** — Hero headline italic accent ("zu deiner Zertifizierung")
+- **Roboto** — Body text, buttons, descriptions (weight: 400, 500)
+- Load via Google Fonts
 
 ### Colors
-- Primary Dark Navy: `#1A2341`
-- Accent Gold: `#D4A843`
-- White: `#FFFFFF`
-- Light Gray BG: `#F5F5F5`
-- Text Dark: `#1A2341`
-- Text Gray: `#6B7280`
-- Muted Text (on dark): `#B0B8C8`
+- **Gold primary:** `#E2AC26` (logo, checkmarks, accents)
+- **Gold light:** `#FCC846` (stars, highlights)
+- **Gold gradient (CTA):** `linear-gradient(94deg, rgba(238,203,117,0.90) 13%, rgba(226,172,38,0.90) 57%, rgba(238,203,117,0.90) 102%)`
+- **Gold gradient (nav button):** `linear-gradient(86deg, #FFE5AC -30%, #F5C253 20%, #F1B53D 41%, #FFE5AC 75%, #EECB75 97%)`
+- **Navy/Dark:** `#14213D`, `#082742`, `#0A2640` (dark sections)
+- **Text:** `#000` (headings), `#6A7282` / `#272525` (body)
+- **Borders:** `#E0E0E0`, `#ECECEC`, `#F3F4F6`
+- **White:** `#FFF`, `rgba(255,255,255,0.95)` (nav bg)
 
-### Typography
-- Body: Inter or similar clean sans-serif (use Inter from Google Fonts)
-- Accent/Script headings: Playfair Display Italic for gold accent words
-- Heading sizes: 36-42px (H1), 28-32px (H2), 20-22px (H3)
-- Body: 14-16px
-- Line-height: 1.2 (headings), 1.6-1.7 (body)
+### Layout
+- **Max width:** 1441px (Figma artboard)
+- **Content max-width:** ~1311px with padding
+- **Nav padding:** `0 65px`
+- **Section padding:** typically `80px 65px` or `120px 65px`
 
-### Design Patterns
-- Alternating section backgrounds: White → Navy → White → Navy
-- Gold accent words in headings (script/italic font)
-- Cards with subtle borders on dark bg: `rgba(255,255,255,0.1)` border, `rgba(255,255,255,0.05)` bg
-- Border-radius: 12-16px on cards, 8px on buttons
-- Shadows: `0 10px 40px rgba(0,0,0,0.1)` on cards
-- Max container width: ~1200px centered
+## Architecture
 
-## Sections (top to bottom — reference sections/ images)
-
-### 1. Navigation Bar (sections/01-nav-hero.png)
-- Sticky top, dark navy bg
-- Logo left, nav links center-right, gold CTA button right
-- Height ~60-70px
-
-### 2. Hero Section (sections/01-nav-hero.png + sections/02-hero-stats.png)
-- Dark navy background
-- Left: Headline "Der einfache Weg zu deiner Zertifizierung" (gold accent on key word)
-- Left: Subtext, trust badges row (grayscale logos), stats row (gold numbers)
-- Right: Professional photo of man in suit
-- Stats: "+800", "+20", "+1.200" with labels
-
-### 3. Video Section (sections/03-video-social.png)
-- White/light bg
-- Centered video thumbnail with play button
-- Floating testimonial cards around video (slight rotation, shadows)
-
-### 4. "Warum zum Isograf?" (sections/04-warum-isograf.png)
-- White bg
-- Centered heading with "Isograf" in gold script
-- Testimonial quote block with gold quote marks
-
-### 5. "Done-4-You Zertifizierung" (sections/05-done4you.png)
-- Dark navy bg
-- 3 icon cards inline (semi-transparent bg, gold icons)
-- "Zertifizierung" in gold script
-
-### 6. "Zertifizierung, Die Ihr Wachstum Trägt" (sections/06-wachstum.png)
-- White bg, two-column layout
-- Left: Text + checklist with gold checkmarks
-- Right: Photo with floating stat card overlay
-
-### 7. Features/Benefits (sections/07-features.png)
-- Light gray bg
-- Feature list with icons
-- CTA: "Bereit für Ihre Zertifizierung?"
-
-### 8-9. "5-Phasen-Methode" (sections/08-ergebnisse-phasen.png + sections/09-phasen-continued.png)
-- Results stats section (dark navy)
-- Then vertical timeline with 5 steps, alternating left-right layout
-- Step circles with gold borders, connecting vertical line
-- Each step has title, description, small image
-
-### 10. Team + Footer (sections/10-team-footer.png)
-- Team section: Grid of headshot cards (3-4 columns)
-- Footer: Dark navy, logo, nav links, contact info
-
-## Technical Requirements
-- Single HTML file with embedded CSS (or separate CSS file)
-- Vanilla HTML/CSS/JS — NO frameworks
-- Google Fonts: Inter + Playfair Display
-- Fully responsive (Desktop pixel-perfect → Tablet → Mobile)
-- Smooth scroll for nav links
-- Images: Use placeholder images from picsum.photos or placeholder.com for photos
-- Icons: Use inline SVG or simple CSS shapes (no icon library dependency)
-- Deploy-ready for GitHub Pages
-
-## File Structure
+### Files to create
 ```
-index.html
-styles.css
-script.js
-assets/ (if needed)
+index.html          — Semantic HTML5, sections matching Figma layers
+styles.css          — All styles, CSS custom properties, responsive breakpoints
+script.js           — Smooth scroll, intersection observers, mobile menu
+assets/             — All images downloaded from Builder CDN
 ```
 
-## Quality Bar
-- Desktop MUST look identical to the Figma screenshots
-- Mobile must be clean and professional (stack columns, adjust font sizes)
-- No visual bugs, no overflow, no misaligned elements
-- Smooth animations (fade-in on scroll, hover effects on cards/buttons)
+### Responsive Breakpoints
+- Desktop: 1441px+ (match Figma exactly)
+- Laptop: 1024-1440px (fluid scaling)
+- Tablet: 768-1023px (stack columns)
+- Mobile: <768px (single column, hamburger menu)
 
-## Image References
-ALWAYS look at the section images before coding each section:
-- `sections/01-nav-hero.png` → Nav + Hero top
-- `sections/02-hero-stats.png` → Hero bottom + stats
-- `sections/03-video-social.png` → Video + social proof
-- `sections/04-warum-isograf.png` → Why Isograf
-- `sections/05-done4you.png` → Done-4-You cards
-- `sections/06-wachstum.png` → Growth section
-- `sections/07-features.png` → Features
-- `sections/08-ergebnisse-phasen.png` → Results + phases start
-- `sections/09-phasen-continued.png` → Phases continued
-- `sections/10-team-footer.png` → Team + Footer
+## Critical Rules
+
+1. **NO absolute positioning** — Convert ALL absolute positions from builder-export to flexbox/grid
+2. **Download ALL images** from `https://api.builder.io/api/v1/image/assets/TEMP/...` to `assets/` folder
+3. **Preserve ALL SVGs** inline (logo, icons, check marks, stars, decorative)
+4. **Preserve exact colors** — use CSS custom properties matching the design system above
+5. **Preserve exact typography** — font families, sizes, weights, line-heights, letter-spacing
+6. **Preserve exact spacing** — paddings, gaps, margins from the export
+7. **Every section must be a semantic HTML section** with descriptive class names from Figma layer names
+8. **All text content must be searchable/selectable** — NO text-as-image
+9. **CTA buttons** must be `<a>` tags linking to `#kontakt` or Calendly
+10. **Navigation** must have smooth-scroll to sections + sticky header
+
+## Sections (from builder-export.html layer names)
+
+1. **NavBar** — Logo + Links (Leistungen, Über uns, Ergebnisse, Ressourcen, Karriere) + Gold CTA
+2. **Hero** — Headline with DM Sans + Libre Baskerville italic, 3 checkmark USPs, gold CTA, "Bekannt aus" logos (ZDF, Spiegel)
+3. **Stats/Trust** — Numbers section (1.000+ Projekte etc.)
+4. **Leistungen** — Services grid (ISO 9001, ISO 42001, AZAV, BAFA etc.)
+5. **Prozess/Ablauf** — How it works steps
+6. **Über uns** — Team/company section with navy background
+7. **Ergebnisse/Case Studies** — Results with metrics
+8. **Testimonials** — Customer quotes
+9. **FAQ** — Accordion
+10. **CTA Section** — Final call-to-action
+11. **Footer** — Links, legal, contact
+
+## Image Handling
+For each `src="https://api.builder.io/api/v1/image/assets/TEMP/..."`:
+1. Download with curl to `assets/` using the hash as filename
+2. Replace src in HTML with local `assets/filename.webp` (or png for transparency)
+3. Add proper `alt` text based on Figma layer names
+4. Use `loading="lazy"` for below-fold images
+
+## Quality Checklist
+- [ ] All sections from builder-export present
+- [ ] All images downloaded locally
+- [ ] Responsive on mobile/tablet/desktop
+- [ ] Smooth scroll navigation
+- [ ] Sticky header with backdrop blur
+- [ ] Gold gradient CTAs match exactly
+- [ ] Typography hierarchy preserved
+- [ ] No horizontal scroll on any breakpoint
+- [ ] Page speed: all images optimized
+- [ ] Deployed to GitHub Pages
