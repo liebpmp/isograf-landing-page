@@ -7,337 +7,42 @@
     <meta name="description" content="Wir strukturieren, optimieren und zertifizieren Ihr Unternehmen – mit der Erfahrung aus über 1.000 Projekten. 100% Erfolgsgarantie.">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        
         html { scroll-behavior: smooth; }
-        
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
             background: #FFFFFF;
             overflow-x: hidden;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
 
-        /* === PIXEL-PERFECT SECTION RENDERING === */
-        .section-render {
-            display: block;
+        /* SVG container — renders the Figma design 1:1 */
+        .svg-container {
             width: 100%;
             max-width: 1441px;
-            margin: 0 auto;
+            line-height: 0;
+        }
+
+        .svg-container object {
+            width: 100%;
             height: auto;
-            /* Remove any gaps between sections */
-            vertical-align: bottom;
-            line-height: 0;
         }
 
-        .section-wrapper {
-            width: 100%;
-            line-height: 0;
-            font-size: 0;
-            text-align: center;
-            /* Background color matching each section for loading */
-        }
-
-        /* Section background colors while images load */
-        .section-wrapper[data-bg="white"] { background: #FFFFFF; }
-        .section-wrapper[data-bg="navy"] { background: #14213D; }
-        .section-wrapper[data-bg="light"] { background: #F3F4F6; }
-
-        /* === STICKY NAV (overlays the nav section render) === */
-        .nav-overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 88px;
-            z-index: 1000;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: rgba(255, 255, 255, 0.95);
-            border-bottom: 1px solid #F3F4F6;
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
-            transition: box-shadow 0.3s ease;
-        }
-
-        .nav-overlay.scrolled {
-            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.08);
-        }
-
-        .nav-inner {
-            max-width: 1441px;
-            width: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 0 40px;
-            font-size: 15px;
-            line-height: 1.4;
-        }
-
-        .nav-logo {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            text-decoration: none;
-        }
-
-        .nav-logo svg { width: 32px; height: 24px; }
-
-        .nav-logo-text {
-            font-size: 18px;
-            font-weight: 700;
-            letter-spacing: 2px;
-            color: #14213D;
-        }
-
-        .nav-links {
-            display: flex;
-            align-items: center;
-            gap: 32px;
-            list-style: none;
-        }
-
-        .nav-links a {
-            text-decoration: none;
-            color: #14213D;
-            font-weight: 500;
-            font-size: 15px;
-            transition: color 0.2s;
-        }
-
-        .nav-links a:hover,
-        .nav-links a.active { color: #E2AC26; }
-
-        .nav-cta {
-            background: #14213D;
-            color: #FFFFFF !important;
-            padding: 10px 24px;
-            border-radius: 8px;
-            font-weight: 600;
-            transition: background 0.2s;
-        }
-
-        .nav-cta:hover { background: #0a1225; }
-
-        /* Spacer so content starts below fixed nav */
-        .nav-spacer { height: 88px; }
-
-        /* === RESPONSIVE === */
-        @media (max-width: 1441px) {
-            .section-render {
-                max-width: 100%;
+        /* For screens wider than design, center with white sides */
+        @media (min-width: 1442px) {
+            body { background: #F5F5F5; }
+            .svg-container { 
+                box-shadow: 0 0 60px rgba(0,0,0,0.08);
             }
-        }
-
-        @media (max-width: 768px) {
-            .nav-overlay { height: 64px; }
-            .nav-spacer { height: 64px; }
-            .nav-inner { padding: 0 20px; }
-            .nav-links { display: none; }
-
-            .mobile-menu-btn {
-                display: flex;
-                flex-direction: column;
-                gap: 5px;
-                cursor: pointer;
-                padding: 8px;
-            }
-
-            .mobile-menu-btn span {
-                width: 24px;
-                height: 2px;
-                background: #14213D;
-                transition: all 0.3s;
-            }
-
-            .mobile-menu {
-                display: none;
-                position: fixed;
-                top: 64px;
-                left: 0;
-                width: 100%;
-                background: white;
-                padding: 20px;
-                box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-                z-index: 999;
-            }
-
-            .mobile-menu.active { display: block; }
-
-            .mobile-menu a {
-                display: block;
-                padding: 12px 0;
-                color: #14213D;
-                text-decoration: none;
-                font-size: 16px;
-                font-weight: 500;
-                border-bottom: 1px solid #F3F4F6;
-            }
-
-            .mobile-menu a:last-child { border: none; }
-        }
-
-        @media (min-width: 769px) {
-            .mobile-menu-btn { display: none; }
-        }
-
-        /* === LOADING === */
-        .section-render {
-            opacity: 0;
-            transition: opacity 0.4s ease;
-        }
-
-        .section-render.loaded {
-            opacity: 1;
         }
     </style>
 </head>
 <body>
-
-    <!-- Fixed Navigation -->
-    <nav class="nav-overlay" id="navbar">
-        <div class="nav-inner">
-            <a href="#" class="nav-logo">
-                <svg viewBox="0 0 30 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path fill-rule="evenodd" clip-rule="evenodd" d="M0.023 0.563H0V18.437H14.214L0.023 0.563ZM23.089 7.773L28.812 14.983V0.563L23.089 7.773ZM14.658 0.563H14.61L8.669 8.045L16.919 18.437H28.812V18.39L14.658 0.563Z" fill="#E2AC26"/>
-                </svg>
-                <span class="nav-logo-text">ISOGRAF</span>
-            </a>
-
-            <ul class="nav-links">
-                <li><a href="#leistungen">Leistungen</a></li>
-                <li><a href="#ueber-uns">Über uns</a></li>
-                <li><a href="#ergebnisse" class="active">Ergebnisse</a></li>
-                <li><a href="#ressourcen">Ressourcen</a></li>
-                <li><a href="#karriere">Karriere</a></li>
-                <li><a href="#start" class="nav-cta">Jetzt starten</a></li>
-            </ul>
-
-            <div class="mobile-menu-btn" onclick="toggleMobileMenu()">
-                <span></span><span></span><span></span>
-            </div>
-        </div>
-    </nav>
-
-    <div class="mobile-menu" id="mobileMenu">
-        <a href="#leistungen" onclick="toggleMobileMenu()">Leistungen</a>
-        <a href="#ueber-uns" onclick="toggleMobileMenu()">Über uns</a>
-        <a href="#ergebnisse" onclick="toggleMobileMenu()">Ergebnisse</a>
-        <a href="#ressourcen" onclick="toggleMobileMenu()">Ressourcen</a>
-        <a href="#karriere" onclick="toggleMobileMenu()">Karriere</a>
-        <a href="#start" onclick="toggleMobileMenu()">Jetzt starten</a>
+    <div class="svg-container">
+        <object data="isograf-externalized.svg" type="image/svg+xml" width="100%">
+            <!-- Fallback for browsers that can't render SVG -->
+            <img src="isograf-main-design.png" alt="Isograf Landing Page" style="width:100%;height:auto;">
+        </object>
     </div>
-
-    <!-- Nav spacer -->
-    <div class="nav-spacer"></div>
-
-    <!-- === PIXEL-PERFECT SECTION RENDERS === -->
-    <!-- Each section is the actual Figma render — 1:1 match guaranteed -->
-
-    <div class="section-wrapper" data-bg="white" id="hero">
-        <picture>
-            <source srcset="rendered-sections/02-hero.webp" type="image/webp">
-            <img src="rendered-sections/02-hero.png" alt="Isograf Hero — Der einfache Weg zu deiner Zertifizierung" class="section-render" loading="eager">
-        </picture>
-    </div>
-
-    <div class="section-wrapper" data-bg="white" id="stats">
-        <picture>
-            <source srcset="rendered-sections/03-stats.webp" type="image/webp">
-            <img src="rendered-sections/03-stats.png" alt="800+ Kunden, 20+ Jahre Erfahrung, 1.200+ Projekte" class="section-render">
-        </picture>
-    </div>
-
-    <div class="section-wrapper" data-bg="white" id="leistungen">
-        <picture>
-            <source srcset="rendered-sections/04-video-services.webp" type="image/webp">
-            <img src="rendered-sections/04-video-services.png" alt="Isograf Leistungen" class="section-render">
-        </picture>
-    </div>
-
-    <div class="section-wrapper" data-bg="navy" id="ueber-uns">
-        <picture>
-            <source srcset="rendered-sections/05-warum-isograf.webp" type="image/webp">
-            <img src="rendered-sections/05-warum-isograf.png" alt="Warum zum Isograf?" class="section-render">
-        </picture>
-    </div>
-
-    <div class="section-wrapper" data-bg="navy">
-        <picture>
-            <source srcset="rendered-sections/06-done4you-carousel.webp" type="image/webp">
-            <img src="rendered-sections/06-done4you-carousel.png" alt="Done-4-You Zertifizierung" class="section-render">
-        </picture>
-    </div>
-
-    <div class="section-wrapper" data-bg="white">
-        <picture>
-            <source srcset="rendered-sections/07-certificate-growth.webp" type="image/webp">
-            <img src="rendered-sections/07-certificate-growth.png" alt="Zertifizierung die Ihr Wachstum trägt" class="section-render">
-        </picture>
-    </div>
-
-    <div class="section-wrapper" data-bg="white">
-        <picture>
-            <source srcset="rendered-sections/08-bento-grid.webp" type="image/webp">
-            <img src="rendered-sections/08-bento-grid.png" alt="Bento Grid Features" class="section-render">
-        </picture>
-    </div>
-
-    <div class="section-wrapper" data-bg="navy" id="ergebnisse">
-        <picture>
-            <source srcset="rendered-sections/09-cta-ergebnisse.webp" type="image/webp">
-            <img src="rendered-sections/09-cta-ergebnisse.png" alt="Bisherige Ergebnisse" class="section-render">
-        </picture>
-    </div>
-
-    <div class="section-wrapper" data-bg="navy">
-        <picture>
-            <source srcset="rendered-sections/10-phasen-methode.webp" type="image/webp">
-            <img src="rendered-sections/10-phasen-methode.png" alt="5-Phasen-Methode" class="section-render">
-        </picture>
-    </div>
-
-    <div class="section-wrapper" data-bg="white" id="ressourcen">
-        <picture>
-            <source srcset="rendered-sections/11-gallery.webp" type="image/webp">
-            <img src="rendered-sections/11-gallery.png" alt="Galerie" class="section-render">
-        </picture>
-    </div>
-
-    <div class="section-wrapper" data-bg="white" id="karriere">
-        <picture>
-            <source srcset="rendered-sections/12-team.webp" type="image/webp">
-            <img src="rendered-sections/12-team.png" alt="Unser starkes Team" class="section-render">
-        </picture>
-    </div>
-
-    <div class="section-wrapper" data-bg="navy" id="start">
-        <picture>
-            <source srcset="rendered-sections/13-final-cta-footer.webp" type="image/webp">
-            <img src="rendered-sections/13-final-cta-footer.png" alt="Footer" class="section-render">
-        </picture>
-    </div>
-
-    <script>
-        // Sticky nav shadow on scroll
-        const navbar = document.getElementById('navbar');
-        window.addEventListener('scroll', () => {
-            navbar.classList.toggle('scrolled', window.scrollY > 20);
-        });
-
-        // Mobile menu toggle
-        function toggleMobileMenu() {
-            document.getElementById('mobileMenu').classList.toggle('active');
-        }
-
-        // Lazy load fade-in
-        document.querySelectorAll('.section-render').forEach(img => {
-            if (img.complete) {
-                img.classList.add('loaded');
-            } else {
-                img.addEventListener('load', () => img.classList.add('loaded'));
-            }
-        });
-    </script>
 </body>
 </html>
