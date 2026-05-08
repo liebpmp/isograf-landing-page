@@ -1,59 +1,98 @@
-# Isograf Landing Page — Builder.io Export → Responsive
+# Isograf Landing Page — Figma MCP → Pixel-Perfect Website
 
 ## Mission
-Take `builder-export.html` (the EXACT Figma design as HTML) and make it responsive + production-ready. DO NOT rebuild or reinterpret the design. The export IS the design.
+Build a pixel-perfect responsive website from the Figma design using the Figma MCP server for exact design values.
 
-## Approach: MINIMAL CHANGES
-The builder-export.html already looks pixel-perfect at 1441px. Your job:
+## Figma File
+- **File:** `zjXTHbWMJ85arqkgO17rxa`
+- **Page:** "Isograf Landingpages (Stand 08.05.2026)"
+- **Frame:** "Isograf_UI - Main" (node-id: `75:2473`)
+- **Size:** 1441px × 14218px
 
-1. **Keep the HTML structure as close to builder-export.html as possible**
-2. **Replace absolute positioning with flexbox/grid** — but preserve the EXACT same visual result at 1441px
-3. **Add responsive breakpoints** for tablet (768px) and mobile (375px)
-4. **Download images** from Builder.io CDN → local `assets/` folder
-5. **Add interactivity**: smooth scroll, sticky nav, mobile hamburger, FAQ accordion
-6. **DO NOT change**: colors, fonts, spacing, text content, element order, visual hierarchy
+## 17 Sections (in order)
+| # | Name | Node ID |
+|---|------|---------|
+| 1 | NavBar | 75:2474 |
+| 2 | Hero | 75:2492 |
+| 3 | References | 75:2557 |
+| 4 | 4 Columns | 75:2568 |
+| 5 | 4 Columns | 75:2575 |
+| 6 | Introduction | 75:2605 |
+| 7 | Certificate | 75:2660 |
+| 8 | Frame 16 | 75:2831 |
+| 9 | Growth | 75:2839 |
+| 10 | Contact Banner | 75:2941 |
+| 11 | Routes / References | 75:2960 |
+| 12 | 5 Methods | 75:3076 |
+| 13 | Comparison | 75:3176 |
+| 14 | Frame 14 | 75:3313 |
+| 15 | Routes / References | 75:3321 |
+| 16 | Contact Banner | 75:3402 |
+| 17 | Footer | 75:3424 |
 
-## Critical Rules
+## Workflow — Section by Section
 
-1. **PIXEL-PERFECT AT 1441px** — if your version looks different from builder-export.html at 1441px width, you've failed
-2. **Copy exact CSS values** from the inline styles in builder-export.html — don't approximate
-3. **Keep all inline SVGs** exactly as they are in the export
-4. **Preserve layer-name attributes** as class names for semantic meaning
-5. **Every gradient, shadow, border-radius, font-size, line-height** must match the export exactly
-6. **Test by opening both files side-by-side** at 1441px — they must be indistinguishable
+For EACH section:
+1. **Use Figma MCP tools** to read the node and ALL its children (deep). Extract:
+   - Layout mode (auto-layout → flexbox, or absolute)
+   - Exact dimensions, padding, gap, itemSpacing
+   - Fill colors (solid, gradient — copy exact stops)
+   - Typography: fontFamily, fontSize, fontWeight, lineHeight, letterSpacing
+   - Border radius, strokes, effects (shadows, blurs)
+   - Image fills → export as PNG/JPG via Figma API to `assets/`
+2. **Write the HTML + CSS** for that section using the EXACT values from Figma
+3. **Move to the next section**
 
-## Workflow
+## Figma MCP Tools Available
+You have a Figma MCP server connected. Use its tools to:
+- Read node properties (layout, styles, typography)
+- Get CSS for nodes
+- Export images from nodes
+- Navigate the node tree
 
-### Step 1: Download all images
-```bash
-# Extract all Builder.io CDN URLs from builder-export.html
-grep -o 'src="https://api.builder.io[^"]*"' builder-export.html | sort -u
-# Download each to assets/ with hash as filename
-# Replace URLs in your new HTML
+## Also Available: builder-export.html
+The file `builder-export.html` (248KB) is a Builder.io export of the same Figma frame. It contains:
+- All text content (German)
+- All inline SVGs (logo, icons, decorative)
+- Image URLs on Builder.io CDN
+- Approximate inline styles
+
+Use builder-export.html as a SECONDARY reference for:
+- Text content (copy verbatim)
+- SVG code (copy verbatim)
+- Image URLs (download to assets/)
+
+But use Figma MCP as PRIMARY source for all layout and styling values.
+
+## Design System (from Figma)
+
+### Fonts
+- **DM Sans** — Logo, navigation, headings (400, 500, 700)
+- **Libre Baskerville** — Italic accents in headings
+- **Roboto** — Body text (400, 500)
+
+### Colors (verify via Figma MCP)
+- Gold primary: `#E2AC26`
+- Gold light: `#FCC846`
+- Navy: `#14213D`, `#082742`
+- Text: `#000`, `#6A7282`, `#272525`
+
+## Output Files
+```
+index.html    — semantic HTML5, one <section> per Figma frame
+styles.css    — all styles with CSS custom properties
+script.js     — smooth scroll, sticky nav, mobile menu, FAQ accordion
+assets/       — all images from Figma
 ```
 
-### Step 2: Convert to responsive
-- Take builder-export.html section by section
-- For each section: convert `position:absolute` + fixed px to flexbox
-- VERIFY at 1441px it still looks identical
-- Then add responsive rules
+## Responsive
+- Desktop: 1441px (MUST match Figma exactly)
+- Tablet: 768px (stack where needed)
+- Mobile: 375px (single column, hamburger)
 
-### Step 3: Add interactivity
-- Smooth scroll for nav links
-- Sticky nav with backdrop-blur
-- Mobile hamburger menu
-- FAQ accordion (if present)
-- Intersection observer for scroll animations (subtle)
-
-## Fonts (from export)
-- `DM Sans` — weight 400, 500, 700
-- `Libre Baskerville` — italic accent
-- `Roboto` — body text, weight 400, 500
-
-## DO NOT
-- Rewrite the design from scratch
-- Change the visual hierarchy
-- Use different spacing than what's in the export
-- Simplify or "clean up" the design
-- Remove decorative elements
-- Change any text content
+## Critical Rules
+1. **Every CSS value must come from Figma MCP data** — no guessing
+2. At 1441px width, the result MUST be indistinguishable from the Figma design
+3. Download ALL images via Figma image export API
+4. Keep all SVGs from builder-export.html (they're already correct)
+5. Git commit and push to GitHub Pages when done
