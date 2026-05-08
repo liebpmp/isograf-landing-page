@@ -96,3 +96,57 @@ assets/       — all images from Figma
 3. Download ALL images via Figma image export API
 4. Keep all SVGs from builder-export.html (they're already correct)
 5. Git commit and push to GitHub Pages when done
+
+## ⚠️ IMPORTANT: Use LOCAL Figma JSON files (NOT the MCP API!)
+
+The Figma API has rate limits. ALL section data has been pre-downloaded to local JSON files.
+
+**DO NOT use mcp__figma__get_figma_data!** Instead, read the local JSON files:
+
+```
+figma-sections/01-navbar.json
+figma-sections/02-hero.json
+figma-sections/03-references.json
+figma-sections/04-columns-1.json
+figma-sections/05-columns-2.json
+figma-sections/06-introduction.json
+figma-sections/07-certificate.json
+figma-sections/08-frame16.json
+figma-sections/09-growth.json
+figma-sections/10-contact-banner.json
+figma-sections/11-routes-refs-1.json
+figma-sections/12-five-methods.json
+figma-sections/13-comparison.json
+figma-sections/14-frame14.json
+figma-sections/15-routes-refs-2.json
+figma-sections/16-contact-banner-2.json
+figma-sections/17-footer.json
+```
+
+Each JSON file contains the COMPLETE Figma node tree with ALL properties:
+- `fills` → background colors, gradients
+- `style` → typography (fontFamily, fontSize, fontWeight, lineHeight, letterSpacing)  
+- `absoluteBoundingBox` → exact x, y, width, height
+- `paddingLeft/Right/Top/Bottom` → padding
+- `itemSpacing` → gap
+- `layoutMode` → HORIZONTAL/VERTICAL = flexbox direction
+- `cornerRadius` → border-radius
+- `strokes` → borders
+- `effects` → shadows, blurs
+- `characters` → text content
+
+### How to extract CSS from JSON:
+1. Read the JSON file for the section
+2. Parse the node tree recursively
+3. Map Figma properties to CSS:
+   - `fills[0].color` (r,g,b,a 0-1) → `rgb(r*255, g*255, b*255)`
+   - `layoutMode: "HORIZONTAL"` → `display: flex; flex-direction: row`
+   - `layoutMode: "VERTICAL"` → `display: flex; flex-direction: column`
+   - `primaryAxisAlignItems` → `justify-content`
+   - `counterAxisAlignItems` → `align-items`
+   - `itemSpacing` → `gap`
+   - `absoluteBoundingBox.width/height` → `width/height`
+
+### For images: Use mcp__figma__download_figma_images
+Image downloads still work. For any node with `type: "RECTANGLE"` and `fills[].type: "IMAGE"`, export via:
+- mcp__figma__download_figma_images with fileKey "zjXTHbWMJ85arqkgO17rxa" and the node IDs
