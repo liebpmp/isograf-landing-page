@@ -1,88 +1,88 @@
-# Isograf Landing Page V11 — Visual Fixes on Responsive V10
+# Isograf Landing Page V12 — Pixel-Perfect Fix Round
 
-## ⚠️ CRITICAL: The Base is ALREADY Responsive!
-The current `index.html` + `styles.css` is the output of a previous Claude Code session that converted Anima's fixed-1440px React code into responsive vanilla HTML+CSS with 3 breakpoints. **DO NOT go back to the Anima source code for layout/responsive behavior.** The Anima source (`anima-source/`) is ONLY useful for understanding which visual elements/assets should exist — NOT for layout values.
-
-**Your job: Fix specific visual issues ON TOP of the existing responsive code. Do NOT rewrite responsive breakpoints or layout logic that already works.**
-
-## The Key Layout Issue: Container Boxing
-The existing code wraps ALL sections in `max-width: var(--max-w)` (1440px). This means on screens wider than 1440px, there are white gaps on the sides.
-
-**The fix pattern for EVERY section:**
-- Section BACKGROUND (the `<section>` element itself): `width: 100%` — spans full viewport, no max-width
-- Section CONTENT (the inner `__inner` div): `max-width: var(--max-w); margin: 0 auto; padding: 0 32px;` — centered, constrained
-
-This means dark/navy backgrounds, gradients, and background images go edge-to-edge across the FULL screen, while text/cards stay centered. This is standard landing page behavior.
-
-**Check this on EVERY section — many currently have max-width on the section itself instead of only the inner wrapper.**
-
-## Version Management
-- Save result as `versions/v11-clean.html` + `versions/v11-clean.css`
-- Also update root `index.html` + `styles.css`
+## ⚠️ CRITICAL RULES
+1. The current code is ALREADY responsive with 3 breakpoints — DO NOT rewrite responsive logic
+2. Only fix the specific issues listed below
+3. Use `figma-references-v11/figma-section-*.png` images (view with `image` tool) as the PIXEL REFERENCE
+4. Use Figma MCP (`mcp__figma__get_figma_data` with file key `rvCwJ18rF7Fmm9i7vc9PK6`) to get exact CSS values and download missing assets
+5. Save result as `versions/v12.html` + `versions/v12.css`, also update root files
 
 ## Architecture
-- Vanilla HTML + CSS + minimal JS (NO React, NO Tailwind)
-- Static hosting on GitHub Pages
+- Vanilla HTML + CSS + minimal JS. Static GitHub Pages hosting.
+- Fonts: DM Sans (headings), Libre Baskerville (italic), Roboto (body)
+- Gold: #e2ac26, Navy: #14213d
 
-## Fonts & Colors (for reference)
-- DM Sans (headings), Libre Baskerville (italic), Roboto (body)
-- Gold: #e2ac26, Navy: #14213d, Light bg: #f9f7f2
+## ===== 12 ISSUES TO FIX =====
 
-## ===== VISUAL ISSUES TO FIX =====
+### 🔴 1. Double "Jetzt starten" Button in Navbar
+There are TWO "Jetzt starten" buttons visible on desktop. One has class `mobile-cta` (should be `display: none` on desktop) and one in `.site-header__cta`. Verify `.mobile-cta { display: none; }` is in the CSS (not inside a media query). Currently it might only be set inside a mobile media query.
 
-### 🔴 ISSUE 1: Container Boxing (affects ALL sections)
-Fix the pattern described above. Every section needs full-width background with centered max-width content.
+### 🟡 2. Hero — Daniel Further Right
+Daniel's photo cutout needs to move further right so there's better proportion when the background goes full-width. Check Figma section 1 (`figma-section-1.png`) for exact positioning. Daniel should bleed off the right edge slightly.
 
-### 🔴 ISSUE 2: Video Section — Remove fake monitor bezel
-The video thumbnail image `assets/anima/4-coloumns.png` (1441x1078) already contains the play button and rounded corners BAKED IN. The CSS should NOT add:
-- Extra play button overlay (`.video-intro__play`) → hide it
-- Dark gradient overlay (`.video-intro__frame::after`) → remove it
-- `background: #2c2c2c` → transparent
-- Heavy box-shadow → soft `drop-shadow(0 8px 40px rgba(0,0,0,0.12))`
-- `filter: brightness(0.78)` → remove or lighten
-Just show the image cleanly with a subtle drop shadow. See `figma-references-v11/` for comparison.
+### 🟡 3. Content Sections Wider
+The inner content areas are too narrow. Increase `max-width` on inner wrappers by ~100-150px where they look too constrained. Check against Figma proportions.
 
-### 🔴 ISSUE 3: "Warum zum Isograf" — Daniel's photo missing
-The card with "Denn wer mit ISOGRAF arbeitet..." currently shows only the columns/architecture image on the right. Daniel's portrait photo should be OVERLAID on top, positioned right side of the card.
-- Look at `figma-references-v11/01-figma-warum-zum-isograf.jpg` for the correct look
-- The photo file is likely `assets/anima/dsc01322-1.png` or similar (check existing assets)
-- If no suitable photo exists in assets, check what Anima source references: look at `CourseIntroductionSection.tsx`
-- Also: add gold bullet dots before the 3 list items (kleine bis mittelständige..., Bildungsinstitute..., Berater...)
+### 🟡 4. Modules Section (ISO 9001, AZAV, ZFU, Listung) — Bigger Font + Column Illustrations
+- Increase font size for card descriptions (better desktop readability)
+- The decorative column illustrations should be CLOSER to/touching the card edges (like in Figma)
+- Check `figma-section-2.png` for reference
 
-### 🔴 ISSUE 4: "Done-4-You Zertifizierung" — Carousel → 4-column Grid
-V10 shows a carousel with only 1 active card visible. The Figma design shows ALL 4 cards (KOMPASS, AZAV, ZFU, ISO 9001) side by side.
-- See `figma-references-v11/04-figma-done4you-grid.jpg` for the correct look
-- All 4 cards visible simultaneously in a row
-- The "active" card (currently ZFU) is slightly larger/highlighted with gold border
-- Arrow buttons + pagination dots below allow changing which card is active
-- Navigation is OPTIONAL — the static grid with all visible is the priority
+### 🔴 5. "Warum zum ISOGRAF" — WRONG Daniel Photo
+Currently uses the same Daniel cutout as the hero (black suit, white shirt, arms crossed). The Figma shows a DIFFERENT photo: Daniel in a **gray/blue blazer, light blue shirt, slightly different angle, more relaxed expression**. 
+- Download the correct image from Figma MCP using `mcp__figma__download_figma_images`
+- The photo should be LARGER than current and properly layered over the columns background
+- Check `figma-section-3.png` for reference
 
-### 🔴 ISSUE 5: "Zertifizierung, die Ihr Wachstum trägt" Bento Grid — Missing overlays
-The bento grid has these missing elements:
-- **Top-left (Daniel photo):** Should have floating testimonial cards overlaid (showing "Persona 1", star ratings, review text) — see `figma-references-v11/06-figma-bento-grid.jpg`
-- **Bottom-left ("Unkomplizierter Prozess"):** Should have a large checkmark icon (teal circle with white check)
-- **Bottom-right ("Echtes Wachstum"):** Should have diamond decorative shapes
+### 🟡 6. Done-4-You — Add Carousel Navigation (Visual)
+The Figma shows carousel-style navigation below the 4 cards:
+- Two circular arrow buttons (left outlined, right filled gold)
+- 5 pagination dots below (3rd active/filled)
+- The center card is "active" (larger, gold border), flanking cards are dimmed
+- Currently V11 shows all 4 in a flat grid — change to: all 4 visible BUT with active card highlighted, plus add the arrow buttons + dots below
+- Add basic JS: clicking arrows changes which card is "active" (gets gold border + full opacity, others dim)
+- Check `figma-section-4.png` for reference
 
-Check what assets exist for these overlays — look at `CertificationAssuranceSection.tsx` in the Anima source for the asset references.
+### 🔴 7. "Unkomplizierter Prozess" Card — Wrong Checkmark Icon
+The current checkmark is CSS-generated. The Figma shows a **premium glassmorphism checkmark**: white checkmark inside a translucent circle with a subtle glow/radial light behind it.
+- Download the actual asset from Figma MCP or recreate with CSS (radial gradient glow + frosted circle + white checkmark)
+- Check `figma-section-5.png` for reference
 
-### 🔴 ISSUE 6: Bottom CTA "Bereit für Ihre Zertifizierung?" — Photo wrong side
-Daniel's photo is on the LEFT, heavily cropped. Should be on the RIGHT, larger, overlapping/extending above the card.
-- See `figma-references-v11/08-figma-bottom-cta.jpg`
-- Check `ConsultationSection.tsx` for correct layout
+### 🔴 8. Daniel Photo in Bento Grid — Missing Color Gradient
+The Daniel photo in the bento grid ("Zertifizierung die Ihr Wachstum trägt" section, top-left card) should have a **dark navy-to-blue gradient overlay/tint** — it's desaturated/cool-toned in Figma, not the current warm/color photo.
+- Add a CSS overlay (navy-to-blue gradient with mix-blend-mode or ::after pseudo-element)
+- The testimonial cards floating on top are already there from V11
+- Check `figma-section-5.png` for reference
 
-### 🟡 ISSUE 7: Hero Background Image
-The hero section needs the architectural sketch background image behind Daniel's photo cutout. The image file is `assets/anima/placeholder-image.png` (check if it exists). If not, check what the Anima source `CertificationHeroSection.tsx` references.
-**DO NOT change the hero layout/responsive behavior — only add the background image.**
+### 🔴 9. "Echtes Wachstum" Card — Completely Different from Figma
+In Figma this card has:
+- A blend of dark navy gradient (left) transitioning to faded classical building photo (right)
+- **Diamond/rhombus decorative shapes** (◇) at top-left and bottom-left
+- Text on the LEFT side of the card
+- Currently it's plain — needs the gradient, building photo background, and diamond decorations
+- Check `figma-section-5.png` for reference
+
+### 🔴 10. "Bereit für Ihre Zertifizierung?" CTA — Daniel Position
+Daniel must be on the RIGHT side (not left) and his photo must EXTEND ABOVE the card boundary (head breaks out of the card). This creates the signature "breaking-bounds" effect from the Figma design.
+- Use `position: relative` on the card + `position: absolute` or negative `margin-top` on Daniel's photo
+- Check `figma-section-6.png` for reference
+
+### 🟡 11. 5-Phasen-Methode — Fly-in Animation
+Add subtle CSS animations: each phase card flies in from left/right alternately as the user scrolls to them.
+- Use `@keyframes` + `IntersectionObserver` in JS
+- Stagger the animations (each phase 150ms after the previous)
+- Subtle: `opacity: 0; transform: translateX(-40px)` → `opacity: 1; transform: translateX(0)`
+- Alternate direction: odd phases from left, even from right
+
+### 🟡 12. General Colors — Match Figma More Closely
+Some sections have slightly different colors than Figma. Use the Figma MCP to verify exact color values for:
+- Navy backgrounds
+- Gold accents
+- Card backgrounds
+- Text colors on dark backgrounds
 
 ## Available Resources
-- **Figma reference screenshots:** `figma-references-v11/` (9 images, showing Figma vs V10)
-- **Anima React source:** `anima-source/anima-v10/` — use ONLY for asset references and element structure, NOT for layout values
-- **Figma CSS:** `figma-css/` — 17 files with exact CSS values at 1440px
-- **Assets:** `assets/anima/` — 89+ images from Anima CDN
-- **Figma MCP Server:** Available via `mcp__figma__get_figma_data` and `mcp__figma__download_figma_images` tools — use for exact CSS values or missing assets. File key: `rvCwJ18rF7Fmm9i7vc9PK6`
-
-## Quality Bar
-- Responsive behavior that already works → DON'T TOUCH
-- Full-width backgrounds on ALL sections (no white gaps on large screens)
-- All visual elements from Figma present (photos, overlays, icons)
-- No layout breaks at any viewport from 375px to 2560px
+- **Figma section images:** `figma-references-v11/figma-section-{1..10}.png` — USE IMAGE TOOL to view these!
+- **Figma MCP:** `mcp__figma__get_figma_data` (file key: `rvCwJ18rF7Fmm9i7vc9PK6`) for CSS values + `mcp__figma__download_figma_images` for assets
+- **Anima source:** `anima-source/anima-v10/` — for understanding component structure
+- **Current assets:** `assets/anima/` — 89+ images
