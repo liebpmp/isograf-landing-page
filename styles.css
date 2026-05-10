@@ -314,15 +314,15 @@ h1, h2, h3, h4, p { margin: 0; }
   min-height: 880px;
   display: flex;
   align-items: center;
-  padding: 80px 32px 140px 160px;
+  padding: 40px 32px 140px 160px;
 }
 .hero__art {
   position: absolute;
   bottom: 0;
   right: -2%;
-  width: 62%;
-  max-width: 920px;
-  height: 100%;
+  width: 65%;
+  max-width: 960px;
+  height: 105%;
   background: url("assets/anima/isografprobleme-1.png") right bottom / contain no-repeat;
   z-index: -2;
   pointer-events: none;
@@ -331,9 +331,9 @@ h1, h2, h3, h4, p { margin: 0; }
   position: absolute;
   bottom: 0;
   right: -4%;
-  width: 62%;
-  max-width: 920px;
-  height: 100%;
+  width: 65%;
+  max-width: 960px;
+  height: 105%;
   background: url("assets/anima/isografprobleme.png") right bottom / contain no-repeat;
   filter: blur(36.75px);
   opacity: 0.55;
