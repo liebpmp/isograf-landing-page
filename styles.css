@@ -107,6 +107,7 @@ h1, h2, h3, h4, p { margin: 0; }
   transition: transform 0.18s ease;
 }
 .btn-primary-sm:hover { transform: translateY(-1px); }
+.mobile-cta { display: none; }
 
 /* large CTA — gold w/ inner highlight + golden gradient border via pseudo-element */
 .btn-cta {
