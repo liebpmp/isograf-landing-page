@@ -320,9 +320,9 @@ h1, h2, h3, h4, p { margin: 0; }
   position: absolute;
   bottom: 0;
   right: -2%;
-  width: 55%;
-  max-width: 820px;
-  height: 90%;
+  width: 62%;
+  max-width: 920px;
+  height: 100%;
   background: url("assets/anima/isografprobleme-1.png") right bottom / contain no-repeat;
   z-index: -2;
   pointer-events: none;
@@ -331,9 +331,9 @@ h1, h2, h3, h4, p { margin: 0; }
   position: absolute;
   bottom: 0;
   right: -4%;
-  width: 55%;
-  max-width: 820px;
-  height: 90%;
+  width: 62%;
+  max-width: 920px;
+  height: 100%;
   background: url("assets/anima/isografprobleme.png") right bottom / contain no-repeat;
   filter: blur(36.75px);
   opacity: 0.55;
