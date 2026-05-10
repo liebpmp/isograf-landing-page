@@ -1148,7 +1148,6 @@ h1, h2, h3, h4, p { margin: 0; }
 }
 .panel--growth {
   background:
-    linear-gradient(90deg, rgba(26,42,77,1) 0%, rgba(26,42,77,1) 30%, rgba(26,42,77,0.6) 50%, rgba(60,98,179,0) 70%),
     url("assets/anima/namewithd-architectual-pencil-drawing-of-a-majestic-court-bui-19.png") right center / auto 100% no-repeat,
     #1a2a4d;
   color: #fff;
@@ -1158,42 +1157,50 @@ h1, h2, h3, h4, p { margin: 0; }
   text-align: left;
   gap: 18px;
 }
+.panel--growth > * { position: relative; z-index: 2; }
 .panel--growth .panel__title,
-.panel--growth .panel__text { max-width: 70%; text-align: left; }
-.panel--growth .panel__title { font-size: 42px; }
-.panel--growth::after {
-  content: "";
-  position: absolute;
-  bottom: 28px;
-  left: 36px;
-  width: 14px; height: 14px;
-  background: rgba(255,255,255,0.16);
-  border: 1px solid rgba(255,255,255,0.4);
-  transform: rotate(45deg);
-  z-index: 0;
+.panel--growth .panel__text { max-width: 60%; text-align: left; }
+.panel--growth .panel__title { font-size: 43px; }
+/* Diamond decorations removed — replaced by blur blobs */
+.panel--experience {
+  background: #1a2a4d;
 }
 .panel--experience::before {
   content: "";
-  position: absolute; inset: 0;
+  position: absolute;
+  top: -24%; left: -3%;
+  width: 113%; height: 153%;
   background: url("assets/anima/689f075c3678cb3139d24593-chatgpt-20image-209-20-d0-b8-d1-8e-d0-b.png") center / cover no-repeat;
-  opacity: 0.5;
-  z-index: -1;
+  z-index: 0;
 }
+.panel--experience::after {
+  content: "";
+  position: absolute;
+  bottom: 0; left: -28%;
+  width: 155%; height: 65%;
+  border-radius: 135px;
+  background: linear-gradient(184deg, rgba(26,42,77,0) 0%, rgba(26,42,77,1) 61%);
+  z-index: 1;
+}
+.panel--experience > * { position: relative; z-index: 2; }
 .panel--process .panel__check-glass {
   position: absolute;
-  top: -5%; left: 50%;
-  transform: translateX(-50%);
-  width: 70%; height: 70%;
+  top: -20%; left: 16%;
+  width: 68%; height: 75%;
   z-index: 2;
   pointer-events: none;
   background: url("assets/anima/check-seal.png") center / contain no-repeat;
+  filter: drop-shadow(0px 31px 47px rgba(122,122,161,0.4));
+}
+.panel--process {
+  background: #1a2a4e;
 }
 .panel--process::before {
   content: "";
   position: absolute;
   top: -55%; left: 12%;
-  width: 80%; height: 93%;
-  border-radius: 50%;
+  width: 79%; height: 93%;
+  border-radius: 40% 46%;
   background: #708ac1;
   filter: blur(119px);
   z-index: 0;
@@ -1202,8 +1209,8 @@ h1, h2, h3, h4, p { margin: 0; }
   content: "";
   position: absolute;
   top: -55%; left: 62%;
-  width: 80%; height: 93%;
-  border-radius: 50%;
+  width: 79%; height: 93%;
+  border-radius: 40% 46%;
   background: #3d68c6;
   filter: blur(119px);
   z-index: 0;
@@ -1212,12 +1219,22 @@ h1, h2, h3, h4, p { margin: 0; }
 .panel--growth::before {
   content: "";
   position: absolute;
-  top: 28px; left: 36px;
-  width: 14px; height: 14px;
-  background: rgba(255, 255, 255, 0.22);
-  border: 1px solid rgba(255, 255, 255, 0.4);
-  transform: rotate(45deg);
-  z-index: 0;
+  top: -47%; left: -48%;
+  width: 120%; height: 232%;
+  border-radius: 50%;
+  background: linear-gradient(90deg, rgba(26,42,77,1) 50%, rgba(60,98,179,0) 100%);
+  filter: blur(100px);
+  z-index: 1;
+}
+.panel--growth::after {
+  content: "";
+  position: absolute;
+  top: 42%; left: -28%;
+  width: 75%; height: 159%;
+  border-radius: 50%;
+  background: #3d68c6;
+  filter: blur(203px);
+  z-index: 1;
 }
 
 /* ============================================================
