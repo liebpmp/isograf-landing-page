@@ -318,23 +318,23 @@ h1, h2, h3, h4, p { margin: 0; }
 }
 .hero__art {
   position: absolute;
-  top: 5%;
-  right: -3%;
-  width: 58%;
-  max-width: 880px;
-  height: 728px;
-  background: url("assets/anima/isografprobleme-1.png") right center / contain no-repeat;
+  bottom: 0;
+  right: -2%;
+  width: 55%;
+  max-width: 820px;
+  height: 90%;
+  background: url("assets/anima/isografprobleme-1.png") right bottom / contain no-repeat;
   z-index: -2;
   pointer-events: none;
 }
 .hero__art-blur {
   position: absolute;
-  top: 12%;
-  right: -5%;
-  width: 58%;
-  max-width: 880px;
-  height: 728px;
-  background: url("assets/anima/isografprobleme.png") right center / contain no-repeat;
+  bottom: 0;
+  right: -4%;
+  width: 55%;
+  max-width: 820px;
+  height: 90%;
+  background: url("assets/anima/isografprobleme.png") right bottom / contain no-repeat;
   filter: blur(36.75px);
   opacity: 0.55;
   z-index: -3;
@@ -344,7 +344,7 @@ h1, h2, h3, h4, p { margin: 0; }
   content: "";
   position: absolute;
   left: 0; right: 0; bottom: 0;
-  height: 269px;
+  height: 320px;
   background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #fff 100%);
   z-index: -1;
   pointer-events: none;
