@@ -62,10 +62,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (active < 0) active = 0;
 
     const update = () => {
-      cards.forEach((c, i) => {
-        const isActive = i === active;
-        c.classList.toggle('is-active', isActive);
-      });
+      cards.forEach((c, i) => c.classList.toggle('is-active', i === active));
       const total = dots.length;
       const dotIdx = total > 0 ? Math.round((active / Math.max(cards.length - 1, 1)) * (total - 1)) : 0;
       dots.forEach((d, i) => {
