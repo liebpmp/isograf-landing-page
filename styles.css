@@ -1148,9 +1148,9 @@ h1, h2, h3, h4, p { margin: 0; }
 }
 .panel--growth {
   background:
-    linear-gradient(to right, #14213d 0%, #1a2a4d 25%, rgba(26,42,77,0.5) 50%, rgba(26,42,77,0.15) 75%, rgba(26,42,77,0) 100%),
-    url("assets/anima/namewithd-architectual-pencil-drawing-of-a-majestic-court-bui-19.png") right center / cover no-repeat,
-    var(--navy-2);
+    linear-gradient(90deg, rgba(26,42,77,1) 0%, rgba(26,42,77,1) 30%, rgba(26,42,77,0.6) 50%, rgba(60,98,179,0) 70%),
+    url("assets/anima/namewithd-architectual-pencil-drawing-of-a-majestic-court-bui-19.png") right center / auto 100% no-repeat,
+    #1a2a4d;
   color: #fff;
   padding: 36px 44px;
   justify-content: flex-start;
@@ -1181,12 +1181,33 @@ h1, h2, h3, h4, p { margin: 0; }
 }
 .panel--process .panel__check-glass {
   position: absolute;
-  top: 0; left: 50%;
-  transform: translateX(-50%);
-  width: 220px; height: 220px;
+  top: -8%; left: 50%;
+  transform: translateX(-50%) rotate(-7.45deg);
+  width: 68%; height: 75%;
   z-index: 2;
   pointer-events: none;
-  background: url("assets/anima/check-seal.png") center top / contain no-repeat;
+  background: url("assets/anima/check-seal.png") center / contain no-repeat;
+  filter: drop-shadow(0px 31px 47px rgba(122,122,161,0.4));
+}
+.panel--process::before {
+  content: "";
+  position: absolute;
+  top: -55%; left: 12%;
+  width: 80%; height: 93%;
+  border-radius: 50%;
+  background: #708ac1;
+  filter: blur(119px);
+  z-index: 0;
+}
+.panel--process::after {
+  content: "";
+  position: absolute;
+  top: -55%; left: 62%;
+  width: 80%; height: 93%;
+  border-radius: 50%;
+  background: #3d68c6;
+  filter: blur(119px);
+  z-index: 0;
 }
 .panel--process > * { position: relative; z-index: 2; }
 .panel--growth::before {
@@ -1840,8 +1861,8 @@ h1, h2, h3, h4, p { margin: 0; }
   .testi { width: 180px; padding: 10px 12px; }
   .testi--1 { left: 32%; top: 14px; }
   .testi--2 { left: 44%; top: 110px; }
-  .panel--process::before { width: 130px; height: 130px; top: 24px; }
-  .panel--process::after { width: 64px; height: 64px; top: 56px; background-size: 44px 44px; }
+  .panel--process::before { width: 60%; height: 60%; top: -30%; left: 10%; }
+  .panel--process::after { width: 60%; height: 60%; top: -30%; left: 50%; }
 
   .cta-banner { padding: 60px 20px; }
   .cta-banner__card { padding: 32px 24px; min-height: 0; }
