@@ -1179,15 +1179,17 @@ h1, h2, h3, h4, p { margin: 0; }
   opacity: 0.5;
   z-index: -1;
 }
+.panel--process {
+  overflow: hidden;
+}
 .panel--process .panel__check-glass {
   position: absolute;
-  top: 0; left: 50%;
+  top: -20px; left: 50%;
   transform: translateX(-50%);
-  width: 300px; height: 300px;
+  width: 320px; height: 320px;
   z-index: 10;
   pointer-events: none;
   background: url("assets/anima/check-seal.png") center / contain no-repeat;
-  filter: drop-shadow(0px 20px 40px rgba(122,122,161,0.3));
 }
 .panel--process::before {
   content: "";
