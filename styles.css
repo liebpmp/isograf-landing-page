@@ -1148,8 +1148,8 @@ h1, h2, h3, h4, p { margin: 0; }
 }
 .panel--growth {
   background:
-    linear-gradient(100deg, #14213d 0%, #1a2a4d 30%, rgba(26,42,77,0.4) 55%, rgba(26,42,77,0) 100%),
-    url("assets/anima/namewithd-architectual-pencil-drawing-of-a-majestic-court-bui-19.png") right top / auto 100% no-repeat,
+    linear-gradient(to right, #14213d 0%, #1a2a4d 25%, rgba(26,42,77,0.5) 50%, rgba(26,42,77,0.15) 75%, rgba(26,42,77,0) 100%),
+    url("assets/anima/namewithd-architectual-pencil-drawing-of-a-majestic-court-bui-19.png") right center / cover no-repeat,
     var(--navy-2);
   color: #fff;
   padding: 36px 44px;
@@ -1181,12 +1181,12 @@ h1, h2, h3, h4, p { margin: 0; }
 }
 .panel--process .panel__check-glass {
   position: absolute;
-  top: 16px; left: 50%;
+  top: 0; left: 50%;
   transform: translateX(-50%);
-  width: 180px; height: 180px;
+  width: 220px; height: 220px;
   z-index: 2;
   pointer-events: none;
-  background: url("assets/anima/check-seal.png") center / contain no-repeat;
+  background: url("assets/anima/check-seal.png") center top / contain no-repeat;
 }
 .panel--process > * { position: relative; z-index: 2; }
 .panel--growth::before {
