@@ -314,7 +314,7 @@ h1, h2, h3, h4, p { margin: 0; }
   min-height: 880px;
   display: flex;
   align-items: center;
-  padding: 40px 32px 140px 160px;
+  padding: 40px 32px 80px 160px;
 }
 .hero__art {
   position: absolute;
@@ -1181,13 +1181,12 @@ h1, h2, h3, h4, p { margin: 0; }
 }
 .panel--process .panel__check-glass {
   position: absolute;
-  top: -8%; left: 50%;
-  transform: translateX(-50%) rotate(-7.45deg);
-  width: 68%; height: 75%;
+  top: -5%; left: 50%;
+  transform: translateX(-50%);
+  width: 70%; height: 70%;
   z-index: 2;
   pointer-events: none;
   background: url("assets/anima/check-seal.png") center / contain no-repeat;
-  filter: drop-shadow(0px 31px 47px rgba(122,122,161,0.4));
 }
 .panel--process::before {
   content: "";
