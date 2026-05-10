@@ -1181,12 +1181,13 @@ h1, h2, h3, h4, p { margin: 0; }
 }
 .panel--process .panel__check-glass {
   position: absolute;
-  top: -5%; left: 50%;
+  top: -15%; left: 50%;
   transform: translateX(-50%);
-  width: 70%; height: 70%;
+  width: 90%; height: 85%;
   z-index: 2;
   pointer-events: none;
   background: url("assets/anima/check-seal.png") center / contain no-repeat;
+  filter: drop-shadow(0px 20px 40px rgba(122,122,161,0.3));
 }
 .panel--process::before {
   content: "";
