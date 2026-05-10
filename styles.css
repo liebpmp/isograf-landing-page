@@ -1033,14 +1033,13 @@ h1, h2, h3, h4, p { margin: 0; }
 }
 .assurance__grid {
   display: grid;
-  grid-template-columns: 1.6fr 1fr;
-  grid-template-rows: 200px 200px 380px;
+  grid-template-columns: 1.7fr 1fr;
+  grid-template-rows: 420px 420px;
   gap: 24px;
   width: 100%;
   grid-template-areas:
     "testimonials experience"
-    "testimonials process"
-    "growth growth";
+    "process growth";
 }
 .panel--testimonials { grid-area: testimonials; }
 .panel--experience { grid-area: experience; }
@@ -1157,15 +1156,15 @@ h1, h2, h3, h4, p { margin: 0; }
     url("assets/anima/namewithd-architectual-pencil-drawing-of-a-majestic-court-bui-19.png") right center / cover no-repeat,
     var(--navy-2);
   color: #fff;
-  padding: 48px 56px;
-  justify-content: center;
+  padding: 36px 44px;
+  justify-content: flex-start;
   align-items: flex-start;
   text-align: left;
   gap: 18px;
 }
 .panel--growth .panel__title,
-.panel--growth .panel__text { max-width: 50%; text-align: left; }
-.panel--growth .panel__title { font-size: 48px; }
+.panel--growth .panel__text { max-width: 70%; text-align: left; }
+.panel--growth .panel__title { font-size: 42px; }
 .panel--growth::after {
   content: "";
   position: absolute;
@@ -1756,7 +1755,7 @@ h1, h2, h3, h4, p { margin: 0; }
       "experience process"
       "growth growth";
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 360px 200px 320px;
+    grid-template-rows: 380px 280px 340px;
   }
   .cta-banner__card { padding: 47px 49px; }
   .cta-banner__art { display: none; }
@@ -1839,7 +1838,7 @@ h1, h2, h3, h4, p { margin: 0; }
       "process"
       "growth";
     grid-template-columns: 1fr;
-    grid-template-rows: 360px 260px 260px 320px;
+    grid-template-rows: 360px 280px 280px 320px;
   }
   .panel { padding: 24px; }
   .panel__title { font-size: 26px; }
