@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ISOGRAF — Unternehmensberatung für messbares Wachstum</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Roboto:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Section 1: NavBar -->
+  <header class="navbar" id="navbar">
+    <div class="navbar__inner">
+      <a href="#" class="navbar__logo">
+        <svg class="navbar__logo-icon" width="29" height="18" viewBox="0 0 29 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M0.0232014 0H0V17.8742H14.2138L0.0232014 0ZM23.0888 7.21028L28.8121 14.4199V0L23.0888 7.21028ZM14.6584 0H14.6095L8.66865 7.48242L16.919 17.8742H28.8115V17.8275L14.6578 0H14.6584Z" fill="#E2AC26"/>
+        </svg>
+        <span class="navbar__logo-text">ISOGRAF</span>
+      </a>
+      <nav class="navbar__nav">
+        <a href="#leistungen" class="navbar__link">Leistungen</a>
+        <a href="#ueber-uns" class="navbar__link">Über uns</a>
+        <a href="#ergebnisse" class="navbar__link navbar__link--active">Ergebnisse</a>
+        <a href="#ressourcen" class="navbar__link">Ressourcen</a>
+        <a href="#karriere" class="navbar__link">Karriere</a>
+        <a href="#kontakt" class="navbar__cta">Jetzt starten</a>
+      </nav>
+      <div class="navbar__hamburger" aria-label="Menü öffnen">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Section 2: Hero -->
+  <section class="hero" id="hero">
+    <div class="hero__bg">
+      <img src="assets/assets/hero-bg.png" alt="" class="hero__bg-img">
+      <div class="hero__bg-gradient"></div>
+    </div>
+    <div class="hero__inner">
+      <div class="hero__content">
+        <div class="hero__rating">
+          <div class="hero__stars">
+            <svg width="18" height="18" viewBox="0 0 19 19" fill="none"><path d="M8.8 1.75C8.83 1.68 8.89 1.63 8.95 1.59C9.01 1.55 9.09 1.53 9.16 1.53C9.24 1.53 9.31 1.55 9.38 1.59C9.44 1.63 9.49 1.68 9.53 1.75L11.29 5.33C11.41 5.56 11.58 5.76 11.79 5.92C12 6.07 12.25 6.17 12.51 6.21L16.45 6.79C16.53 6.8 16.6 6.83 16.65 6.88C16.71 6.93 16.76 6.99 16.78 7.06C16.8 7.14 16.8 7.21 16.79 7.29C16.77 7.36 16.73 7.43 16.68 7.48L13.82 10.26C13.64 10.44 13.49 10.67 13.41 10.92C13.33 11.17 13.31 11.43 13.36 11.69L14.03 15.62C14.04 15.69 14.04 15.77 14.01 15.84C13.98 15.91 13.93 15.97 13.87 16.01C13.81 16.06 13.74 16.08 13.66 16.09C13.58 16.09 13.51 16.08 13.44 16.04L9.92 14.19C9.68 14.07 9.42 14 9.16 14C8.9 14 8.64 14.07 8.41 14.19L4.88 16.04C4.82 16.08 4.74 16.09 4.67 16.09C4.59 16.08 4.52 16.06 4.46 16.01C4.4 15.97 4.35 15.91 4.32 15.84C4.29 15.77 4.28 15.69 4.3 15.62L4.97 11.69C5.01 11.43 4.99 11.17 4.91 10.92C4.83 10.67 4.69 10.44 4.5 10.26L1.65 7.48C1.59 7.43 1.56 7.36 1.54 7.29C1.52 7.21 1.52 7.14 1.55 7.06C1.57 6.99 1.61 6.93 1.67 6.88C1.73 6.83 1.8 6.8 1.87 6.79L5.82 6.21C6.08 6.17 6.32 6.07 6.54 5.92C6.75 5.76 6.92 5.56 7.04 5.33L8.8 1.75Z" fill="#FCC846" stroke="#FCC846" stroke-width="1.53"/></svg>
+            <svg width="18" height="18" viewBox="0 0 19 19" fill="none"><path d="M8.8 1.75C8.83 1.68 8.89 1.63 8.95 1.59C9.01 1.55 9.09 1.53 9.16 1.53C9.24 1.53 9.31 1.55 9.38 1.59C9.44 1.63 9.49 1.68 9.53 1.75L11.29 5.33C11.41 5.56 11.58 5.76 11.79 5.92C12 6.07 12.25 6.17 12.51 6.21L16.45 6.79C16.53 6.8 16.6 6.83 16.65 6.88C16.71 6.93 16.76 6.99 16.78 7.06C16.8 7.14 16.8 7.21 16.79 7.29C16.77 7.36 16.73 7.43 16.68 7.48L13.82 10.26C13.64 10.44 13.49 10.67 13.41 10.92C13.33 11.17 13.31 11.43 13.36 11.69L14.03 15.62C14.04 15.69 14.04 15.77 14.01 15.84C13.98 15.91 13.93 15.97 13.87 16.01C13.81 16.06 13.74 16.08 13.66 16.09C13.58 16.09 13.51 16.08 13.44 16.04L9.92 14.19C9.68 14.07 9.42 14 9.16 14C8.9 14 8.64 14.07 8.41 14.19L4.88 16.04C4.82 16.08 4.74 16.09 4.67 16.09C4.59 16.08 4.52 16.06 4.46 16.01C4.4 15.97 4.35 15.91 4.32 15.84C4.29 15.77 4.28 15.69 4.3 15.62L4.97 11.69C5.01 11.43 4.99 11.17 4.91 10.92C4.83 10.67 4.69 10.44 4.5 10.26L1.65 7.48C1.59 7.43 1.56 7.36 1.54 7.29C1.52 7.21 1.52 7.14 1.55 7.06C1.57 6.99 1.61 6.93 1.67 6.88C1.73 6.83 1.8 6.8 1.87 6.79L5.82 6.21C6.08 6.17 6.32 6.07 6.54 5.92C6.75 5.76 6.92 5.56 7.04 5.33L8.8 1.75Z" fill="#FCC846" stroke="#FCC846" stroke-width="1.53"/></svg>
+            <svg width="18" height="18" viewBox="0 0 19 19" fill="none"><path d="M8.8 1.75C8.83 1.68 8.89 1.63 8.95 1.59C9.01 1.55 9.09 1.53 9.16 1.53C9.24 1.53 9.31 1.55 9.38 1.59C9.44 1.63 9.49 1.68 9.53 1.75L11.29 5.33C11.41 5.56 11.58 5.76 11.79 5.92C12 6.07 12.25 6.17 12.51 6.21L16.45 6.79C16.53 6.8 16.6 6.83 16.65 6.88C16.71 6.93 16.76 6.99 16.78 7.06C16.8 7.14 16.8 7.21 16.79 7.29C16.77 7.36 16.73 7.43 16.68 7.48L13.82 10.26C13.64 10.44 13.49 10.67 13.41 10.92C13.33 11.17 13.31 11.43 13.36 11.69L14.03 15.62C14.04 15.69 14.04 15.77 14.01 15.84C13.98 15.91 13.93 15.97 13.87 16.01C13.81 16.06 13.74 16.08 13.66 16.09C13.58 16.09 13.51 16.08 13.44 16.04L9.92 14.19C9.68 14.07 9.42 14 9.16 14C8.9 14 8.64 14.07 8.41 14.19L4.88 16.04C4.82 16.08 4.74 16.09 4.67 16.09C4.59 16.08 4.52 16.06 4.46 16.01C4.4 15.97 4.35 15.91 4.32 15.84C4.29 15.77 4.28 15.69 4.3 15.62L4.97 11.69C5.01 11.43 4.99 11.17 4.91 10.92C4.83 10.67 4.69 10.44 4.5 10.26L1.65 7.48C1.59 7.43 1.56 7.36 1.54 7.29C1.52 7.21 1.52 7.14 1.55 7.06C1.57 6.99 1.61 6.93 1.67 6.88C1.73 6.83 1.8 6.8 1.87 6.79L5.82 6.21C6.08 6.17 6.32 6.07 6.54 5.92C6.75 5.76 6.92 5.56 7.04 5.33L8.8 1.75Z" fill="#FCC846" stroke="#FCC846" stroke-width="1.53"/></svg>
+            <svg width="18" height="18" viewBox="0 0 19 19" fill="none"><path d="M8.8 1.75C8.83 1.68 8.89 1.63 8.95 1.59C9.01 1.55 9.09 1.53 9.16 1.53C9.24 1.53 9.31 1.55 9.38 1.59C9.44 1.63 9.49 1.68 9.53 1.75L11.29 5.33C11.41 5.56 11.58 5.76 11.79 5.92C12 6.07 12.25 6.17 12.51 6.21L16.45 6.79C16.53 6.8 16.6 6.83 16.65 6.88C16.71 6.93 16.76 6.99 16.78 7.06C16.8 7.14 16.8 7.21 16.79 7.29C16.77 7.36 16.73 7.43 16.68 7.48L13.82 10.26C13.64 10.44 13.49 10.67 13.41 10.92C13.33 11.17 13.31 11.43 13.36 11.69L14.03 15.62C14.04 15.69 14.04 15.77 14.01 15.84C13.98 15.91 13.93 15.97 13.87 16.01C13.81 16.06 13.74 16.08 13.66 16.09C13.58 16.09 13.51 16.08 13.44 16.04L9.92 14.19C9.68 14.07 9.42 14 9.16 14C8.9 14 8.64 14.07 8.41 14.19L4.88 16.04C4.82 16.08 4.74 16.09 4.67 16.09C4.59 16.08 4.52 16.06 4.46 16.01C4.4 15.97 4.35 15.91 4.32 15.84C4.29 15.77 4.28 15.69 4.3 15.62L4.97 11.69C5.01 11.43 4.99 11.17 4.91 10.92C4.83 10.67 4.69 10.44 4.5 10.26L1.65 7.48C1.59 7.43 1.56 7.36 1.54 7.29C1.52 7.21 1.52 7.14 1.55 7.06C1.57 6.99 1.61 6.93 1.67 6.88C1.73 6.83 1.8 6.8 1.87 6.79L5.82 6.21C6.08 6.17 6.32 6.07 6.54 5.92C6.75 5.76 6.92 5.56 7.04 5.33L8.8 1.75Z" fill="#FCC846" stroke="#FCC846" stroke-width="1.53"/></svg>
+            <svg width="18" height="18" viewBox="0 0 19 19" fill="none"><path d="M8.8 1.75C8.83 1.68 8.89 1.63 8.95 1.59C9.01 1.55 9.09 1.53 9.16 1.53C9.24 1.53 9.31 1.55 9.38 1.59C9.44 1.63 9.49 1.68 9.53 1.75L11.29 5.33C11.41 5.56 11.58 5.76 11.79 5.92C12 6.07 12.25 6.17 12.51 6.21L16.45 6.79C16.53 6.8 16.6 6.83 16.65 6.88C16.71 6.93 16.76 6.99 16.78 7.06C16.8 7.14 16.8 7.21 16.79 7.29C16.77 7.36 16.73 7.43 16.68 7.48L13.82 10.26C13.64 10.44 13.49 10.67 13.41 10.92C13.33 11.17 13.31 11.43 13.36 11.69L14.03 15.62C14.04 15.69 14.04 15.77 14.01 15.84C13.98 15.91 13.93 15.97 13.87 16.01C13.81 16.06 13.74 16.08 13.66 16.09C13.58 16.09 13.51 16.08 13.44 16.04L9.92 14.19C9.68 14.07 9.42 14 9.16 14C8.9 14 8.64 14.07 8.41 14.19L4.88 16.04C4.82 16.08 4.74 16.09 4.67 16.09C4.59 16.08 4.52 16.06 4.46 16.01C4.4 15.97 4.35 15.91 4.32 15.84C4.29 15.77 4.28 15.69 4.3 15.62L4.97 11.69C5.01 11.43 4.99 11.17 4.91 10.92C4.83 10.67 4.69 10.44 4.5 10.26L1.65 7.48C1.59 7.43 1.56 7.36 1.54 7.29C1.52 7.21 1.52 7.14 1.55 7.06C1.57 6.99 1.61 6.93 1.67 6.88C1.73 6.83 1.8 6.8 1.87 6.79L5.82 6.21C6.08 6.17 6.32 6.07 6.54 5.92C6.75 5.76 6.92 5.56 7.04 5.33L8.8 1.75Z" fill="url(#starGrad)"/><defs><linearGradient id="starGrad" x1="1.5" y1="8.8" x2="16.8" y2="8.8" gradientUnits="userSpaceOnUse"><stop stop-color="#FCC846"/><stop offset="0.7" stop-color="#FCC846"/><stop offset="0.74" stop-color="#FDECC0"/></linearGradient></defs></svg>
+          </div>
+          <span class="hero__rating-text">4,9/5,0 - Deutschlands bestbewertete Zertifizierungsexperten</span>
+        </div>
+        <h1 class="hero__heading">Der einfache Weg<br><em>zu deiner Zertifizierung</em></h1>
+        <p class="hero__subheading">Wir strukturieren, optimieren und zertifizieren Ihr Unternehmen – mit der Erfahrung aus über 1.000 Projekten.</p>
+        <div class="hero__bullets">
+          <div class="hero__bullet">
+            <span class="hero__bullet-icon"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M10 3L4.5 8.5L2 6" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            <span class="hero__bullet-text">Mehr Umsatz. Mehr Vertrauen. Mehr Wachstum.</span>
+          </div>
+          <div class="hero__bullet">
+            <span class="hero__bullet-icon"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M10 3L4.5 8.5L2 6" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            <span class="hero__bullet-text">Alles mit staatlicher Unterstützung.</span>
+          </div>
+          <div class="hero__bullet">
+            <span class="hero__bullet-icon"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M10 3L4.5 8.5L2 6" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            <span class="hero__bullet-text">100% Erfolgsgarantie.</span>
+          </div>
+        </div>
+        <a href="#kontakt" class="hero__cta">
+          <span class="hero__cta-main">Jetzt kostenloses Erstgespräch sichern</span>
+          <span class="hero__cta-sub">und passende Zertifizierung finden</span>
+        </a>
+        <div class="hero__bekannt">
+          <span class="hero__bekannt-label">Bekannt aus</span>
+          <div class="hero__bekannt-logos">
+            <img src="assets/assets/logo-zdf.png" alt="ZDF" class="hero__bekannt-logo hero__bekannt-logo--zdf">
+            <img src="assets/assets/logo-ard.png" alt="ARD" class="hero__bekannt-logo hero__bekannt-logo--ard">
+            <img src="assets/assets/logo-spiegel.svg" alt="Der Spiegel" class="hero__bekannt-logo hero__bekannt-logo--spiegel">
+          </div>
+        </div>
+      </div>
+      <div class="hero__awards">
+        <span class="hero__awards-label">Ausgezeichnet von:</span>
+        <div class="hero__awards-badges">
+          <img src="assets/assets/award-badge.png" alt="Auszeichnung" class="hero__award-badge">
+          <img src="assets/assets/award-badge.png" alt="Auszeichnung" class="hero__award-badge">
+          <img src="assets/assets/award-badge.png" alt="Auszeichnung" class="hero__award-badge">
+          <img src="assets/assets/award-badge.png" alt="Auszeichnung" class="hero__award-badge">
+          <img src="assets/assets/award-badge.png" alt="Auszeichnung" class="hero__award-badge">
+          <img src="assets/assets/award-badge.png" alt="Auszeichnung" class="hero__award-badge">
+          <img src="assets/assets/award-badge.png" alt="Auszeichnung" class="hero__award-badge">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 3: References / Stats -->
+  <section class="references" id="referenzen">
+    <div class="references__inner">
+      <div class="references__card">
+        <span class="references__number">+800</span>
+        <span class="references__label">Zufriedene Kunden</span>
+      </div>
+      <div class="references__card">
+        <span class="references__number">+20</span>
+        <span class="references__label">Jahre Erfahrung</span>
+      </div>
+      <div class="references__card">
+        <span class="references__number">+1.200</span>
+        <span class="references__label">Projekte</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 4: Columns 1 (Background image with play button overlay) -->
+  <section class="columns1" id="leistungen">
+    <div class="columns1__inner">
+      <div class="columns1__image-wrapper">
+        <img src="assets/assets/columns1-bg.png" alt="ISOGRAF Leistungen" class="columns1__bg-image">
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 5: Columns 2 (4 service cards) -->
+  <section class="columns2">
+    <div class="columns2__grid">
+      <div class="columns2__card">
+        <div class="columns2__card-bg">
+          <img src="assets/assets/deco-column.png" alt="" class="columns2__card-deco">
+        </div>
+        <div class="columns2__card-content">
+          <span class="columns2__card-number">01.</span>
+          <span class="columns2__card-title">ISO 9001</span>
+          <p class="columns2__card-text">Standard für internationales Vertrauen – zeigt Ihre Professionalität, öffnet Türen zu öffentlichen Ausschreibungen, B2B-Partnerschaften und stärkt das Markenimage.</p>
+        </div>
+      </div>
+      <div class="columns2__card">
+        <div class="columns2__card-bg">
+          <img src="assets/assets/deco-column.png" alt="" class="columns2__card-deco">
+        </div>
+        <div class="columns2__card-content">
+          <span class="columns2__card-number">02.</span>
+          <span class="columns2__card-title">AZAV</span>
+          <p class="columns2__card-text">ISOGRAF begleitet Sie als erfahrener Berater und Coach persönlich durch den gesamten Prozess – von der ersten Analyse bis zur finalen erfolgreichen Zertifizierung.</p>
+        </div>
+      </div>
+      <div class="columns2__card">
+        <div class="columns2__card-bg">
+          <img src="assets/assets/deco-column.png" alt="" class="columns2__card-deco">
+        </div>
+        <div class="columns2__card-content">
+          <span class="columns2__card-number">03.</span>
+          <span class="columns2__card-title">ZFU Zulassung</span>
+          <p class="columns2__card-text">Wir führen Sie schnell und unproblematisch durch den Vorgang der Anerkennung als staatlich zugelassener Fernunterricht.</p>
+        </div>
+      </div>
+      <div class="columns2__card">
+        <div class="columns2__card-bg">
+          <img src="assets/assets/deco-column.png" alt="" class="columns2__card-deco">
+        </div>
+        <div class="columns2__card-content">
+          <span class="columns2__card-number">04.</span>
+          <span class="columns2__card-title">Listung</span>
+          <p class="columns2__card-text">Es gibt diverse Zertifizierungen, die Ihnen den Zugang zu Fördermitteln oder Kunden ermöglichen. Wir zeigen Ihnen auf, welche für Ihren konkreten Fall zutreffend sind.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 6: Introduction -->
+  <section class="introduction" id="ueber-uns">
+    <div class="introduction__inner">
+      <div class="introduction__header">
+        <h2 class="introduction__title">Warum zum Isograf?</h2>
+        <p class="introduction__subtitle">Viele Unternehmen befassen sich viel zu intensiv und zu umfangreich mit der Dokumentation, die für eine Zertifizierung notwendig ist. Mit unserer Erfahrung, unserem Fachwissen und modernen Lösungen, helfen wir Ihnen dieses Thema schnell und unkompliziert zu lösen</p>
+      </div>
+      <div class="introduction__content">
+        <div class="introduction__text-side">
+          <h3 class="introduction__content-title">Denn wer mit ISOGRAF arbeitet, hebt sich automatisch von der Masse ab: Viele Erfahrung, schnelle Bearbeitung und unkomplizierte Prozesse.</h3>
+          <p class="introduction__content-text">Für alle, die ihre Leistungen leichter verkaufen und durch staatliche Förderung skalieren wollen – vom bisherigen Selbstzahler-Modell zum echten Wachstumspfad.</p>
+          <ul class="introduction__list">
+            <li class="introduction__list-item">
+              <span class="introduction__list-icon"></span>
+              <span>kleine bis mittelständige Unternehmen (Produktion, Handwerk, Gastronomie)</span>
+            </li>
+            <li class="introduction__list-item">
+              <span class="introduction__list-icon"></span>
+              <span>Bildungsinstitute und Coaches</span>
+            </li>
+            <li class="introduction__list-item">
+              <span class="introduction__list-icon"></span>
+              <span>Berater und Dienstleister</span>
+            </li>
+          </ul>
+        </div>
+        <div class="introduction__image-side">
+          <img src="assets/assets/intro-portrait.png" alt="ISOGRAF Berater" class="introduction__portrait">
+          <div class="introduction__label-overlay">
+            <span>Steuerarchitekt, Steuerberater<br>und erfahrener Unternehmer</span>
+          </div>
+        </div>
+      </div>
+      <div class="introduction__cta-row">
+        <a href="#kontakt" class="introduction__cta-btn">Jetzt loslegen</a>
+        <div class="introduction__clients">
+          <img src="assets/assets/logo-clients-steuern.png" alt="Kunden" class="introduction__clients-logo">
+          <span class="introduction__clients-text">+800 Zufriedene Kunden</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 7: Certificate Cards -->
+  <section class="certificate" id="zertifizierung">
+    <div class="certificate__inner">
+      <div class="certificate__header">
+        <p class="certificate__subtitle">Wählen Sie die passende Zertifizierung für Ihr Business</p>
+        <h2 class="certificate__title">Done-4-You Zertifizierung</h2>
+      </div>
+      <div class="certificate__cards">
+        <div class="certificate__card">
+          <div class="certificate__card-image">
+            <img src="assets/assets/card-kompass.png" alt="KOMPASS" class="certificate__card-img">
+          </div>
+          <div class="certificate__card-body">
+            <h3 class="certificate__card-name">KOMPASS</h3>
+            <p class="certificate__card-desc">Förderung für Selbstständige</p>
+            <div class="certificate__card-badge">Bis zu 90% Zuschuss</div>
+            <ul class="certificate__card-features">
+              <li>Coaching für 5.000 € → Kunde zahlt nur 500 €</li>
+              <li>Staat übernimmt bis zu 4.500 €</li>
+              <li>Sofort mehr Abschlüsse</li>
+              <li>Komplette Prozessbegleitung</li>
+            </ul>
+            <a href="#" class="certificate__card-btn">Mehr erfahren <span class="certificate__card-arrow">→</span></a>
+          </div>
+        </div>
+        <div class="certificate__card">
+          <div class="certificate__card-image">
+            <img src="assets/assets/card-service-2.png" alt="AZAV" class="certificate__card-img">
+          </div>
+          <div class="certificate__card-body">
+            <h3 class="certificate__card-name">AZAV</h3>
+            <p class="certificate__card-desc">Zugang zum Fördermarkt</p>
+            <div class="certificate__card-badge">Bis zu 100% Förderung</div>
+            <ul class="certificate__card-features">
+              <li>Existenzgründer-Coachings bis 100%</li>
+              <li>Qualifizierungschancengesetz</li>
+              <li>Bildungsgutscheine & AVGS</li>
+              <li>Unterlagen, QM & Audit-Prep</li>
+            </ul>
+            <a href="#" class="certificate__card-btn">Mehr erfahren <span class="certificate__card-arrow">→</span></a>
+          </div>
+        </div>
+        <div class="certificate__card certificate__card--featured">
+          <div class="certificate__card-image">
+            <img src="assets/assets/card-service-featured.png" alt="ZFU" class="certificate__card-img">
+          </div>
+          <div class="certificate__card-body">
+            <h3 class="certificate__card-name">ZFU</h3>
+            <p class="certificate__card-desc">Sicherheit für digitale Programme</p>
+            <div class="certificate__card-badge">Rechtssicher skalieren</div>
+            <ul class="certificate__card-features">
+              <li>Schutz vor Rückforderungen</li>
+              <li>Freigabe für Online-Kurse</li>
+              <li>Seriosität & Vertrauen</li>
+              <li>Didaktik & Vertragskonformität</li>
+            </ul>
+            <a href="#" class="certificate__card-btn">Mehr erfahren <span class="certificate__card-arrow">→</span></a>
+          </div>
+        </div>
+        <div class="certificate__card">
+          <div class="certificate__card-image">
+            <img src="assets/assets/card-service-4.png" alt="ISO 9001" class="certificate__card-img">
+          </div>
+          <div class="certificate__card-body">
+            <h3 class="certificate__card-name">ISO 9001</h3>
+            <p class="certificate__card-desc">Internationales Qualitätssiegel</p>
+            <div class="certificate__card-badge">Globaler Standard</div>
+            <ul class="certificate__card-features">
+              <li>Vertrauen bei Kunden & Partnern</li>
+              <li>Effizientere Prozesse</li>
+              <li>Zugang zu Ausschreibungen</li>
+              <li>Aufbau, Audit & Zertifizierung</li>
+            </ul>
+            <a href="#" class="certificate__card-btn">Mehr erfahren <span class="certificate__card-arrow">→</span></a>
+          </div>
+        </div>
+      </div>
+      <div class="certificate__nav">
+        <div class="certificate__nav-arrows">
+          <button class="certificate__nav-arrow certificate__nav-arrow--prev" aria-label="Zurück">
+            <svg width="15" height="12" viewBox="0 0 15 12" fill="none"><path d="M15 6H1M1 6L6 1M1 6L6 11" stroke="black" stroke-width="1.5"/></svg>
+          </button>
+          <button class="certificate__nav-arrow certificate__nav-arrow--next" aria-label="Weiter">
+            <svg width="15" height="12" viewBox="0 0 15 12" fill="none"><path d="M0 6H14M14 6L9 1M14 6L9 11" stroke="white" stroke-width="1.5"/></svg>
+          </button>
+        </div>
+        <div class="certificate__nav-dots">
+          <span class="certificate__nav-dot"></span>
+          <span class="certificate__nav-dot"></span>
+          <span class="certificate__nav-dot certificate__nav-dot--active"></span>
+          <span class="certificate__nav-dot"></span>
+          <span class="certificate__nav-dot"></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 8: Frame16 (Certificate + Text) -->
+  <section class="frame16">
+    <div class="frame16__inner">
+      <div class="frame16__image">
+        <img src="assets/assets/frame16-certificate.png" alt="ISO 9001 Zertifikat" class="frame16__img">
+      </div>
+      <div class="frame16__text">
+        <h2 class="frame16__title">Zertifizierung, Die Ihr <em>Wachstum</em> Trägt.</h2>
+        <p class="frame16__desc">Et eleifend consectetur tellus consectetur nibh non urna lobortis. Quis sapien enim posuere mollis risus. Nec dictumst ullamcorper et leo. Varius praesent tinc.</p>
+        <a href="#kontakt" class="frame16__btn">Jetzt loslegen</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 9: Growth -->
+  <section class="growth">
+    <div class="growth__inner">
+      <div class="growth__header">
+        <h2 class="growth__title">Zertifizierung, die Ihr <em>Wachstum</em> trägt.</h2>
+        <p class="growth__subtitle">Mit ISOGRAF führen wir Sie unkompliziert und sicher durch den gesamten Zertifizierungsprozess – vollständig begleitet.</p>
+      </div>
+      <div class="growth__grid">
+        <div class="growth__card growth__card--dark">
+          <div class="growth__card-medal"></div>
+          <h3 class="growth__card-title">Unkomplizierter <em>Prozess</em></h3>
+          <p class="growth__card-text">mit der Erfahrung aus über 1.200 Projekten.</p>
+        </div>
+        <div class="growth__card growth__card--image">
+          <img src="assets/assets/growth-court.png" alt="" class="growth__card-bg">
+          <div class="growth__card-overlay">
+            <h3 class="growth__card-title">Echtes <em>Wachstum</em></h3>
+            <p class="growth__card-text">Die meisten Unternehmen scheitern an der Komplexität der Zertifizierungsprozesse. Wir übernehmen den gesamten Prozess für Sie.</p>
+          </div>
+        </div>
+        <div class="growth__card growth__card--reviews">
+          <img src="assets/assets/growth-team.png" alt="" class="growth__card-bg">
+        </div>
+        <div class="growth__card growth__card--experience">
+          <img src="assets/assets/growth-portrait.png" alt="" class="growth__card-bg">
+          <div class="growth__card-overlay">
+            <h3 class="growth__card-title">+20 Jahre <em>Erfahrung</em></h3>
+            <p class="growth__card-text">sowohl bei Dienstleistern, als auch bei Gewerbekunden.</p>
+          </div>
+        </div>
+      </div>
+      <div class="growth__cta-row">
+        <a href="#kontakt" class="growth__btn">Jetzt loslegen</a>
+        <div class="growth__clients">
+          <img src="assets/assets/logo-clients-steuern.png" alt="" class="growth__clients-logo">
+          <span class="growth__clients-text">800+ Zufriedene Kunden</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 10: Contact Banner -->
+  <section class="contact-banner" id="kontakt">
+    <div class="contact-banner__inner">
+      <div class="contact-banner__card">
+        <div class="contact-banner__text-side">
+          <h3 class="contact-banner__title">Bereit für Ihre Zertifizierung?</h3>
+          <p class="contact-banner__desc">Vereinbaren Sie jetzt ein kostenloses Erstgespräch und erfahren Sie, wie wir Sie auf dem Weg zur Zertifizierung unterstützen können.</p>
+          <div class="contact-banner__cta-row">
+            <a href="#" class="contact-banner__btn">Jetzt loslegen</a>
+            <div class="contact-banner__clients">
+              <img src="assets/assets/logo-clients-steuern.png" alt="" class="contact-banner__clients-logo">
+              <span class="contact-banner__clients-text">+800 Zufriedene Kunden</span>
+            </div>
+          </div>
+        </div>
+        <div class="contact-banner__image-side">
+          <img src="assets/assets/hero-isograf-probleme.png" alt="ISOGRAF Berater" class="contact-banner__portrait">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 11: Routes / References 1 (Results) -->
+  <section class="results" id="ergebnisse">
+    <div class="results__bg">
+      <img src="assets/assets/bg-walkway-light.png" alt="" class="results__bg-img">
+    </div>
+    <div class="results__inner">
+      <div class="results__header">
+        <span class="results__badge">Die Ergebnisse</span>
+        <h2 class="results__title">Bisherige Ergebnisse</h2>
+        <p class="results__subtitle">Transparente Leistungen, nachweisbare Resultate – und ein Prozess, der in über +1.200 Projekten zuverlässig funktioniert.</p>
+      </div>
+      <div class="results__cards">
+        <div class="results__card">
+          <h4 class="results__card-name">EduVision Coaching GmbH</h4>
+          <p class="results__card-type">Business Coaching</p>
+          <div class="results__card-before">
+            <span class="results__card-label">Vorher</span>
+            <span class="results__card-value">80.000 €</span>
+          </div>
+          <div class="results__card-divider">
+            <span class="results__card-divider-line"></span>
+            <svg class="results__card-divider-icon" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M3 14L10 6L17 14" stroke="#E2AC26" stroke-width="1.67"/></svg>
+          </div>
+          <div class="results__card-after">
+            <span class="results__card-label">Nachher</span>
+            <span class="results__card-value-big">340.000 €</span>
+          </div>
+          <div class="results__card-growth">+325% Wachstum</div>
+          <p class="results__card-method">durch KOMPASS + AZAV</p>
+        </div>
+        <div class="results__card results__card--featured">
+          <h4 class="results__card-name">TrainUp Institut</h4>
+          <p class="results__card-type">Leadership Training</p>
+          <div class="results__card-before">
+            <span class="results__card-label">Vorher</span>
+            <span class="results__card-value">50.000 €</span>
+          </div>
+          <div class="results__card-divider">
+            <span class="results__card-divider-line"></span>
+            <svg class="results__card-divider-icon" width="24" height="24" viewBox="0 0 20 20" fill="none"><path d="M3 14L10 6L17 14" stroke="#E2AC26" stroke-width="2"/></svg>
+          </div>
+          <div class="results__card-after">
+            <span class="results__card-label">Nachher</span>
+            <span class="results__card-value-big">410.000 €</span>
+          </div>
+          <div class="results__card-growth">+720% Wachstum</div>
+          <p class="results__card-method">durch Qualifizierungschancengesetz + ISO</p>
+        </div>
+        <div class="results__card">
+          <h4 class="results__card-name">MindGrow Academy</h4>
+          <p class="results__card-type">Digitales Coaching</p>
+          <div class="results__card-before">
+            <span class="results__card-label">Vorher</span>
+            <span class="results__card-value">9.000 €/M</span>
+          </div>
+          <div class="results__card-divider">
+            <span class="results__card-divider-line"></span>
+            <svg class="results__card-divider-icon" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M3 14L10 6L17 14" stroke="#E2AC26" stroke-width="1.67"/></svg>
+          </div>
+          <div class="results__card-after">
+            <span class="results__card-label">Nachher</span>
+            <span class="results__card-value-big">46.000 €/M</span>
+          </div>
+          <div class="results__card-growth">+411% Wachstum</div>
+          <p class="results__card-method">durch ZFU-Freigabe</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 12: Five Methods -->
+  <section class="methods">
+    <div class="methods__inner">
+      <div class="methods__header">
+        <span class="methods__badge">Die 5-Phasen</span>
+        <h2 class="methods__title">Unsere bewährte 5-Phasen-Methode</h2>
+        <p class="methods__subtitle">Mit unserem strukturierten Prozess führen wir Sie Schritt für Schritt durch die gesamte Zertifizierung – transparent, planbar und ohne böse Überraschungen.</p>
+        <div class="methods__tags">
+          <span class="methods__tag">Einfachheit</span>
+          <span class="methods__tag">Expertise & Erfahrung</span>
+          <span class="methods__tag">Vertrauen & Entlastung</span>
+        </div>
+      </div>
+      <div class="methods__steps">
+        <div class="methods__step methods__step--right">
+          <div class="methods__step-text">
+            <span class="methods__step-number">01</span>
+            <h3 class="methods__step-title">Analyse & Strategie</h3>
+            <p class="methods__step-desc">Wir analysieren Ihre aktuelle Situation und entwickeln eine maßgeschneiderte Strategie für Ihre Zertifizierung.</p>
+          </div>
+          <div class="methods__step-image">
+            <img src="assets/assets/step-01-analyse.png" alt="Analyse & Strategie">
+          </div>
+        </div>
+        <div class="methods__step methods__step--left">
+          <div class="methods__step-image">
+            <img src="assets/assets/step-02-dokumentation.png" alt="Dokumentation">
+          </div>
+          <div class="methods__step-text">
+            <span class="methods__step-number">02</span>
+            <h3 class="methods__step-title">Dokumentation</h3>
+            <p class="methods__step-desc">Wir erstellen alle notwendigen Dokumente, Prozesse und Handbücher nach aktuellen Standards.</p>
+          </div>
+        </div>
+        <div class="methods__step methods__step--right">
+          <div class="methods__step-text">
+            <span class="methods__step-number">03</span>
+            <h3 class="methods__step-title">Implementierung</h3>
+            <p class="methods__step-desc">Ihr Team wird geschult und alle Prozesse werden in Ihrem Unternehmen implementiert.</p>
+          </div>
+          <div class="methods__step-image">
+            <img src="assets/assets/step-03-implementierung.png" alt="Implementierung">
+          </div>
+        </div>
+        <div class="methods__step methods__step--left">
+          <div class="methods__step-image">
+            <img src="assets/assets/step-04-audit.png" alt="Audit-Vorbereitung">
+          </div>
+          <div class="methods__step-text">
+            <span class="methods__step-number">04</span>
+            <h3 class="methods__step-title">Audit-Vorbereitung</h3>
+            <p class="methods__step-desc">Wir simulieren das Audit und bereiten Sie optimal auf die Prüfung vor. Keine Überraschungen.</p>
+          </div>
+        </div>
+        <div class="methods__step methods__step--right">
+          <div class="methods__step-text">
+            <span class="methods__step-number">05</span>
+            <h3 class="methods__step-title">Zertifizierung</h3>
+            <p class="methods__step-desc">Wir begleiten Sie beim Audit und feiern gemeinsam Ihre erfolgreiche Zertifizierung.</p>
+          </div>
+          <div class="methods__step-image">
+            <img src="assets/assets/step-05-zertifizierung.png" alt="Zertifizierung">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 13: Comparison -->
+  <section class="comparison">
+    <div class="comparison__inner">
+      <div class="comparison__header">
+        <h2 class="comparison__title">Die häufigsten Probleme ohne professionelle Begleitung</h2>
+      </div>
+      <div class="comparison__items">
+        <div class="comparison__item">
+          <span class="comparison__item-check"></span>
+          <div class="comparison__item-content">
+            <h4 class="comparison__item-title">Rechtsrisiko ohne Freigabe</h4>
+            <p class="comparison__item-text">Digitale Programme ohne ZFU-Freigabe können rechtliche Probleme und Rückforderungen nach sich ziehen.</p>
+          </div>
+        </div>
+        <div class="comparison__item">
+          <span class="comparison__item-check"></span>
+          <div class="comparison__item-content">
+            <h4 class="comparison__item-title">Viele Schritte, hohe Fehlergefahr</h4>
+            <p class="comparison__item-text">Prozesse sind unübersichtlich, Deadlines schwer einzuhalten – Fehler verlängern den Weg.</p>
+          </div>
+        </div>
+        <div class="comparison__item">
+          <span class="comparison__item-check"></span>
+          <div class="comparison__item-content">
+            <h4 class="comparison__item-title">Hohe Eigenzahlung, geringes Vertrauen</h4>
+            <p class="comparison__item-text">Kunden zögern bei hohen Preisen, Vertrauen und Abschlussraten sinken.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 14: Frame14 (Gallery) -->
+  <section class="gallery">
+    <div class="gallery__inner">
+      <div class="gallery__header">
+        <h2 class="gallery__title">Ich bin eine Headline</h2>
+        <p class="gallery__subtitle">Interdum ac tincidunt molestie facilisis. Nulla at erat odio bibendum diam quam. Scelerisque mus vel egestas justo, purus consequat nibh eget. Non risus feugiat porta integer.</p>
+      </div>
+      <div class="gallery__images">
+        <img src="assets/assets/gallery-1.png" alt="Galerie 1" class="gallery__img">
+        <img src="assets/assets/gallery-2.png" alt="Galerie 2" class="gallery__img">
+        <img src="assets/assets/gallery-3.png" alt="Galerie 3" class="gallery__img">
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 15: Routes / References 2 (Team) -->
+  <section class="team" id="karriere">
+    <div class="team__bg">
+      <img src="assets/assets/bg-walkway-light.png" alt="" class="team__bg-img">
+    </div>
+    <div class="team__inner">
+      <div class="team__header">
+        <span class="team__badge">Das Team</span>
+        <h2 class="team__title">Unser starkes Team</h2>
+        <p class="team__subtitle">Transparente Leistungen, nachweisbare Resultate – und ein Prozess, der in über 1.200 Projekten zuverlässig funktioniert.</p>
+      </div>
+      <div class="team__cards">
+        <div class="team__card">
+          <div class="team__avatar">
+            <img src="assets/assets/team-member-1.png" alt="Volker Rozek">
+          </div>
+          <div class="team__info">
+            <h4 class="team__name">Volker Rozek</h4>
+            <span class="team__role">Senior Berater</span>
+            <p class="team__bio">Experte für Prozessoptimierung</p>
+          </div>
+        </div>
+        <div class="team__card">
+          <div class="team__avatar">
+            <img src="assets/assets/team-member-2.png" alt="Daniel Graf">
+          </div>
+          <div class="team__info">
+            <h4 class="team__name">Daniel Graf</h4>
+            <span class="team__role">Senior Berater</span>
+            <p class="team__bio">Experte für ISO 9001, AZAV, ISO 14001 sowie 13485 und 27001</p>
+          </div>
+        </div>
+        <div class="team__card">
+          <div class="team__avatar">
+            <img src="assets/assets/team-member-3.png" alt="Christian Engelhardt">
+          </div>
+          <div class="team__info">
+            <h4 class="team__name">Christian Engelhardt</h4>
+            <span class="team__role">Geschäftsführung, AZAV Fachmann</span>
+            <p class="team__bio">Zulassung AZAV, Förderanträge, Förderprozess</p>
+          </div>
+        </div>
+        <div class="team__card">
+          <div class="team__avatar">
+            <img src="assets/assets/team-member-4.png" alt="Jeremy Gocht">
+          </div>
+          <div class="team__info">
+            <h4 class="team__name">Jeremy Gocht</h4>
+            <span class="team__role">Junior Berater</span>
+            <p class="team__bio">Prozessmanagement und Auditvorbereitung</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 16: Contact Banner 2 -->
+  <section class="contact-banner-2">
+    <div class="contact-banner-2__inner">
+      <div class="contact-banner-2__card">
+        <div class="contact-banner-2__text-side">
+          <h3 class="contact-banner-2__title">Bereit für Ihre Zertifizierung?</h3>
+          <p class="contact-banner-2__desc">Vereinbaren Sie jetzt ein kostenloses Erstgespräch und erfahren Sie, wie wir Sie auf dem Weg zur Zertifizierung unterstützen können.</p>
+          <div class="contact-banner-2__cta-row">
+            <a href="#" class="contact-banner-2__btn">Jetzt loslegen</a>
+            <div class="contact-banner-2__clients">
+              <img src="assets/assets/logo-clients-steuern.png" alt="" class="contact-banner-2__clients-logo">
+              <span class="contact-banner-2__clients-text">+800 Zufriedene Kunden</span>
+            </div>
+          </div>
+        </div>
+        <div class="contact-banner-2__image-side">
+          <img src="assets/assets/hero-isograf-probleme.png" alt="ISOGRAF Berater" class="contact-banner-2__portrait">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 17: Footer -->
+  <footer class="footer">
+    <div class="footer__inner">
+      <div class="footer__top">
+        <div class="footer__brand">
+          <div class="footer__logo">
+            <svg width="33" height="21" viewBox="0 0 29 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M0.0232014 0H0V17.8742H14.2138L0.0232014 0ZM23.0888 7.21028L28.8121 14.4199V0L23.0888 7.21028ZM14.6584 0H14.6095L8.66865 7.48242L16.919 17.8742H28.8115V17.8275L14.6578 0H14.6584Z" fill="#E2AC26"/>
+            </svg>
+            <span class="footer__logo-text">ISOGRAF</span>
+          </div>
+          <p class="footer__tagline">Qualität, die fördert. Über 1.200 erfolgreiche Projekte.</p>
+          <div class="footer__social">
+            <a href="#" class="footer__social-link" aria-label="Instagram">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><rect x="2" y="2" width="16" height="16" rx="4" stroke="#99A1AF" stroke-width="1.67"/><circle cx="10" cy="10" r="3" stroke="#99A1AF" stroke-width="1.67"/><circle cx="14.5" cy="5.5" r="1" fill="#99A1AF"/></svg>
+            </a>
+            <a href="#" class="footer__social-link" aria-label="LinkedIn">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M4 8V16M4 4V4.01M8 16V10C8 9 9 8 10 8C11 8 12 9 12 10V16M12 16V10M8 16H8.01" stroke="#99A1AF" stroke-width="1.67" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+            <a href="#" class="footer__social-link" aria-label="Twitter">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M2 2L8 10L2 18M18 2H12L8 10M18 18H12L8 10" stroke="#99A1AF" stroke-width="1.67" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+          </div>
+        </div>
+        <div class="footer__col">
+          <h4 class="footer__col-title">Leistungen</h4>
+          <ul class="footer__list">
+            <li><a href="#">KOMPASS-Förderung</a></li>
+            <li><a href="#">AZAV-Zulassung</a></li>
+            <li><a href="#">ZFU-Zulassung</a></li>
+            <li><a href="#">ISO 9001</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4 class="footer__col-title">Unternehmen</h4>
+          <ul class="footer__list">
+            <li><a href="#">Über uns</a></li>
+            <li><a href="#">Team</a></li>
+            <li><a href="#">Karriere</a></li>
+            <li><a href="#">Kontakt</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4 class="footer__col-title">Ressourcen</h4>
+          <ul class="footer__list">
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Leitfäden</a></li>
+            <li><a href="#">Support</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p class="footer__copyright">© 2025 ISOGRAF. Alle Rechte vorbehalten.</p>
+        <div class="footer__legal">
+          <a href="#">Datenschutz</a>
+          <a href="#">Impressum</a>
+          <a href="#">AGB</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
