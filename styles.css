@@ -1252,7 +1252,7 @@ h1, h2, h3, h4, p { margin: 0; }
 .cta-banner__proof img { height: 28px; width: auto; }
 .cta-banner__proof .b { font-weight: 700; }
 .cta-banner__art {
-  position: absolute;
+  position: absolute !important;
   top: -70px;
   right: 20px;
   width: 260px;
@@ -1260,11 +1260,10 @@ h1, h2, h3, h4, p { margin: 0; }
   background: url("assets/anima/isografprobleme-3.png") right bottom / contain no-repeat;
   opacity: 1;
   pointer-events: none;
-  z-index: 0;
+  z-index: 1;
   filter: drop-shadow(-12px 8px 24px rgba(0, 0, 0, 0.35));
 }
-.cta-banner__card > * { position: relative; z-index: 2; }
-.cta-banner__card > .cta-banner__art { z-index: 1; }
+.cta-banner__copy { position: relative; z-index: 2; }
 
 /* ============================================================
    SECTION 9 — RESULTS
