@@ -1215,13 +1215,14 @@ h1, h2, h3, h4, p { margin: 0; }
   position: relative;
   width: 100%;
   max-width: 980px;
-  min-height: 280px;
+  min-height: 300px;
   border-radius: 24px;
   border: 1px solid var(--border-gold-soft);
   background: var(--navy-card-grad);
   overflow: visible;
-  padding: 47px 280px 47px 49px;
-  display: block;
+  padding: 52px 360px 52px 56px;
+  display: flex;
+  align-items: center;
 }
 .cta-banner__copy {
   display: flex;
@@ -1253,15 +1254,15 @@ h1, h2, h3, h4, p { margin: 0; }
 .cta-banner__proof .b { font-weight: 700; }
 .cta-banner__art {
   position: absolute !important;
-  top: -70px;
-  right: 20px;
-  width: 260px;
-  height: calc(100% + 70px);
-  background: url("assets/anima/isografprobleme-3.png") right bottom / contain no-repeat;
+  bottom: 0;
+  right: 24px;
+  width: 340px;
+  height: calc(100% + 80px);
+  background: url("assets/anima/isografprobleme-3.png") center bottom / contain no-repeat;
   opacity: 1;
   pointer-events: none;
   z-index: 1;
-  filter: drop-shadow(-12px 8px 24px rgba(0, 0, 0, 0.35));
+  filter: drop-shadow(-8px 4px 20px rgba(0, 0, 0, 0.3));
 }
 .cta-banner__copy { position: relative; z-index: 2; }
 
