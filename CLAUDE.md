@@ -1,82 +1,31 @@
-# Isograf Landing Page V10 — Anima Export → Responsive
+# Isograf Landing Page V11 — Fix Round
 
 ## Mission
-Take the pixel-perfect Anima export (React + Tailwind, 1440px fixed) and convert it into a fully responsive, production-ready landing page. The result MUST look IDENTICAL to Figma at 1440px AND work perfectly on all screen sizes.
+Fix ALL visual issues in V10 to match the Figma design. The Anima React source (`anima-source/anima-v10/`) is the SINGLE SOURCE OF TRUTH for what the page should look like. Reference screenshots from Figma are in `figma-references-v11/`.
 
-## Source: Anima Export
-The Anima export is at `./anima-source/` (inside this project). It's a React + TypeScript + Tailwind + Vite project that perfectly reproduces the Figma design at 1440px width. BUT:
-- All dimensions are fixed pixel values (w-[896px], absolute top-[47px], etc.)
-- Images reference Anima CDN URLs (c.animaapp.com) — must be downloaded locally
-- One section is a flat image ("4-coloumns.png") — must become real HTML
-- Zero responsive design — breaks on any width != 1440px
+## CRITICAL: Version Management
+- V10 backup is in `versions/v10-pre-fixes.html` + `versions/v10-pre-fixes.css`
+- Save the result as `versions/v11-fixes.html` AND update root `index.html`
+- NEVER delete previous versions
 
-## Target: THIS Project
-Build everything here in `/Users/nexus/.openclaw/workspace/projects/isograf-landing-page/`.
-Output: single `index.html` (or React build that produces it) deployed via GitHub Pages.
+## Source Files
+- **Current page:** `index.html` + `styles.css` + `script.js`
+- **Anima React source (TRUTH):** `anima-source/anima-v10/src/screens/IsografUiMain/`
+- **Figma reference screenshots:** `figma-references-v11/` (9 images, Figma vs V10 comparisons)
+- **Figma CSS values:** `figma-css/` (17 files with exact CSS)
+- **Assets:** `assets/anima/` (89 images from Anima CDN)
 
-## Architecture Decision
-Convert from React/Tailwind to **vanilla HTML + CSS + minimal JS**. Reasons:
-- GitHub Pages = static hosting, no build step needed
-- Simpler maintenance for non-developers
-- Faster loading (no React runtime)
-- The page has zero interactivity beyond smooth scroll + mobile menu + maybe FAQ accordion
+## Architecture
+- Vanilla HTML + CSS + minimal JS (NO React, NO Tailwind runtime)
+- Static hosting on GitHub Pages
+- ALL images must be local (no CDN dependencies)
 
-## The 17 Sections (from Anima export)
-
-### Header/Navbar (inline in IsografUiMain.tsx)
-- Logo "ISOGRAF" + nav links + gold "Jetzt starten" button
-- Must become sticky on scroll
-
-### Sections from components:
-1. **CertificationHeroSection** (125 LOC) — Hero with gradient card, CTA, customer logos
-2. **IntroVideoSection** (57 LOC) — Video introduction area
-3. **4-Columns** (FLAT IMAGE in main — `4-coloumns.png`) — MUST be rebuilt as real HTML from `figma-css/04-columns-1-css.md`
-4. **CourseModulesSection** (135 LOC) — Course module cards
-5. **CourseIntroductionSection** (139 LOC) — Introduction to courses
-6. **ExamPrepEbookSection** (461 LOC) — Biggest section, exam prep content
-7. **CertificationFactorsSection** (56 LOC) — Certification factors
-8. **CertificationAssuranceSection** (291 LOC) — Quality assurance details
-9. **ValuePropositionSection** (80 LOC) — Value proposition
-10. **MobileAppFeaturesSection** (242 LOC) — Mobile app features showcase
-11. **SevenPointMethodSection** (253 LOC) — 7-point method explanation
-12. **RelatedContentSection** (60 LOC) — Related content links
-13. **TeamSection** (149 LOC) — Team members
-14. **ConsultationSection** (71 LOC) — CTA consultation banner
-15. **FooterSection** (144 LOC) — Footer with links
-
-## Conversion Rules — CRITICAL
-
-### 1. Visual Fidelity at 1440px = NON-NEGOTIABLE
-At exactly 1440px viewport width, the page MUST look IDENTICAL to the Anima export.
-- Same colors, fonts, spacing, gradients, shadows, border-radius
-- Same layout, proportions, alignments
-- Extract EVERY CSS value from the Anima Tailwind classes — don't guess
-
-### 2. Responsive Strategy
-- **Desktop (1200px+):** `max-width: 1440px; margin: 0 auto;` container. Content identical to Figma.
-- **Tablet (768px-1199px):** Scale proportionally, stack columns where needed
-- **Mobile (< 768px):** Single column, hamburger menu, touch-friendly tap targets (44px min)
-- Use CSS Grid and Flexbox — NO absolute positioning
-- Use `clamp()` for fluid typography where appropriate
-- Use `rem` for spacing, derived from the pixel values in the Anima export
-
-### 3. Image Handling
-- Download ALL images from `c.animaapp.com` URLs to local `assets/` directory
-- Use descriptive filenames (not random hashes)
-- Optimize: convert large PNGs to WebP where possible
-- Use `loading="lazy"` for below-fold images
-- Keep SVGs inline for icons/logos (they're already inline in Anima)
-
-### 4. The "4-Columns" Image Section
-This is rendered as a flat PNG in the Anima export (`4-coloumns.png`).
-Rebuild it as real HTML using the CSS data from `figma-css/04-columns-1-css.md` AND `figma-css/05-columns-2-css.md`.
-
-### 5. Fonts
+## Fonts
 - DM Sans (logo, headings, nav) — Google Fonts
 - Libre Baskerville (italic accents) — Google Fonts
 - Roboto (body text) — Google Fonts
 
-### 6. Colors (from Figma, verified)
+## Colors
 - Gold primary: #e2ac26
 - Gold gradient: linear-gradient(~58deg, #ffe5ac, #f5c253, #f1b53d, #ffe5ac, #eecb75)
 - Navy dark: #14213d
@@ -84,49 +33,65 @@ Rebuild it as real HTML using the CSS data from `figma-css/04-columns-1-css.md` 
 - Text gray: #6a7282
 - White: #ffffff
 - Light bg: #f9f7f2, #faf9f6
-- Border light: #f2f4f6
 
-## Available Resources
+## ===== ISSUES TO FIX (Priority Order) =====
 
-### Figma CSS files (pre-extracted, EXACT values)
-Located in `figma-css/` — 17 files with precise CSS for every element.
-**USE THESE for the 4-Columns section** and to VERIFY your conversion matches.
+### 🔴 ISSUE 1: Container Boxing — Page has left/right margin/padding
+**Problem:** The entire page appears "boxed" — sections that should go full-width (edge to edge) have padding/margin. The navy/dark blue sections don't extend to the full viewport width.
+**Fix:** Ensure ALL sections with dark backgrounds (navy, gradient) span the FULL viewport width. Only the INNER content should be constrained to max-width.
+**Reference:** Look at Figma screenshots — dark sections go edge-to-edge.
 
-### Figma reference images
-Located in `figma-reference-images/` — 17 PNG screenshots from Figma.
-**Compare your output against these** at 1440px width.
+### 🔴 ISSUE 2: Hero Section — Responsive breakage
+**Problem:** At certain viewports, the hero text wraps one-word-per-line and the layout collapses. See `figma-references-v11/09-v10-hero-BROKEN.jpg`.
+**Figma Reference:** See `figma-references-v11/` — hero should have text on left (~60%), Daniel's photo on right (~40%), with clean text wrapping.
+**Fix:** Check the Anima source `CertificationHeroSection.tsx` for exact layout. Ensure proper min-width on text column and responsive breakpoints.
 
-### Previously downloaded assets
-Located in `assets/` — 157 images already downloaded from Figma.
-Check if any match the Anima CDN images before re-downloading.
+### 🔴 ISSUE 3: "Warum zum Isograf" Section — Daniel's photo missing
+**Problem:** The card showing "Denn wer mit ISOGRAF arbeitet..." has only the columns/architecture image on the right. Daniel's portrait photo should be OVERLAID on top of the columns image.
+**V10 (broken):** `figma-references-v11/02-v10-warum-zum-isograf-BROKEN.jpg`
+**Figma (correct):** `figma-references-v11/01-figma-warum-zum-isograf.jpg`
+**Fix:** Look at the Anima source for this section. Daniel's photo (`dsc01322-1.png` or `cute-smiling-young-man...` image) needs to be positioned over the columns background. Also add gold bullet dots before list items, and the "+800 Zufriedene Kunden" social proof below the CTA button.
 
-### Builder.io export
-`builder-export.html` — 248KB with all German text + inline SVGs.
-Use for TEXT CONTENT verification.
+### 🔴 ISSUE 4: "Done-4-You Zertifizierung" — Carousel vs Grid
+**Problem:** V10 shows a carousel/slider with only one card visible at a time. Figma shows ALL 4 cards (KOMPASS, AZAV, ZFU, ISO 9001) side by side in a grid, with the active one highlighted.
+**V10 (broken):** `figma-references-v11/03-v10-done4you-carousel-WRONG.jpg`
+**Figma (correct):** `figma-references-v11/04-figma-done4you-grid.jpg`
+**Fix:** Check the Anima source `ExamPrepEbookSection.tsx` (this is the 461 LOC section). Convert from carousel to a 4-column grid. All cards visible simultaneously. Active card slightly larger/highlighted with gold border. Arrow buttons below for navigation (clicking changes which card is "active"/highlighted). Pagination dots match card count (4, not 5).
+
+### 🔴 ISSUE 5: "Zertifizierung, die Ihr Wachstum trägt" Bento Grid — Missing overlays
+**Problem:** Multiple missing design elements in the bento grid:
+  - Daniel's photo (top-left) should have FLOATING TESTIMONIAL CARDS overlaid (showing "Persona 1", star ratings, review text)
+  - "Unkomplizierter Prozess" card (bottom-left) should have a large CHECKMARK ICON (teal circle with white check)
+  - "Echtes Wachstum" card (bottom-right) should have DIAMOND decorative shapes
+**V10 (broken):** `figma-references-v11/05-v10-bento-grid-BROKEN.jpg`
+**Figma (correct):** `figma-references-v11/06-figma-bento-grid.jpg`
+**Fix:** Check the Anima source `CertificationAssuranceSection.tsx` (291 LOC). Add all missing overlay elements. Check which images from `assets/anima/` are needed.
+
+### 🔴 ISSUE 6: Bottom CTA "Bereit für Ihre Zertifizierung?" — Photo wrong side
+**Problem:** Daniel's photo is on the LEFT side, heavily cropped. Should be on the RIGHT side, larger, overlapping/extending above the card.
+**V10 (broken):** `figma-references-v11/07-v10-bottom-cta-WRONG.jpg`
+**Figma (correct):** `figma-references-v11/08-figma-bottom-cta.jpg`
+**Fix:** Check Anima source `ConsultationSection.tsx` (71 LOC). Flip layout: text left, Daniel right. Photo should be larger and break out of the card boundary upward.
+
+### 🟡 ISSUE 7: "Ich bin eine Headline" placeholder
+**Problem:** Section 11 (Related Content) still has placeholder text "Ich bin eine Headline" and Lorem ipsum.
+**Fix:** Check Anima source `RelatedContentSection.tsx` for the actual text. If it's also placeholder in the source, keep it but make it look correct visually.
+
+## Responsive Strategy
+- **1440px:** MUST be pixel-perfect to Figma
+- **1200-1439px:** Scale gracefully
+- **768-1199px (tablet):** Stack columns where needed, ensure readability
+- **<768px (mobile):** Single column, hamburger menu
 
 ## Workflow
-
-1. **Read** the Anima export section by section
-2. **Extract** all CSS values from Tailwind classes
-3. **Convert** to semantic HTML + CSS (BEM naming)
-4. **Replace** absolute positioning with Flexbox/Grid
-5. **Add** responsive breakpoints
-6. **Download** all Anima CDN images to `assets/`
-7. **Rebuild** the 4-Columns image section as real HTML
-8. **Test** at 1440px (must match Figma) + 1024px + 768px + 375px
-9. **Take screenshots** at each breakpoint for verification
-
-## Output Files
-```
-index.html    — single HTML file with all sections
-styles.css    — all styles, CSS custom properties
-script.js     — smooth scroll, sticky nav, mobile menu, FAQ accordion
-assets/       — all images (local, optimized)
-```
+1. Read ALL Anima source components listed above (especially the broken sections)
+2. Compare with current HTML/CSS
+3. Fix section by section, starting with ISSUE 1 (container boxing) since it affects everything
+4. Use `image` tool to view the Figma reference screenshots for pixel-level comparison
+5. After ALL fixes, take screenshots at 1440px and compare
 
 ## Quality Bar
-- At 1440px: 95%+ visual match with Figma (pixel-perfect goal)
-- Responsive: clean, professional look at ALL breakpoints
-- Performance: < 3s load on 4G
-- Accessibility: semantic HTML, alt texts, focus states
-- No broken images, no layout shifts, no horizontal scroll
+- At 1440px: Match Figma (the reference screenshots in `figma-references-v11/`)
+- ALL sections must be full-width where the Figma shows them full-width
+- ALL images/overlays from Figma must be present
+- Responsive must not break at any common viewport
