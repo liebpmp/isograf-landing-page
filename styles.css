@@ -779,8 +779,8 @@ h1, h2, h3, h4, p { margin: 0; }
 }
 .exam__cards {
   display: grid;
-  grid-template-columns: 1fr 1fr 1.2fr 1fr;
-  align-items: center;
+  grid-template-columns: repeat(4, 1fr);
+  align-items: stretch;
   gap: 24px;
   max-width: 1320px;
   width: 100%;
@@ -796,21 +796,19 @@ h1, h2, h3, h4, p { margin: 0; }
   flex-direction: column;
   gap: 10px;
 }
-/* All cards: default = inactive (small, dimmed) */
+/* All cards: default = inactive (dimmed) */
 .cert-card--side,
 .cert-card--center {
   opacity: 0.5;
-  transform: scale(0.92);
-  transition: opacity .35s ease, transform .35s ease, border-color .35s ease, padding .35s ease;
+  transition: opacity .35s ease, transform .35s ease, border-color .35s ease, box-shadow .35s ease;
   border: 1px solid rgba(255,255,255,0.2);
 }
-/* Active card = highlighted, full size, gold frame */
+/* Active card = highlighted, gold frame */
 .cert-card.is-active {
   opacity: 1;
-  transform: scale(1);
   z-index: 3;
-  padding: 21px;
-  border: none;
+  border-color: transparent;
+  box-shadow: 0 8px 32px rgba(226,172,38,0.25);
 }
 .cert-card.is-active::after {
   content: "";
